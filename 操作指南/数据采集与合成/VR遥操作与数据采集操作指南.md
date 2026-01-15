@@ -27,9 +27,9 @@ pip install -r requirements.txt
 
 VR遥操作需先完成硬件连接与软件初始化，数据采集时，通过手柄控制机械臂执行任务并采集数据。
 
-**步骤1** ：安装 `PicoController.apk` 程序
+**步骤1** ：安装 `PicoController.apk` 程序(apk包所在目录：OrcaManipulation/src/examples/超市场景青龙机器人数采案例/pico安装包/）
  - 使用 USB 线将 Pico 连接电脑，并开机。
- - 将`PicoController.apk` 复制到PICO设备目录中 (所在目录：OrcaManipulation/src/examples/超市场景青龙机器人数采案例/pico安装包）
+ - 将`PicoController.apk` 复制到PICO设备目录中 
 ![](img/pico_install.png)
  - 佩戴VR设备，在 VR 视角中，找到文件管理器，查看安装包目录，使用右手手柄点击 **A 键**，确认安装刚刚下载的 apk 包。
 
@@ -108,9 +108,9 @@ orcalab
 ```
 ![](img/shop_layout.png)
 
-6.将shopScense示例场景的example_shop.yaml文件，重命名为example
+6.shopScense示例场景的yaml文件已配置为example.yaml，如需详细了解配置参数含义，请参考第三章节 数据采集任务配置文件说明
 ```bash
-#example_shop.yaml文件路径
+#example.yaml文件路径
 ~/OrcaManipulation/src/examples/dataCollection
 ```
 ![](img/shop_example1.png)
