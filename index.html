@@ -24,7 +24,7 @@
             name: '',
             root: './', // 文档根目录（默认当前）
             // 仓库地址，点击右上角的Github章鱼猫头像会跳转到此地址
-            repo:'https://github.com/mengfeizhao/OrcaLabdocs.git' ,
+            //repo:'https://github.com/mengfeizhao/OrcaLabdocs.git' ,
             // 侧边栏支持，默认加载的是项目根目录下的_sidebar.md文件
             loadSidebar: '_sidebar.md', // 显式加载根目录的_sidebar.md
             sidebarCollapse: true, // 可选：启用侧边栏折叠功能
@@ -104,17 +104,7 @@
 
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-  <script>
-    const gitalk = new Gitalk({
-      clientID: 'Github Application Client ID',
-      clientSecret: 'Github Application Client Secret',
-      repo: 'Github repo',
-      owner: 'Github repo owner',
-      admin: ['Github repo collaborators, only these guys can initialize github issues'],
-      // facebook-like distraction free mode
-      distractionFreeMode: false
-    })
-  </script>
+
   <!--字数统计-->
   <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
   
