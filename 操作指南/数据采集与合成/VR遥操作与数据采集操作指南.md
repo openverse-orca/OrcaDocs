@@ -30,6 +30,7 @@ VR遥操作需先完成硬件连接与软件初始化，数据采集时，通过
 **步骤1** ：安装 `PicoController.apk` 程序(apk包所在目录：OrcaManipulation/src/examples/超市场景青龙机器人数采案例/pico安装包/）
  - 使用 USB 线将 Pico 连接电脑，并开机。
  - 将`PicoController.apk` 复制到PICO设备目录中 
+
 ![](img/pico_install.png)
  - 佩戴VR设备，在 VR 视角中，找到文件管理器，查看安装包目录，使用右手手柄点击 **A 键**，确认安装刚刚下载的 apk 包。
 
@@ -155,7 +156,7 @@ python data_collection_tele.py
 
 3. **数据采集及存储**
    
-   - 参考下图采集云币运行输出，updata_scence时，按一次左手柄扳机，开始数据采集状态。
+   - 参考下图采集脚本输出信息，updata_scence时，按一次左手柄扳机，开始数据采集状态。
    - 根据任务提示，抓取目标物体，放在篮子中。
    - 抓取完成后，再按一次左手柄扳机，保存采集的数据，并提示保存的目录，如数据失败，则进入下一个任务。  
     
