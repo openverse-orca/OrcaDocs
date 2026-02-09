@@ -95,7 +95,7 @@ OrcaPlayground/
 > - 🔧 是否需要手动在 OrcaStudio 中拖动资产到场景布局
 > - 📝 对应的模型名称
 > 
-> 资产下载地址：https://simassets.orca3d.cn/
+> 资产订阅地址：https://simassets.orca3d.cn/
 
 ## 📋 依赖说明
 
@@ -108,7 +108,7 @@ OrcaPlayground/
 
 详细依赖说明请查看 `requirements.txt`。
 
-## 🔧 OrcaLab 配置
+## 🔧 OrcaLab 配置仿真程序
 
 ### 配置文件位置
 
