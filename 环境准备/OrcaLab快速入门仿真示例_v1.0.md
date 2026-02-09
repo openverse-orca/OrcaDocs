@@ -46,6 +46,16 @@ orcalab
 
 1. 添加资产hummer_h2_usda_1到布局中
    ![](img/playground/add_hummer_h2_usda_1.png)
+
+⚠️ **注意手动拖入资产进行调试时,检查脚本中agent_name和拖入的资产名称是否一致**
+```bash
+#该示例脚本路径：OrcaPlayground/examples/wheeled_chassis/run_ackerman.py
+orcagym_addr = "localhost:50051"
+agent_name = "hummer_h2_usda_1"   # 脚本中的agent_name必须与大纲中的资产名一致；若拖入后为其他名称，请自行修改资产名。
+env_name = "run_ackerman"
+
+```
+
 2. OrcaLab 界面右上角点运行按钮，打开选择仿真程序窗口  
 3. **仿真程序**列表中选择对应的示例程序：
 
