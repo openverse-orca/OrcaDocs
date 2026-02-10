@@ -44,32 +44,20 @@ orcalab
 
 #### 步骤 5：在 OrcaLab 中启动示例
 
-1. 添加资产hummer_h2_usda_1到布局中
-   ![](img/playground/add_hummer_h2_usda_1.png)
-
-⚠️ **注意手动拖入资产进行调试时,检查脚本中agent_name和拖入的资产名称是否一致**
-```bash
-#该示例脚本路径：OrcaPlayground/examples/wheeled_chassis/run_ackerman.py
-orcagym_addr = "localhost:50051"
-agent_name = "hummer_h2_usda_1"   # 脚本中的agent_name必须与大纲中的资产名一致；若拖入后为其他名称，请自行修改资产名。
-env_name = "run_ackerman"
-
-```
-
-2. OrcaLab 界面右上角点运行按钮，打开选择仿真程序窗口  
-3. **仿真程序**列表中选择对应的示例程序：
+1. OrcaLab 界面右上角点运行按钮，打开选择仿真程序窗口  
+2. **仿真程序**列表中选择对应的示例程序：
 
    - `run_ackerman` - 小汽车仿真
 
    ![](img/playground/run_ackerman.png)
 
-4. 启动运行仿真程序后，W、S、A、D 键可控制前后左右移动方向。
+3. 启动运行仿真程序后，W、S、A、D 键可控制前后左右移动方向。
 
 
 **更多配置信息参:OrcaPlayground/examples/wheeled_chassis/README.md**
 
 ---
- ## 二、 OrcaPlayground项目代码仓介绍及样例运行参数说明
+ ## 二、 OrcaPlayground项目代码仓介绍及其他几个样例说明
 
  ## 📦 项目结构
 
@@ -92,11 +80,13 @@ OrcaPlayground/
 
 所有示例的详细使用说明请查看examples下各示例目录中的 `README.md`：
 
-- **角色仿真** - `examples/character/README.md`
-- **足式机器人 RL 训练** - `examples/legged_gym/README.md`
-- **轮式底盘** - `examples/wheeled_chassis/README.md`
-- **XBot 机器人** - `examples/xbot/README.md`
-- **场景复制** - `examples/replicator/README.md`
+- **角色仿真** - [`examples/character/README.md`](examples/character/README.md)
+- **足式机器人 RL 训练** - [`examples/legged_gym/README.md`](examples/legged_gym/README.md)
+- **轮式底盘** - [`examples/wheeled_chassis/README.md`](examples/wheeled_chassis/README.md)
+- **XBot 机器人** - [`examples/xbot/README.md`](examples/xbot/README.md)
+- **ZQ SA01 人形** - [`examples/zq_sa01/README.md`](examples/zq_sa01/README.md)
+- **G1 人形** - [`examples/g1/README.md`](examples/g1/README.md)
+- **场景复制** - [`examples/replicator/README.md`](examples/replicator/README.md)
 
 > **⚠️ 重要提示：资产准备**
 > 
