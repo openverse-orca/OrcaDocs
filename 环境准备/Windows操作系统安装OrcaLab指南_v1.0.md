@@ -168,6 +168,17 @@ conda activate orcalab
 
  ![](img/install/offline-login.jpg) 
 
+#### 问题：软件启动后窗口菜单显示不完整
+
+**解决方案**：
+
+- 检查分辨是否设置过低
+- 检查显示设置->缩放和布局是否设置超过120%
+  
+![](img/install/app_windows.png) 
+
+
+
 ---
 
 ## 八、技术支持
