@@ -23,7 +23,7 @@
 **步骤1：** 下载Miniconda安装程序并安装。
 ```bash
 # 下载 Miniconda windows版本安装包
-Miniconda下载链接：https://www.anaconda.com/download/success
+https://www.anaconda.com/download/success
 ```
 **步骤2：** 配置系统环境变量
 - 按下 Win + R，输入 sysdm.cpl 并回车，打开「系统属性」窗口； 
