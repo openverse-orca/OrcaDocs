@@ -155,8 +155,23 @@ conda init
 # 关闭所有命令行，重新打开命令行再激活
 conda activate orcalab
 ```
+#### 问题：首次启动orcalab,安装组件包过程中报错
+![](img/install/error_proxy.png)
+
+**解决方案**:
+- 检查是否开启了代理，如果开启了代理，将代理关闭或设置为直连。
+![](img/install/proxy_setting.png)
 
 ### 7.2 运行问题
+
+#### 问题：运行Orcalab, 同步完资产后闪退
+![](img/install/run_eixt.png)
+
+**解决方案**：
+- 权限问题，检查CMD是否有管理员权限
+- 打开CMD命令行时，选择"以管理员身份运行"
+![](img/install/run_cmd_admin.png)
+
 
 #### 问题：软件启动后无法连接服务器
 
