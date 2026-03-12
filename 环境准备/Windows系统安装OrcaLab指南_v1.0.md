@@ -1,38 +1,48 @@
-# OrcaLab 安装指南
+# Windows操作系统上安装OrcaLab
 
 ## 一、系统要求
 
 ### 1.1 操作系统
 
-- **推荐系统**：Ubuntu 22.04 LTS，Ubuntu 24.04 LTS
+- **推荐系统**：Windows 11
 
 ### 1.2 前置依赖
 
 - **Miniconda**：需要提前安装最新版本的 Miniconda
 - **网络要求**：需要稳定的网络连接
-- **系统权限**：需要 sudo 权限安装系统依赖
 
 ### 1.3 硬件要求
 
 - 建议配备 NVIDIA 显卡（RTX 40/50 系列）
-- 建议驱动版本：≥535.00（RTX 40系列）或 ≥550.00（RTX 50系列）
 - 建议内存：大于32G
-
 ---
 
 ## 二、安装步骤
 
 ### 2.1 安装 Miniconda
+**步骤1：** 下载Miniconda安装程序并安装。
+```bash
+# 下载 Miniconda windows版本安装包
+https://www.anaconda.com/download/success
+```
+**步骤2：** 配置系统环境变量
+- 按下 Win + R，输入 sysdm.cpl 并回车，打开「系统属性」窗口； 
+- 切换到「高级」选项卡，点击「环境变量」； 
+- 在「系统变量」列表中找到 Path，双击打开； 
+- 点击「新建」，添加以下Miniconda安装路径（替换成你的实际路径）
 
 ```bash
-# 下载 Miniconda 安装脚本
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+#  Miniconda 安装路径
+C:\ProgramData\miniconda3\
+C:\ProgramData\miniconda3\Scripts\
+```
 
-# 运行安装脚本
-bash Miniconda3-latest-Linux-x86_64.sh
-
-# 按照提示完成安装，重启终端或执行：
-source ~/.bashrc
+**步骤3：** 验证配置是否生效
+- 关闭所有已打开的命令行窗口（CMD/PowerShell）；
+- 重新打开一个新的命令行窗口，输入以下命令：
+```bash
+# 如果输出 conda 25.x.x 之类的版本号，说明配置成功
+conda --version
 ```
 
 ### 2.2 配置 PyPI 镜像源
@@ -40,19 +50,12 @@ source ~/.bashrc
 为了加快下载速度，建议配置清华 PyPI 镜像源：
 
 ```bash
-# 创建 pip 配置目录
-mkdir -p ~/.pip
-
 # 配置清华源
-cat > ~/.pip/pip.conf << EOF
-[global]
-index-url = https://pypi.tuna.tsinghua.edu.cn/simple
-[install]
-trusted-host = pypi.tuna.tsinghua.edu.cn
-EOF
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+pip config set install.trusted-host pypi.tuna.tsinghua.edu.cn
 ```
 
-### 2.3 创建 Conda 环境
+### 2.3 创建orcalab运行的Conda环境
 
 ```bash
 # 创建名为 orcalab 的 Python 3.12 环境
@@ -72,13 +75,10 @@ pip install orca-lab
 ### 2.5 启动 OrcaLab
 
 ```bash
-# 首次启动（会自动安装依赖）
-orcalab
-
-# 如果首次启动失败，安装 x265 后再次启动
-sudo apt install libx265-dev
+# 命令行执行以下命令，首次启动OrcaLab（会自动安装依赖）
 orcalab
 ```
+![](img/install/first_start.png)
 
 **注意**：
 
@@ -98,10 +98,7 @@ python --version  # 应显示 Python 3.12.x
 # 2. 检查 OrcaLab 版本
 pip show orca-lab
 
-# 3. 检查系统依赖
-dpkg -l | grep libx265
-
-# 4. 启动软件
+# 3. 启动软件
 orcalab
 ```
 
@@ -153,15 +150,28 @@ curl https://pypi.tuna.tsinghua.edu.cn/simple/
 
 ```bash
 # 初始化 conda
-conda init bash
-source ~/.bashrc
+conda init 
 
-# 或手动激活
-source ~/miniconda3/etc/profile.d/conda.sh
+# 关闭所有命令行，重新打开命令行再激活
 conda activate orcalab
 ```
+#### 问题：首次启动orcalab,安装组件包过程中报错
+![](img/install/error_proxy.png)
+
+**解决方案**:
+- 检查是否开启了代理，如果开启了代理，将代理关闭或设置为直连。
+![](img/install/proxy_setting.png)
 
 ### 7.2 运行问题
+
+#### 问题：运行Orcalab, 同步完资产后闪退
+![](img/install/run_eixt.png)
+
+**解决方案**：
+- 权限问题，检查CMD是否有管理员权限
+- 打开CMD命令行时，选择"以管理员身份运行"
+![](img/install/run_cmd_admin.png)
+
 
 #### 问题：软件启动后无法连接服务器
 
