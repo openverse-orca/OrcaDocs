@@ -74,10 +74,6 @@ pip install orca-lab
 ```bash
 # 首次启动（会自动安装依赖）
 orcalab
-
-# 如果首次启动失败，安装 x265 后再次启动
-sudo apt install libx265-dev
-orcalab
 ```
 
 **注意**：
