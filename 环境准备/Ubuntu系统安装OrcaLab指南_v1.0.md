@@ -83,7 +83,7 @@ orcalab
 
 ---
 
-## 四、检查安装环境及版本
+## 三、检查安装环境及版本
 
 安装完成后，可以通过以下方式验证：
 
@@ -102,7 +102,7 @@ orcalab
 ```
 
 --- 
-## 五、OrcaLab升级方法
+## 四、OrcaLab升级方法
 有升级包可用时
 ```bash
 # 需要添加 --upgrade 参数
@@ -111,7 +111,7 @@ pip install --upgrade orca-lab
 
 ---
 
-## 六、OrcaLab卸载方法
+## 五、OrcaLab卸载方法
 
 如果需要卸载 OrcaLab：
 
@@ -126,9 +126,9 @@ conda env remove -n orcalab
 
 ---
 
-## 七、常见问题排查
+## 六、常见问题排查
 
-### 7.1 安装问题
+### 6.1 安装问题
 
 #### 问题：pip 安装失败，下载速度慢
 
@@ -157,7 +157,7 @@ source ~/miniconda3/etc/profile.d/conda.sh
 conda activate orcalab
 ```
 
-### 7.2 运行问题
+### 6.2 运行问题
 
 #### 问题：软件启动后无法连接服务器
 
@@ -171,7 +171,7 @@ conda activate orcalab
 
 ---
 
-## 八、技术支持
+## 七、技术支持
 
 如遇到问题，请：
 
