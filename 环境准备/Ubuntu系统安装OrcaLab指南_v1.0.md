@@ -4,7 +4,7 @@
 
 ### 1.1 操作系统
 
-- **推荐系统**：Ubuntu 22.04 LTS，Ubuntu 24.04 LTS
+- **推荐系统**：Ubuntu 22.04 LTS，Ubuntu 24.04 LTS，统信UOS V20
 
 ### 1.2 前置依赖
 

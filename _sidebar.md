@@ -12,7 +12,7 @@
   - [**欢迎使用ORCA Lab**](/README.md)
 - **环境准备**
   - [**用户注册与管理**](环境准备/用户注册与管理.md)
-  - [**Ubuntu上安装ORCA Lab指南**](环境准备/Ubuntu系统安装OrcaLab指南_v1.0.md)
+  - [**Linux上安装ORCA Lab指南**](环境准备/Ubuntu系统安装OrcaLab指南_v1.0.md)
   - [**Windows上安装ORCA Lab指南**](环境准备/Windows系统安装OrcaLab指南_v1.0.md)
   - [**快速入门仿真案例**](环境准备/OrcaLab快速入门仿真示例_v1.0.md)
 - **操作指南**
