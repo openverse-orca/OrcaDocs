@@ -10,7 +10,7 @@
 
 - **Miniconda**：需要提前安装最新版本的 Miniconda
 - **网络要求**：需要稳定的网络连接
-- **用户注册**：https://openverse-orca.github.io/OrcaDocs/#/%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/%E7%94%A8%E6%88%B7%E6%B3%A8%E5%86%8C%E4%B8%8E%E7%AE%A1%E7%90%86
+- **用户注册**：参见用户注册与管理章节完成用户注册
 
 ### 1.3 硬件要求
 
@@ -132,7 +132,7 @@ conda env remove -n orcalab
 
 ### 6.1 安装问题
 
-#### 问题：pip 安装失败，下载速度慢
+#### 6.1.1问题：pip 安装失败，下载速度慢
 
 **解决方案**：
 
@@ -145,7 +145,7 @@ conda env remove -n orcalab
 curl https://pypi.tuna.tsinghua.edu.cn/simple/
 ```
 
-#### 问题：conda 环境激活失败
+#### 6.1.2问题：conda 环境激活失败
 
 **解决方案**：
 
@@ -156,7 +156,7 @@ conda init
 # 关闭所有命令行，重新打开命令行再激活
 conda activate orcalab
 ```
-#### 问题：首次启动orcalab,安装组件包过程中报错
+#### 6.1.3问题：首次启动orcalab,安装组件包过程中报错
 ![](img/install/error_proxy.png)
 
 **解决方案**:
@@ -165,7 +165,7 @@ conda activate orcalab
 
 ### 6.2 运行问题
 
-#### 问题：运行Orcalab, 同步完资产后闪退
+#### 6.2.1问题：运行Orcalab, 同步完资产后闪退
 ![](img/install/run_eixt.png)
 
 **解决方案**：
@@ -173,8 +173,15 @@ conda activate orcalab
 - 打开CMD命令行时，选择"以管理员身份运行"
 ![](img/install/run_cmd_admin.png)
 
+#### 6.2.2问题：硬件配置有独立显卡，但运行Orcalab非常卡顿，性能监控显示实际运行在集成显卡上
+![](img/install/Not_GPU.png)
 
-#### 问题：软件启动后无法连接服务器
+**解决方案**：
+- 首选图形处理器设置问题，打开NVIDIA控制面板。
+- 在3D设置中奖NVIDIA处理器设置为首选图形处理器
+![](img/install/set_GPU.png)
+
+#### 6.2.3问题：软件启动后无法连接服务器
 
 **解决方案**：
 

@@ -4,14 +4,14 @@
 
 ### 1.1 操作系统
 
-- **推荐系统**：Ubuntu 22.04 LTS，Ubuntu 24.04 LTS
+- **推荐系统**：Ubuntu 22.04 LTS，Ubuntu 24.04 LTS，统信UOS V20
 
 ### 1.2 前置依赖
 
 - **Miniconda**：需要提前安装最新版本的 Miniconda
 - **网络要求**：需要稳定的网络连接
 - **系统权限**：需要 sudo 权限安装系统依赖
-- **用户注册**：https://openverse-orca.github.io/OrcaDocs/#/%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/%E7%94%A8%E6%88%B7%E6%B3%A8%E5%86%8C%E4%B8%8E%E7%AE%A1%E7%90%86
+- **用户注册**：参见用户注册与管理章节完成用户注册
 ### 1.3 硬件要求
 
 - 建议配备 NVIDIA 显卡（RTX 40/50 系列）
