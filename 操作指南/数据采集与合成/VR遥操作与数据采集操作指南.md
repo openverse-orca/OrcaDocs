@@ -234,6 +234,7 @@ python data_collection_tele.py
 1. 查看本文档的"常见问题排查"部分
 2. 检查终端错误信息
 3. 扫码联系技术支持团队
+
 ![](img/chat_scode.png)
 
 ---
