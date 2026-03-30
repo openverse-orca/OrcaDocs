@@ -133,7 +133,10 @@ conda activate orcalab
 ```bash
 cd ~/OrcaManipulation/src/examples/dataCollection
 #启动数据采集脚本,确保example.yaml文件中资产版本配置正确
-python data_collection_tele.py
+python data_collection_tele.py  --level shop_scaning --agent_name openloong  --task_config example.yaml 
+
+#参数说明
+# --level 场景名称，--agent_name 机器人名称，--task_config 任务文件
 ```
 ![](img/run_shop_scan.png)
 
@@ -233,7 +236,7 @@ python data_collection_tele.py
 
 1. 查看本文档的"常见问题排查"部分
 2. 检查终端错误信息
-3. 扫码联系技术支持团队
+3. (入群请附上申请邀请码的学校/企业/个人信息等)
 
 ![](img/chat_scode.png)
 
