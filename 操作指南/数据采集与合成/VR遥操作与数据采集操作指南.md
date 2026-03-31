@@ -136,7 +136,8 @@ cd ~/OrcaManipulation/src/examples/dataCollection
 python data_collection_tele.py  --level shop_scaning --agent_name openloong  --task_config example.yaml 
 
 #参数说明（根据实际填写）
-# --level 场景名称，--agent_name 机器人名称，--task_config 任务文件
+#  level 场景名称，agent_name 机器人名称，task_config 任务文件
+
 ```
 ![](img/run_shop_scan.png)
 
