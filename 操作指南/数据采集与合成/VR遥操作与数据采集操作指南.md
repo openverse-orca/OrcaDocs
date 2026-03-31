@@ -132,11 +132,9 @@ conda activate orcalab
 2. 进入数采脚本目录并启动
 ```bash
 cd ~/OrcaManipulation/src/examples/dataCollection
-#启动数据采集脚本,确保example.yaml文件中资产版本配置正确
-python data_collection_tele.py  --level shop_scaning --agent_name openloong  --task_config example.yaml 
-
+#启动数据采集脚本,确保example.yaml文件中资产配置正确
 #参数说明（根据实际填写）:level 场景名称，agent_name 机器人名称，task_config 任务文件
-
+python data_collection_tele.py  --level shop_scaning --agent_name openloong  --task_config example.yaml 
 ```
 
 ![](img/run_shop_scan.png)
