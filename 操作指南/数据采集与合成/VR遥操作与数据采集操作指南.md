@@ -45,7 +45,7 @@ VR遥操作需先完成硬件连接与软件初始化，数据采集时，通过
  - 启动OrcaGymCtrl后，会进入3D程序界面：左侧显示三维红蓝绿坐标轴，中间有红色文字启动OrcaGymCtrl后，会进入3D程序界面：左侧显示三维红蓝绿坐标轴，中间有红色文字。**后续VR遥操作需始终保持此界面激活**。
  ![Pico设备资源库界面](img/pico_OrcaGymCtrl.png)
 
-**步骤4** ：安装adb工具
+**步骤4** ：安装adb工具（Windows需下载adb工具安装并设置环境变量）
 在Ubuntu终端中执行以下命令，安装Android调试工具（adb）
  ```bash
 sudo apt install android-tools-adb android-tools-fastboot
