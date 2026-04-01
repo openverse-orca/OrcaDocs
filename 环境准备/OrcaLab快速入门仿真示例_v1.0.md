@@ -80,19 +80,19 @@ OrcaPlayground/
 
 所有示例的详细使用说明请查看examples下各示例目录中的 `README.md`：
 
-- **角色仿真** - [`examples/character/README.md`](examples/character/README.md)
-- **足式机器人 RL 训练** - [`examples/legged_gym/README.md`](examples/legged_gym/README.md)
-- **轮式底盘** - [`examples/wheeled_chassis/README.md`](examples/wheeled_chassis/README.md)
-- **XBot 机器人** - [`examples/xbot/README.md`](examples/xbot/README.md)
-- **ZQ SA01 人形** - [`examples/zq_sa01/README.md`](examples/zq_sa01/README.md)
-- **G1 人形** - [`examples/g1/README.md`](examples/g1/README.md)
-- **场景复制** - [`examples/replicator/README.md`](examples/replicator/README.md)
+- **角色仿真** - `examples/character/README.md`
+- **足式机器人 RL 训练** - `examples/legged_gym/README.md`
+- **轮式底盘** - `examples/wheeled_chassis/README.md`
+- **XBot 机器人** - `examples/xbot/README.md`
+- **ZQ SA01 人形** - `examples/zq_sa01/README.md`
+- **G1 人形** - `examples/g1/README.md`
+- **场景复制** - `examples/replicator/README.md`
 
 > **⚠️ 重要提示：资产准备**
 > 
 > 每个示例都需要相应的 3D 资产才能正常运行。**请务必查看各示例目录下的 README.md 文件**，了解：
-> - 📦 所需资产的下载地址
-> - 🔧 是否需要手动在 OrcaStudio 中拖动资产到场景布局
+> - 📦 所需订阅的资产
+> - 🔧 是否需要手动拖动资产到场景布局
 > - 📝 对应的模型名称
 > 
 > 资产订阅地址：https://simassets.orca3d.cn/
@@ -237,7 +237,7 @@ orcalab --init-config
 
 1. 查看本文档的"常见问题排查"部分
 2. 检查终端错误信息
-3. 扫码联系技术支持团队
+3. 扫码联系技术支持团队(入群请附上申请邀请码的学校/企业/个人信息等)
 
 ![](img/install/chat_scode.png)
 

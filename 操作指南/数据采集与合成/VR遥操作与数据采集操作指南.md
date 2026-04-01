@@ -235,7 +235,7 @@ python data_collection_tele.py  --level shop_scaning --agent_name openloong  --t
 
 1. 查看本文档的"常见问题排查"部分
 2. 检查终端错误信息
-3. (入群请附上申请邀请码的学校/企业/个人信息等)
+3. 扫码联系技术支持团队(入群请附上申请邀请码的学校/企业/个人信息等)
 
 ![](img/chat_scode.png)
 
