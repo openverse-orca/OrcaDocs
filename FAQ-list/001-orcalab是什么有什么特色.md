@@ -47,5 +47,5 @@ OrcaLab聚焦"**告别复杂代码，人人可学的机器人训练术**"核心�
 OrcaLab作为OrcaStudio企业版的推广载体，让用户可以快速体验完整的机器人训练全流程核心能力。
 
 ## 相关链接
-- [OrcaLab产品简介](../OrcaLab简介/OrcaLab%20产品简要介绍_v1.0.md)
-- [OrcaLab安装指南](../环境准备/Ubuntu系统安装OrcaLab指南_v1.0.md)
+- [OrcaLab产品简介](OrcaLab简介/OrcaLab%20产品简要介绍_v1.0.md)
+- [OrcaLab安装指南](环境准备/Ubuntu系统安装OrcaLab指南_v1.0.md)
