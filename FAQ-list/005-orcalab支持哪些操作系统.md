@@ -22,7 +22,7 @@ Ubuntu 24.04 LTS (Noble Numbat)
 - **Ubuntu 22.04 LTS**：稳定性更高，兼容性最佳
 - **Ubuntu 24.04 LTS**：较新版本，性能可能更优
 
-![Ubuntu版本](../环境准备/img/install/offline-login.jpg)
+![Ubuntu版本](环境准备/img/install/offline-login.jpg)
 
 ### 🚫 不支持的操作系统
 
@@ -218,5 +218,5 @@ A: 不强制要求，但建议使用英文环境避免编码问题。
 选择合适的操作系统是成功运行OrcaLab的第一步，确保系统环境满足要求将为后续的使用提供良好基础。
 
 ## 相关链接
-- [OrcaLab安装指南](../环境准备/OrcaLab安装指南_v1.0.md)
-- [常见问题排查](../环境准备/OrcaLab安装指南_v1.0.md#七常见问题排查)
+- [OrcaLab安装指南](环境准备/Ubuntu系统安装OrcaLab指南_v1.0.md)
+- [常见问题排查](环境准备/Ubuntu系统安装OrcaLab指南_v1.0.md)
