@@ -73,6 +73,4 @@ OrcaLab作为一款"高保真物理AI仿真系统"，在物理仿真精度方面
 OrcaLab的物理仿真精度是"高保真"的，能够提供可靠的物理表现，足以支持大多数教学、学习、科研和原型开发的需求。对于需要严格符合工业标准的产品级验证，可能需要更专业的物理引擎配置和精确的模型校准，这通常是OrcaStudio企业版的服务范畴。
 
 ## 相关链接
-- [OrcaLab产品简要介绍](../OrcaLab简介/OrcaLab%20产品简要介绍_v1.0.md)
-- [OrcaLab与OrcaStudio企业版有什么区别？](../FAQ/002-orcalab与orcastudio企业版有什么区别.md)
-- [OrcaLab的核心优势是什么？](../FAQ/007-orcalab的核心优势是什么.md)
+- [OrcaLab产品简要介绍](OrcaLab简介/OrcaLab%20产品简要介绍_v1.0.md)

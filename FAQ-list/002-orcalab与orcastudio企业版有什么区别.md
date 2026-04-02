@@ -80,5 +80,5 @@ OrcaLab为用户提供了完整的升级路径：
 这种设计确保了从OrcaLab到OrcaStudio的平滑迁移。
 
 ## 相关链接
-- [OrcaLab产品定位](../OrcaLab简介/OrcaLab%20产品简要介绍_v1.0.md)
-- [用户注册与管理](../环境准备/用户注册与管理.md)
+- [OrcaLab产品定位](OrcaLab简介/OrcaLab%20产品简要介绍_v1.0.md)
+- [用户注册与管理](环境准备/用户注册与管理.md)
