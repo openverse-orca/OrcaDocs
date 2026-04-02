@@ -48,4 +48,4 @@ OrcaLab作为OrcaStudio企业版的推广载体，让用户可以快速体验完
 
 ## 相关链接
 - [OrcaLab产品简介](../OrcaLab简介/OrcaLab%20产品简要介绍_v1.0.md)
-- [OrcaLab安装指南](../环境准备/OrcaLab安装指南_v1.0.md)
+- [OrcaLab安装指南](../环境准备/Ubuntu系统安装OrcaLab指南_v1.0.md)
