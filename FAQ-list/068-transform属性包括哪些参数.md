@@ -87,5 +87,5 @@ OrcaLab"编辑栏"中的`Position`、`Rotation`和`Uniform Scale`是控制场景
 
 ## 相关链接
 - [OrcaLab基础操作指南](操作指南/OrcaLab基础操作指南_v1.0.md)
-- [OrcaLab界面由哪几部分组成？](061-orcalab界面由哪几部分组成.md)
-- [如何选择和编辑场景中的物体？](065-如何选择和编辑场景中的物体.md)
+- [OrcaLab界面由哪几部分组成？](FAQ-list/061-orcalab界面由哪几部分组成.md)
+- [如何选择和编辑场景中的物体？](FAQ-list/065-如何选择和编辑场景中的物体.md)

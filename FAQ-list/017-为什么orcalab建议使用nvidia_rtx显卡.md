@@ -55,5 +55,5 @@ NVIDIA RTX系列显卡为OrcaLab提供了**强大的物理计算、AI训练和�
 
 ## 相关链接
 - [OrcaLab安装指南](环境准备/OrcaLab安装指南_v1.0.md)
-- [安装OrcaLab需要什么硬件配置？](016-安装orcalab需要什么硬件配置.md)
-- [OrcaLab的技术架构是什么样的？](013-orcalab的技术架构是什么样的.md)
+- [安装OrcaLab需要什么硬件配置？](FAQ-list/016-安装orcalab需要什么硬件配置.md)
+- [OrcaLab的技术架构是什么样的？](FAQ-list/013-orcalab的技术架构是什么样的.md)

@@ -80,5 +80,5 @@ OrcaLab对内存和硬盘的要求是：
 
 ## 相关链接
 - [OrcaLab安装指南](环境准备/Ubuntu系统安装OrcaLab指南_v1.0.md)
-- [安装OrcaLab需要什么硬件配置？](016-安装orcalab需要什么硬件配置.md)
-- [OrcaLab启动失败的常见原因有哪些？](026-orcalab启动失败的常见原因有哪些.md)
+- [安装OrcaLab需要什么硬件配置？](FAQ-list/016-安装orcalab需要什么硬件配置.md)
+- [OrcaLab启动失败的常见原因有哪些？](FAQ-list/026-orcalab启动失败的常见原因有哪些.md)

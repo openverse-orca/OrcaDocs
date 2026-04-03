@@ -147,4 +147,4 @@ OrcaLab启动失败的原因多种多样，通常涉及到**环境配置、硬�
 
 ## 相关链接
 - [OrcaLab安装指南](环境准备/Ubuntu系统安装OrcaLab指南_v1.0.md)
-- [如何检查OrcaLab是否安装成功？](025-如何检查orcalab是否安装成功.md)
+- [如何检查OrcaLab是否安装成功？](FAQ-list/025-如何检查orcalab是否安装成功.md)

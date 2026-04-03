@@ -109,4 +109,4 @@ pip下载速度慢是一个常见问题，通过配置**清华PyPI镜像源**是
 
 ## 相关链接
 - [OrcaLab安装指南](环境准备/Ubuntu系统安装OrcaLab指南_v1.0.md)
-- [Conda环境创建失败怎么办？](021-conda环境创建失败怎么办.md)
+- [Conda环境创建失败怎么办？](FAQ-list/021-conda环境创建失败怎么办.md)
