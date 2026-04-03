@@ -107,6 +107,6 @@ OrcaLab下载的资产包通常存储在一个特定的本地目录中。如果�
 彻底卸载OrcaLab需要移除其Conda环境、相关Python包以及所有的配置文件和缓存。请务必小心操作，并在执行删除命令前仔细核对路径。
 
 ## 相关链接
-- [OrcaLab安装指南](../环境准备/OrcaLab安装指南_v1.0.md#六orcalab卸载方法)
-- [什么是Miniconda？为什么需要安装？](../FAQ/020-什么是miniconda为什么需要安装.md)
-- [Conda环境创建失败怎么办？](../FAQ/021-conda环境创建失败怎么办.md)
+- [OrcaLab安装指南](环境准备/Ubuntu系统安装OrcaLab指南_v1.0.md)
+- [什么是Miniconda？为什么需要安装？](020-什么是miniconda为什么需要安装.md)
+- [Conda环境创建失败怎么办？](021-conda环境创建失败怎么办.md)

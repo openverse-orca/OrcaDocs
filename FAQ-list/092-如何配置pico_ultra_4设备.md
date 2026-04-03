@@ -21,7 +21,6 @@ OrcaLab支持使用Pico Ultra 4 VR设备进行遥操作数据采集。我应该�
     -   浏览到您刚刚复制`PicoController.apk`的目录。
     -   使用右手手柄点击**A键**，确认安装`PicoController.apk`程序。
 
-![PicoController.apk安装示意图](../操作指南/数据采集与合成/img/pico_install.png)
 
 ### 第二步：打开VR设备开发者模式
 
@@ -33,7 +32,7 @@ OrcaLab支持使用Pico Ultra 4 VR设备进行遥操作数据采集。我应该�
 4.  **连续点击**：使用手柄的A键，对着"软件版本号"**连续点击6-7次**。这会调出隐藏的开发者模式。
 5.  **打开调试开关**：在开发者模式中，找到并打开"USB调试"（USB Debugging）或类似的调试开关。
 
-![Pico USB调试示意图](../操作指南/数据采集与合成/img/pico_usb.jpg)
+
 
 ### 第三步：启动VR端`OrcaGymCtrl`程序
 
@@ -43,8 +42,7 @@ OrcaLab支持使用Pico Ultra 4 VR设备进行遥操作数据采集。我应该�
     -   启动后，会进入3D程序界面：左侧显示三维红蓝绿坐标轴，中间有红色文字。
     -   **重要**：在进行VR遥操作时，需要**始终保持此界面激活和在前台**。
 
-![Pico设备资源库界面](../操作指南/数据采集与合成/img/pico_gym_controller.png)
-![Pico OrcaGymCtrl界面](../操作指南/数据采集与合成/img/pico_OrcaGymCtrl.png)
+
 
 ### 第四步：安装ADB工具（PC端）
 
@@ -99,6 +97,6 @@ ADB（Android Debug Bridge）是用于连接和控制Android设备的命令行�
 配置Pico Ultra 4设备进行OrcaLab的VR遥操作数据采集，需要**在Pico上安装`PicoController.apk`并开启开发者模式，同时在PC端安装ADB并建立`adb reverse`连接**。确保每个步骤都正确执行，是实现流畅VR遥操作体验的关键。
 
 ## 相关链接
-- [VR遥操作与数据采集操作指南](../操作指南/数据采集与合成/VR遥操作与数据采集操作指南.md)
-- [VR数据采集需要什么设备？](../FAQ/091-vr数据采集需要什么设备.md)
-- [OrcaLab对内存和硬盘有什么要求？](../FAQ/033-orcalab对内存和硬盘有什么要求.md)
+- [VR遥操作与数据采集操作指南](操作指南/数据采集与合成/VR遥操作与数据采集操作指南.md)
+- [VR数据采集需要什么设备？](091-vr数据采集需要什么设备.md)
+- [OrcaLab对内存和硬盘有什么要求？](033-orcalab对内存和硬盘有什么要求.md)

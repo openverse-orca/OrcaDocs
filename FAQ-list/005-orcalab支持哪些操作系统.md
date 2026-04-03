@@ -22,7 +22,7 @@ Ubuntu 24.04 LTS (Noble Numbat)
 - **Ubuntu 22.04 LTS**：稳定性更高，兼容性最佳
 - **Ubuntu 24.04 LTS**：较新版本，性能可能更优
 
-![Ubuntu版本](环境准备/img/install/offline-login.jpg)
+
 
 ### 🚫 不支持的操作系统
 

@@ -105,6 +105,6 @@ orcalab
 通过遵循这些步骤和建议，您可以平稳、安全地将OrcaLab升级到最新版本。
 
 ## 相关链接
-- [OrcaLab安装指南](../环境准备/OrcaLab安装指南_v1.0.md#五orcalab升级方法)
-- [如何检查OrcaLab是否安装成功？](../FAQ/025-如何检查orcalab是否安装成功.md)
-- [pip安装OrcaLab时下载很慢怎么办？](../FAQ/022-pip安装orcalab时下载很慢怎么办.md)
+- [OrcaLab安装指南](环境准备/Ubuntu系统安装OrcaLab指南_v1.0.md)
+- [如何检查OrcaLab是否安装成功？](025-如何检查orcalab是否安装成功.md)
+- [pip安装OrcaLab时下载很慢怎么办？](022-pip安装orcalab时下载很慢怎么办.md)

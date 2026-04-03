@@ -49,6 +49,4 @@ OrcaLab的优势在于其**用户友好性、完整的机器人AI训练工作流
 对于需要高度自定义、商业产品化、或者追求极致图形表现力的用户，OrcaStudio企业版或大型商业游戏引擎可能更适合。而对于希望快速入门、进行AI训练验证和教学实验的用户，OrcaLab无疑是一个极具吸引力的选择。
 
 ## 相关链接
-- [OrcaLab产品简要介绍](../OrcaLab简介/OrcaLab%20产品简要介绍_v1.0.md)
-- [OrcaLab与OrcaStudio企业版有什么区别？](../FAQ/002-orcalab与orcastudio企业版有什么区别.md)
-- [OrcaLab的核心优势是什么？](../FAQ/007-orcalab的核心优势是什么.md)
+- [OrcaLab产品简要介绍](OrcaLab简介/OrcaLab%20产品简要介绍_v1.0.md)

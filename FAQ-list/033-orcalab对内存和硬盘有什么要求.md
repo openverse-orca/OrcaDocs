@@ -79,6 +79,6 @@ OrcaLab对内存和硬盘的要求是：
 确保您的计算机配备了足够的内存和高速的硬盘，将为OrcaLab提供流畅、高效的运行环境，避免因硬件瓶颈导致的不佳体验。
 
 ## 相关链接
-- [OrcaLab安装指南](../环境准备/OrcaLab安装指南_v1.0.md)
-- [安装OrcaLab需要什么硬件配置？](../FAQ/016-安装orcalab需要什么硬件配置.md)
-- [OrcaLab启动失败的常见原因有哪些？](../FAQ/026-orcalab启动失败的常见原因有哪些.md)
+- [OrcaLab安装指南](环境准备/Ubuntu系统安装OrcaLab指南_v1.0.md)
+- [安装OrcaLab需要什么硬件配置？](016-安装orcalab需要什么硬件配置.md)
+- [OrcaLab启动失败的常见原因有哪些？](026-orcalab启动失败的常见原因有哪些.md)

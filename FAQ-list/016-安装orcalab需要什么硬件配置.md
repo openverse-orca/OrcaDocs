@@ -92,7 +92,7 @@ Intel i5-12400 或 AMD Ryzen 5 5600X
 - 可能出现性能瓶颈
 ```
 
-![内存使用监控](../环境准备/img/install/offline-login.jpg)
+
 
 ## 💾 存储配置要求
 
@@ -265,5 +265,5 @@ speedtest-cli
 选择合适的硬件配置是确保OrcaLab流畅运行的基础。建议根据使用需求和预算选择合适的配置方案。
 
 ## 相关链接
-- [OrcaLab安装指南](../环境准备/OrcaLab安装指南_v1.0.md)
-- [常见问题排查](../环境准备/OrcaLab安装指南_v1.0.md#七常见问题排查)
+- [OrcaLab安装指南](环境准备/OrcaLab安装指南_v1.0.md)
+- [常见问题排查](环境准备/Ubuntu系统安装OrcaLab指南_v1.0.md)

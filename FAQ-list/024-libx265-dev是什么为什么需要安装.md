@@ -73,5 +73,4 @@ sudo apt install libx265-dev
 `libx265-dev`是提供H.265视频编码器开发文件的系统库，OrcaLab需要它来支持其内部的视频录制、流媒体传输或视频处理等功能。在Ubuntu系统上，通过`sudo apt install libx265-dev`命令即可安装。
 
 ## 相关链接
-- [OrcaLab安装指南](../环境准备/OrcaLab安装指南_v1.0.md#安装-orcalab)
-- [常见问题排查](../环境准备/OrcaLab安装指南_v1.0.md#问题pip-安装失败下载速度慢)
+- [OrcaLab安装指南](环境准备/Ubuntu系统安装OrcaLab指南_v1.0.md)
