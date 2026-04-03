@@ -60,5 +60,5 @@ OrcaLab的首次启动自动安装依赖和同步资产包是一个**智能化�
 
 ## 相关链接
 - [OrcaLab安装指南](环境准备/Ubuntu系统安装OrcaLab指南_v1.0.md)
-- [pip安装OrcaLab时下载很慢怎么办？](022-pip安装orcalab时下载很慢怎么办.md)
+- [pip安装OrcaLab时下载很慢怎么办？](FAQ-list/022-pip安装orcalab时下载很慢怎么办.md)
 - [资产库基础操作指南](操作指南/资产库基础操作指南.md)

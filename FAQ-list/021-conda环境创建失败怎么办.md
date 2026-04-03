@@ -151,4 +151,4 @@ Conda环境创建失败通常是由于网络问题、Conda配置问题、权限�
 
 ## 相关链接
 - [OrcaLab安装指南](环境准备/OrcaLab安装指南_v1.0.md)
-- [什么是Miniconda？为什么需要安装？](020-什么是miniconda为什么需要安装.md)
+- [什么是Miniconda？为什么需要安装？](FAQ-list/020-什么是miniconda为什么需要安装.md)

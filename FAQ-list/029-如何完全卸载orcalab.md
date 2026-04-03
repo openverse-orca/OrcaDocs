@@ -108,5 +108,5 @@ OrcaLab下载的资产包通常存储在一个特定的本地目录中。如果�
 
 ## 相关链接
 - [OrcaLab安装指南](环境准备/Ubuntu系统安装OrcaLab指南_v1.0.md)
-- [什么是Miniconda？为什么需要安装？](020-什么是miniconda为什么需要安装.md)
-- [Conda环境创建失败怎么办？](021-conda环境创建失败怎么办.md)
+- [什么是Miniconda？为什么需要安装？](FAQ-list/020-什么是miniconda为什么需要安装.md)
+- [Conda环境创建失败怎么办？](FAQ-list/021-conda环境创建失败怎么办.md)

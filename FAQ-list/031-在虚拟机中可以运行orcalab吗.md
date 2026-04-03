@@ -64,5 +64,5 @@ OrcaLab对硬件配置要求较高，特别需要NVIDIA RTX显卡。那么，我
 
 ## 相关链接
 - [OrcaLab安装指南](环境准备/Ubuntu系统安装OrcaLab指南_v1.0.md)
-- [安装OrcaLab需要什么硬件配置？](016-安装orcalab需要什么硬件配置.md)
-- [为什么OrcaLab建议使用NVIDIA RTX显卡？](017-为什么orcalab建议使用nvidia_rtx显卡.md)
+- [安装OrcaLab需要什么硬件配置？](FAQ-list/016-安装orcalab需要什么硬件配置.md)
+- [为什么OrcaLab建议使用NVIDIA RTX显卡？](FAQ-list/017-为什么orcalab建议使用nvidia_rtx显卡.md)
