@@ -69,5 +69,4 @@ OrcaLab是由**松应科技（SongYing Technology）**公司开发和推出的�
 松应科技以其深厚的技术积累和前瞻性的战略眼光，致力于成为机器人AI仿真领域的领导者，OrcaLab正是这一宏伟愿景的重要一步。
 
 ## 相关链接
-- [OrcaLab产品简要介绍](../OrcaLab简介/OrcaLab%20产品简要介绍_v1.0.md)
-- [OrcaLab与OrcaStudio企业版有什么区别？](../FAQ/002-orcalab与orcastudio企业版有什么区别.md)
+- [OrcaLab产品简要介绍](OrcaLab简介/OrcaLab%20产品简要介绍_v1.0.md)

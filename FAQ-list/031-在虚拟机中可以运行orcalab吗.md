@@ -63,6 +63,6 @@ OrcaLab对硬件配置要求较高，特别需要NVIDIA RTX显卡。那么，我
 虽然在虚拟机中运行OrcaLab在技术上是可行的，但由于**GPU虚拟化困难、性能损失严重以及图形兼容性问题**，它不是一个理想的选择。为了获得最佳的用户体验和仿真性能，强烈建议在**物理机上安装Ubuntu并直接运行OrcaLab**，或者考虑**双系统**和**GPU云服务器**等替代方案。
 
 ## 相关链接
-- [OrcaLab安装指南](../环境准备/OrcaLab安装指南_v1.0.md)
-- [安装OrcaLab需要什么硬件配置？](../FAQ/016-安装orcalab需要什么硬件配置.md)
-- [为什么OrcaLab建议使用NVIDIA RTX显卡？](../FAQ/017-为什么orcalab建议使用nvidia_rtx显卡.md)
+- [OrcaLab安装指南](环境准备/Ubuntu系统安装OrcaLab指南_v1.0.md)
+- [安装OrcaLab需要什么硬件配置？](016-安装orcalab需要什么硬件配置.md)
+- [为什么OrcaLab建议使用NVIDIA RTX显卡？](017-为什么orcalab建议使用nvidia_rtx显卡.md)

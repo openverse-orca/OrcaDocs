@@ -132,6 +132,5 @@ graph TD
 OrcaLab的技术架构是一个**多层、多组件协同工作**的系统，旨在为用户提供**易用、高效、高保真的机器人AI仿真体验**。其核心在于强大的物理与渲染引擎、灵活的Python编程接口和智能的资产管理服务，共同构建了一个完整的机器人AI训练和验证平台。
 
 ## 相关链接
-- [OrcaLab产品简要介绍](../OrcaLab简介/OrcaLab%20产品简要介绍_v1.0.md)
-- [OrcaLab的核心优势是什么？](../FAQ/007-orcalab的核心优势是什么.md)
-- [OrcaLab安装指南](../环境准备/OrcaLab安装指南_v1.0.md)
+- [OrcaLab产品简要介绍](OrcaLab简介/OrcaLab%20产品简要介绍_v1.0.md)
+- [OrcaLab安装指南](环境准备/Ubuntu系统安装OrcaLab指南_v1.0.md)

@@ -24,7 +24,7 @@
 - **Miniconda**：只包含Conda和Python解释器，轻量级，用户按需安装包。
 - **Anaconda**：包含Conda、Python解释器以及预装了大量科学计算、数据分析等常用库，体积大。
 
-![Miniconda Logo](../环境准备/img/install/miniconda_logo.png)
+
 
 ## 🎯 为什么OrcaLab需要Miniconda
 
@@ -109,6 +109,5 @@ conda env remove -n orcalab
 通过安装和正确使用Miniconda，您可以为OrcaLab提供一个稳定、隔离且易于管理的运行环境，从而确保软件的顺利安装和运行。
 
 ## 相关链接
-- [OrcaLab安装指南](../环境准备/OrcaLab安装指南_v1.0.md#二安装步骤)
+- [OrcaLab安装指南](环境准备/Ubuntu系统安装OrcaLab指南_v1.0.md)
 - [Miniconda官方下载](https://docs.conda.io/en/latest/miniconda.html)
-- [配置PyPI镜像源](../环境准备/OrcaLab安装指南_v1.0.md#配置-pypi-镜像源)
