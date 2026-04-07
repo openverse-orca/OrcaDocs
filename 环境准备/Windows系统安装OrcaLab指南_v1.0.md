@@ -65,7 +65,10 @@ conda create -n orcalab python==3.12
 
 # 激活环境
 conda activate orcalab
+# 激活成功时，括号中显示创建的conda名称 e.g: (orcalab) C:\Users\Admin>
 ```
+
+
 
 ### 2.4 安装 OrcaLab
 
