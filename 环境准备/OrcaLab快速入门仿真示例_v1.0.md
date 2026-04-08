@@ -87,6 +87,7 @@ OrcaPlayground/
 - **ZQ SA01 人形** - `examples/zq_sa01/README.md`
 - **G1 人形** - `examples/g1/README.md`
 - **场景复制** - `examples/replicator/README.md`
+- **流体仿真** - `examples/fluid/README.md`
 
 > **⚠️ 重要提示：资产准备**
 > 

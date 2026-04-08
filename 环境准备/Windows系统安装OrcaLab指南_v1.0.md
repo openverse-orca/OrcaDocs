@@ -9,6 +9,7 @@
 ### 1.2 前置依赖
 
 - **Miniconda**：需要提前安装最新版本的 Miniconda
+- **CMD命令行**：需要以管理员权限启动
 - **网络要求**：需要稳定的网络连接
 - **用户注册**：参见用户注册与管理章节完成用户注册
 
@@ -38,8 +39,8 @@ C:\ProgramData\miniconda3\
 C:\ProgramData\miniconda3\Scripts\
 ```
 
-**步骤3：** 验证配置是否生效
-- 关闭所有已打开的命令行窗口（CMD/PowerShell）；
+**步骤3：** 验证配置是否生效（建议CMD命令行以`管理员启动`）
+- 关闭所有已打开的命令行窗口
 - 重新打开一个新的命令行窗口，输入以下命令：
 ```bash
 # 如果输出 conda 25.x.x 之类的版本号，说明配置成功
@@ -64,7 +65,10 @@ conda create -n orcalab python==3.12
 
 # 激活环境
 conda activate orcalab
+# 激活成功时，括号中显示创建的conda名称 e.g: (orcalab) C:\Users\Admin>
 ```
+
+
 
 ### 2.4 安装 OrcaLab
 
