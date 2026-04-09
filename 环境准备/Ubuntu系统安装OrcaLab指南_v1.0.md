@@ -168,7 +168,7 @@ conda activate orcalab
 - 确认防火墙设置
 - 使用离线启动模式（如果已下载资产）
 
- ![](img/install/offline-login.jpg) 
+ ![](../img/install/offline-login.jpg) 
 
 ---
 
@@ -180,6 +180,6 @@ conda activate orcalab
 2. 检查终端错误信息
 3. 扫码联系技术支持团队
 
-![](img/install/chat_scode.png)
+![](../img/install/chat_scode.png)
 
 ---

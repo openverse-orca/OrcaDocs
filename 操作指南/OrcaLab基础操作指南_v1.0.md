@@ -10,22 +10,22 @@ conda activate orcalab
 
 orcalab
 ```
-<img src="img/客户端基础操作指南/orcalab终端启动页面.png" width="77%">
+<img src="../img/客户端基础操作指南/orcalab终端启动页面.png" width="77%">
 
 启动后，会出现【正在同步资产包...】提示，会自动同步新订阅的资产包以及更新已订阅资产包。
 
 资产包同步完成后出现场景与布局选择界面，点击选择场景、布局后，点击【打开】按钮进入orcalab客户端界面。点击【取消】按钮或【ESC键】后，终端退出orcalab启动程序。
 
-<img src="img/客户端基础操作指南/资产包同步.png" width="40%" > <img src="img/客户端基础操作指南/选择场景.png" width="36%" >
+<img src="../img/客户端基础操作指南/资产包同步.png" width="40%" > <img src="../img/客户端基础操作指南/选择场景.png" width="36%" >
 
 
 默认可选择的场景有orcalab\_day（白天）、orcalab\_night（夜晚）、previewthumbnail\_orcalab（缩略图渲染）。关于更多场景用户可在资产库中订阅后，可查看选择。
 
 布局选项中，【加载默认布局】【空白布局】对于三个默认场景无区别。对于用户在资产库中自行订阅的场景，【加载默认布局】选项【空白布局】选项相比，无场景中自带的可交互物体，需自行添加。
 
-<img src="img/客户端基础操作指南/白天.png" width="36.5%" > <img src="img/客户端基础操作指南/夜晚.png" width="40%" >
+<img src="../img/客户端基础操作指南/白天.png" width="36.5%" > <img src="../img/客户端基础操作指南/夜晚.png" width="40%" >
 
-<img src="img/客户端基础操作指南/默认布局.png" width="38%" > <img src="img/客户端基础操作指南/空白布局.png" width="39%" >
+<img src="../img/客户端基础操作指南/默认布局.png" width="38%" > <img src="../img/客户端基础操作指南/空白布局.png" width="39%" >
 
 
 
@@ -33,7 +33,7 @@ orcalab
 
 启动OrcaLab应用程序，启动后端应用程序界面如下所示，由于OrcaLab,可以支持灵活布局。默认布局分上、中、下三层，共五个模块，分别是菜单栏、大纲栏、视图栏、编辑栏、资产栏。
 
-<img src="img/客户端基础操作指南/GUI界面.png" width="77%" >
+<img src="../img/客户端基础操作指南/GUI界面.png" width="77%" >
 
 
 ### 菜单
@@ -52,35 +52,35 @@ orcalab
 <td></td>
 </tr>
 <tr class="even">
-<td><img src="img/客户端基础操作指南/版本号.png" style="width:0.64583in;height:0.26042in" /></td>
+<td><img src="../img/客户端基础操作指南/版本号.png" style="width:0.64583in;height:0.26042in" /></td>
 <td>显示版本号与场景布局名称</td>
 <td></td>
 <td>--</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td><img src="img/客户端基础操作指南/隐藏.png" style="width:0.23958in;height:0.1875in" /></td>
+<td><img src="../img/客户端基础操作指南/隐藏.png" style="width:0.23958in;height:0.1875in" /></td>
 <td>隐藏</td>
 <td></td>
 <td>--</td>
 <td></td>
 </tr>
 <tr class="even">
-<td><img src="img/客户端基础操作指南/最大化.png" style="width:0.1875in;height:0.27083in" /></td>
+<td><img src="../img/客户端基础操作指南/最大化.png" style="width:0.1875in;height:0.27083in" /></td>
 <td>最大化</td>
 <td></td>
 <td>--</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td><img src="img/客户端基础操作指南/关闭.png" style="width:0.27083in;height:0.17708in" /></td>
+<td><img src="../img/客户端基础操作指南/关闭.png" style="width:0.27083in;height:0.17708in" /></td>
 <td>关闭</td>
 <td></td>
 <td>--</td>
 <td></td>
 </tr>
 <tr class="even">
-<td><img src="img/客户端基础操作指南/文件.png" style="width:0.39583in;height:0.23958in" /></td>
+<td><img src="../img/客户端基础操作指南/文件.png" style="width:0.39583in;height:0.23958in" /></td>
 <td>打开布局</td>
 <td>可选择本地保存在布局文件</td>
 <td>ctrl+o</td>
@@ -110,7 +110,7 @@ orcalab
 <td></td>
 </tr>
 <tr class="odd">
-<td><img src="img/客户端基础操作指南/编辑按钮.png" style="width:0.41667in;height:0.19792in" /></td>
+<td><img src="../img/客户端基础操作指南/编辑按钮.png" style="width:0.41667in;height:0.19792in" /></td>
 <td>undo</td>
 <td>撤销</td>
 <td>ctrl+z</td>
@@ -122,39 +122,39 @@ orcalab
 <td>ctrl+shift+z</td>
 </tr>
 <tr class="odd">
-<td><img src="img/客户端基础操作指南/帮助按钮.png" style="width:0.38542in;height:0.23958in" /></td>
+<td><img src="../img/客户端基础操作指南/帮助按钮.png" style="width:0.38542in;height:0.23958in" /></td>
 <td>关于OrcaLab</td>
 <td><p>显示OrcaLab的版本、版权所有、公司主页、GitHub</p>
 <p>仓库等信息</p></td>
 <td>--</td>
 </tr>
 <tr class="even">
-<td><img src="img/客户端基础操作指南/移动按钮.png" style="width:0.26042in;height:0.23958in" /></td>
+<td><img src="../img/客户端基础操作指南/移动按钮.png" style="width:0.26042in;height:0.23958in" /></td>
 <td>移动</td>
 <td>支持对选中物体进行X、Y、Z三个方向的移动</td>
 <td>1</td>
 </tr>
 <tr class="odd">
-<td><img src="img/客户端基础操作指南/旋转按钮.png" style="width:0.26042in;height:0.21875in" /></td>
+<td><img src="../img/客户端基础操作指南/旋转按钮.png" style="width:0.26042in;height:0.21875in" /></td>
 <td>旋转</td>
 <td>支持对选中物体进行X、Y、Z三个方向的旋转</td>
 <td>2</td>
 </tr>
 <tr class="even">
-<td><img src="img/客户端基础操作指南/缩放按钮.png" style="width:0.21875in;height:0.23958in" /></td>
+<td><img src="../img/客户端基础操作指南/缩放按钮.png" style="width:0.21875in;height:0.23958in" /></td>
 <td>缩放</td>
 <td>支持对选中物体以物体中心点为中心进行缩放</td>
 <td>3</td>
 </tr>
 <tr class="odd">
-<td><img src="img/客户端基础操作指南/仿真运行.png" style="width:0.22917in;height:0.25in" /></td>
+<td><img src="../img/客户端基础操作指南/仿真运行.png" style="width:0.22917in;height:0.25in" /></td>
 <td>仿真运行</td>
 <td></td>
 <td>--</td>
 <td></td>
 </tr>
 <tr class="even">
-<td><img src="img/客户端基础操作指南/仿真结束.png" style="width:0.21875in;height:0.21875in" /></td>
+<td><img src="../img/客户端基础操作指南/仿真结束.png" style="width:0.21875in;height:0.21875in" /></td>
 <td>结束仿真运行</td>
 <td></td>e
 <td>--</td>
@@ -168,9 +168,9 @@ orcalab
 
 该模块主要用于管理视图布局中的物品与视角。最左侧按钮用于切换【大纲】【相机】，其中【大纲】用于管理视图布局中的物品与相机，【相机】用于切换视图视角。
 
-![](img/客户端基础操作指南/大纲.png)
+![](../img/客户端基础操作指南/大纲.png)
 
-![](img/客户端基础操作指南/相机.png)
+![](../img/客户端基础操作指南/相机.png)
 
 通过从资产库中拖拽资产至视图模块，添加物品和相机。添加至视图中的物品和相机同时会出现在【大纲】列表中。涉及功能操作如下：
 
@@ -190,7 +190,7 @@ orcalab
 
 用于展示场景布局展示。
 
-<img src="img/客户端基础操作指南/视图.png" width="77%" >
+<img src="../img/客户端基础操作指南/视图.png" width="77%" >
 
 在3D视图中配合键盘和鼠标操作，可实现对3D环境的查看和导航，如下是常见的快捷键。
 
@@ -218,21 +218,21 @@ orcalab
 该模块主要有编辑两个功能，【编辑】主要负责资产Transform属性编辑（Position、Rotation、Uniform
 Scale）。
 
-<img src="img/客户端基础操作指南/编辑.png" width="77%" >
+<img src="../img/客户端基础操作指南/编辑.png" width="77%" >
 
 
 【编辑】功能：在大纲列表或视图中选中资产，右侧【编辑栏】会显示该物品的Transform信息，包含Position、Rotation、Uniform
 Scale，可点击直接输入数字进行精确修改，同时也可通过滑动在鼠标移至数据条时出现的箭头进行相关参数的调整。
 
-<img src="img/客户端基础操作指南/大纲-视图-编辑.png" width="77%" >
+<img src="../img/客户端基础操作指南/大纲-视图-编辑.png" width="77%" >
 
 
 ### 资产与终端
 
 该模块主要有资产、终端两个功能，【资产】主要展示已在资产库中订阅成功的资产，【终端】主要展示仿真运行的进程。
 
-<img src="img/客户端基础操作指南/资产.png" width="77%" >
-<img src="img/客户端基础操作指南/终端.png" width="77%" >
+<img src="../img/客户端基础操作指南/资产.png" width="77%" >
+<img src="../img/客户端基础操作指南/终端.png" width="77%" >
 
 
 【资产】功能：展示已订阅资产。支持对已定阅资产进行包含、排除相应字段的模糊搜索。点击【打开资产库】按钮，可打开资产库。鼠标移至某个物品上时，最右侧会显示该物品的名称、路径、元数据等相关信息，并且可点击下方【复制】按钮，实现这些信息的复制。
