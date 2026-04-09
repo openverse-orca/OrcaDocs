@@ -83,7 +83,7 @@ pip install orca-lab
 # 命令行执行以下命令，首次启动OrcaLab（会自动安装依赖）
 orcalab
 ```
-![](img/install/first_start.png)
+![](../img/install/first_start.png)
 
 **注意**：
 
@@ -161,29 +161,29 @@ conda init
 conda activate orcalab
 ```
 #### 6.1.3问题：首次启动orcalab,安装组件包过程中报错
-![](img/install/error_proxy.png)
+![](../img/install/error_proxy.png)
 
 **解决方案**:
 - 检查是否开启了代理，如果开启了代理，将代理关闭或设置为直连。
-![](img/install/proxy_setting.png)
+![](../img/install/proxy_setting.png)
 
 ### 6.2 运行问题
 
 #### 6.2.1问题：运行Orcalab, 同步完资产后闪退
-![](img/install/run_eixt.png)
+![](../img/install/run_eixt.png)
 
 **解决方案**：
 - 权限问题，检查CMD是否有管理员权限
 - 打开CMD命令行时，选择"以管理员身份运行"
-![](img/install/run_cmd_admin.png)
+![](../img/install/run_cmd_admin.png)
 
 #### 6.2.2问题：硬件配置有独立显卡，但运行Orcalab非常卡顿，性能监控显示实际运行在集成显卡上
-![](img/install/Not_GPU.png)
+![](../img/install/Not_GPU.png)
 
 **解决方案**：
 - 首选图形处理器设置问题，打开NVIDIA控制面板。
 - 在3D设置中奖NVIDIA处理器设置为首选图形处理器
-![](img/install/set_GPU.png)
+![](../img/install/set_GPU.png)
 
 #### 6.2.3问题：软件启动后无法连接服务器
 
@@ -193,7 +193,7 @@ conda activate orcalab
 - 确认防火墙设置
 - 使用离线启动模式（如果已下载资产）
 
- ![](img/install/offline-login.jpg) 
+ ![](../img/install/offline-login.jpg) 
 
 ---
 
@@ -205,6 +205,6 @@ conda activate orcalab
 2. 检查终端错误信息
 3. 扫码联系技术支持团队
 
-![](img/install/chat_scode.png)
+![](../img/install/chat_scode.png)
 
 ---

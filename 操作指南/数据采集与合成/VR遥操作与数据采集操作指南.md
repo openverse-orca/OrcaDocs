@@ -31,19 +31,19 @@ VR遥操作需先完成硬件连接与软件初始化，数据采集时，通过
  - 使用 USB 线将 Pico 连接电脑，并开机。
  - 将`PicoController.apk` 复制到PICO设备目录中 
 
-![](img/pico_install.png)
+![](../../img/shucai/pico_install.png)
  - 佩戴VR设备，在 VR 视角中，找到文件管理器，查看安装包目录，使用右手手柄点击 **A 键**，确认安装刚刚下载的 apk 包。
 
 **步骤2** ：打开VR设备开发者模式
  - 在 VR 视角中，点击：  **设置 → 关于本机 → 软件版本号**， 使用确认键 **A 键** 对着软件版本号。 连续点击 **6–7 次**，调出开发者模式。  
  - 打开调试开关。
-![](img/pico_usb.jpg)
+![](../../img/shucai/pico_usb.jpg)
 **步骤3**：启动VR端OrcaGymCtrl程序 
  - 开启VR设备，选择底部的「资源库」（Pico Ultra 4设备直接在资源库中查找“OrcaGymCtrl”）。
- ![Pico设备资源库界面](img/pico_gym_controller.png)
+ ![Pico设备资源库界面](../../img/shucai/pico_gym_controller.png)
  - VR启动后会提示设置安全边界，可选择“重设边界”或“保持原有边界”（默认配置）。
  - 启动OrcaGymCtrl后，会进入3D程序界面：左侧显示三维红蓝绿坐标轴，中间有红色文字启动OrcaGymCtrl后，会进入3D程序界面：左侧显示三维红蓝绿坐标轴，中间有红色文字。**后续VR遥操作需始终保持此界面激活**。
- ![Pico设备资源库界面](img/pico_OrcaGymCtrl.png)
+ ![Pico设备资源库界面](../../img/shucai/pico_OrcaGymCtrl.png)
 
 **步骤4** ：安装adb工具（Windows需下载adb工具安装并设置环境变量）
 在Ubuntu终端中执行以下命令，安装Android调试工具（adb）
@@ -68,10 +68,10 @@ sudo apt install android-tools-adb android-tools-fastboot
 1. 资产库链接: https://simassets.orca3d.cn/
 
 2. 资产中心 → 订阅 **ShopScene_Scaning**
-![](img/shop_scan.png)
+![](../../img/shucai/shop_scan.png)
 
 1. 资产中心 → 订阅 **openloong**
-![](img/openloong.png)
+![](../../img/shucai/openloong.png)
 
   
 ## 二、遥操作数据采集
@@ -97,30 +97,30 @@ conda activate orcalab
 orcalab
 ```
 3. 启动过程中会自动下载已订阅的资产，请等待下载与同步完成。
-![](img/shop_download.png)
+![](../../img/shucai/shop_download.png)
 
 4. 资产下载完成后，在选择场景弹框中，选择 **shop 场景** ，选择默认布局。
-![](img/shop_select.png)
+![](../../img/shucai/shop_select.png)
 
 5. 在 OrcaLab 客户端菜单栏中，选择 **打开布局**，加载 `shop_openloong.json` 文件。
 ```bash
 #布局JSON 文件路径（注：布局文件定义了机器人初始位置及姿态）
   ~/OrcaManipulation/src/examples/超市场景青龙机器人数采案例/shop_openloong.json
 ```
-![](img/shop_layout.png)
+![](../../img/shucai/shop_layout.png)
 
 6.shopScense示例场景的yaml文件已配置为example.yaml，如需详细了解配置参数含义，请参考第三章节 数据采集任务配置文件说明
 ```bash
 #example.yaml文件路径
 ~/OrcaManipulation/src/examples/dataCollection
 ```
-![](img/shop_example1.png)
+![](../../img/shucai/shop_example1.png)
 
 ### 2.2 启动仿真
 
 1. 点击界面右上角 **绿色启动按钮**
 2. 选择 **无仿真程序（手动启动）**
-![](img/shop_sim1.png)
+![](../../img/shucai/shop_sim1.png)
 
 ### 2.3 开启数采脚本
 
@@ -137,14 +137,14 @@ cd ~/OrcaManipulation/src/examples/dataCollection
 python data_collection_tele.py  --level shop_scaning --agent_name openloong  --task_config example.yaml 
 ```
 
-![](img/run_shop_scan.png)
+![](../../img/shucai/run_shop_scan.png)
 
 ### 2.4 VR遥操作开始数据采集
 
 1. **机械臂复位** 进入抓取模式
    - 依次按压 **左摇杆**、**右摇杆**
    - 仿真环境中机械臂可移动，机器人进入抓取操作模式
-![](img/vr_hand.png)
+![](../../img/shucai/vr_hand.png)
 
 2. **手柄功能映射**
 
@@ -162,7 +162,7 @@ python data_collection_tele.py  --level shop_scaning --agent_name openloong  --t
    - 根据任务提示，抓取目标物体，放在篮子中。
    - 抓取完成后，再按一次左手柄扳机，保存采集的数据，并提示保存的目录，如数据失败，则进入下一个任务。  
     
-![](img/PICO_l_save.png)
+![](../../img/shucai/PICO_l_save.png)
 
 
 
@@ -237,7 +237,7 @@ python data_collection_tele.py  --level shop_scaning --agent_name openloong  --t
 2. 检查终端错误信息
 3. 扫码联系技术支持团队(入群请附上申请邀请码的学校/企业/个人信息等)
 
-![](img/chat_scode.png)
+![](../../img/shucai/chat_scode.png)
 
 ---
 

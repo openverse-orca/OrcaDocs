@@ -24,7 +24,7 @@ pip install -r requirements.txt
 订阅资产包名称：OrcaPlaygroundAssets
 ```
 - 订阅资产：找到OrcaPlaygroundAssets资产并订阅
-![](img/playground/play_assets.png)
+![](../img/playground/play_assets.png)
 
 #### 步骤 3：激活 OrcaLab 的 conda 环境
 
@@ -49,7 +49,7 @@ orcalab
 
    - `run_ackerman` - 小汽车仿真
 
-   ![](img/playground/run_ackerman.png)
+   ![](../img/playground/run_ackerman.png)
 
 3. 启动运行仿真程序后，W、S、A、D 键可控制前后左右移动方向。
 
@@ -240,6 +240,6 @@ orcalab --init-config
 2. 检查终端错误信息
 3. 扫码联系技术支持团队(入群请附上申请邀请码的学校/企业/个人信息等)
 
-![](img/install/chat_scode.png)
+![](../img/install/chat_scode.png)
 
 ---
