@@ -165,6 +165,7 @@ conda activate orcalab
 
 **解决方案**:
 - 检查是否开启了代理，如果开启了代理，将代理关闭或设置为直连。
+  
 ![](../img/install/proxy_setting.png)
 
 ### 6.2 运行问题
@@ -175,6 +176,7 @@ conda activate orcalab
 **解决方案**：
 - 权限问题，检查CMD是否有管理员权限
 - 打开CMD命令行时，选择"以管理员身份运行"
+  
 ![](../img/install/run_cmd_admin.png)
 
 #### 6.2.2问题：硬件配置有独立显卡，但运行Orcalab非常卡顿，性能监控显示实际运行在集成显卡上
@@ -183,6 +185,7 @@ conda activate orcalab
 **解决方案**：
 - 首选图形处理器设置问题，打开NVIDIA控制面板。
 - 在3D设置中奖NVIDIA处理器设置为首选图形处理器
+  
 ![](../img/install/set_GPU.png)
 
 #### 6.2.3问题：软件启动后无法连接服务器
