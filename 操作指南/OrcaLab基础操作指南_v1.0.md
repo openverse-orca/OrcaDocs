@@ -10,13 +10,13 @@ conda activate orcalab
 
 orcalab
 ```
-<img src="/img/客户端基础操作指南/orcalab终端启动页面.png" width="77%">
+<img src="img/客户端基础操作指南/orcalab终端启动页面.png" width="77%">
 
 启动后，会出现【正在同步资产包...】提示，会自动同步新订阅的资产包以及更新已订阅资产包。
 
 资产包同步完成后出现场景与布局选择界面，点击选择场景、布局后，点击【打开】按钮进入orcalab客户端界面。点击【取消】按钮或【ESC键】后，终端退出orcalab启动程序。
 
-<img src="/img/客户端基础操作指南/资产包同步.png" width="40%" > <img src="/img/客户端基础操作指南/选择场景.png" width="36%" >
+<img src="img/客户端基础操作指南/资产包同步.png" width="40%" > <img src="img/客户端基础操作指南/选择场景.png" width="36%" >
 
 
 默认可选择的场景有orcalab\_day（白天）、orcalab\_night（夜晚）、previewthumbnail\_orcalab（缩略图渲染）。关于更多场景用户可在资产库中订阅后，可查看选择。
