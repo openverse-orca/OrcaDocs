@@ -46,7 +46,7 @@ C:\ProgramData\miniconda3\Scripts\
 - 关闭所有已打开的命令行窗口
 - 重新打开一个新的命令行窗口，输入以下命令：
 ```bash
-# 如果输出 conda 25.x.x 之类的版本号，说明配置成功
+# 如果输出 conda x.x.x 之类的版本号，说明配置成功
 conda --version
 ```
 
