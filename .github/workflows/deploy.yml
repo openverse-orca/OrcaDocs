@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy to Aliyun OSS
-        uses: mengfeizhao/ossutil-action@master
+        uses: manyuanrong/ossutil-action@master
         with:
           endpoint: oss-cn-shanghai.aliyuncs.com
           access-key-id: ${{ secrets.OSS_ACCESS_KEY_ID }}
