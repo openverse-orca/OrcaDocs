@@ -1,0 +1,33 @@
+name: Deploy to Aliyun OSS
+
+on:
+  push:
+    branches:
+      - main # 或者你的主分支名
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # 根据项目需要修改
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build # 假设你的构建命令是 npm run build，生成 dist 目录
+
+      - name: Deploy to Aliyun OSS
+        uses: manyuanrong/ossutil-action@master
+        with:
+          endpoint: oss-cn-hangzhou.aliyuncs.com # 替换为你 Bucket 的实际 Endpoint
+          access-key-id: ${{ secrets.OSS_ACCESS_KEY_ID }}
+          access-key-secret: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
+          bucket: orca-docs-static # 替换为你创建的 Bucket 名称
+          folder: . # 或者指定你构建产物的目录，如 dist
