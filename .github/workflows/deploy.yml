@@ -1,9 +1,9 @@
 - name: Deploy to Aliyun OSS
-        uses: fregde/aliyun-oss-action@v1
-        with:
-          endpoint: oss-cn-shanghai.aliyuncs.com
-          access-key-id: ${{ secrets.OSS_ACCESS_KEY_ID }}
-          access-key-secret: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
-          bucket: orcalab-docs
-          source: ./
-          destination: oss://orcalab-docs/
+  uses: fregde/aliyun-oss-action@v1
+  with:
+    endpoint: https://oss-cn-shanghai.aliyuncs.com
+    access-key-id: ${{ secrets.OSS_ACCESS_KEY_ID }}
+    access-key-secret: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
+    bucket: orcalab-docs
+    source: ./
+    destination: oss://orcalab-docs/
