@@ -1,22 +1,9 @@
-name: Deploy to Aliyun OSS
-
-on:
-  push:
-    branches:
-      - main # 或者你的主分支名
-
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Deploy to Aliyun OSS
-        uses: mengfeizhao/ossutil-action@master
+- name: Deploy to Aliyun OSS
+        uses: fregde/aliyun-oss-action@v1
         with:
-          endpoint: oss-cn-shanghai.aliyuncs.com # 替换为你 Bucket 的实际 Endpoint
+          endpoint: oss-cn-shanghai.aliyuncs.com
           access-key-id: ${{ secrets.OSS_ACCESS_KEY_ID }}
           access-key-secret: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
-          bucket:  orcalab-docs # 替换为你创建的 Bucket 名称
-          folder: . # 或者指定你构建产物的目录，如 dist
+          bucket: orcalab-docs
+          source: ./
+          destination: oss://orcalab-docs/

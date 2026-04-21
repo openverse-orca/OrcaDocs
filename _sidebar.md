@@ -1,5 +1,5 @@
 <div style="text-align: center;">
-  <img src="ORCALOGO.png" alt="ORCA 官方Logo" title="ORCA Logo" width="80" />
+  <img src="ORCA Lab LOGO.png" alt="ORCA Lab 官方Logo" title="ORCA Lab Logo" width="80" />
 </div>
 <p style="text-align: center; font-family: 'Microsoft YaHei', sans-serif; font-size: 16px;">
   ORCA Lab Documentation
