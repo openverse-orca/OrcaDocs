@@ -12,19 +12,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20' # 根据项目需要修改
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Build
-        run: npm run build # 假设你的构建命令是 npm run build，生成 dist 目录
-
       - name: Deploy to Aliyun OSS
-        uses: manyuanrong/ossutil-action@master
+        uses: mengfeizhao/ossutil-action@master
         with:
           endpoint: oss-cn-shanghai.aliyuncs.com # 替换为你 Bucket 的实际 Endpoint
           access-key-id: ${{ secrets.OSS_ACCESS_KEY_ID }}
