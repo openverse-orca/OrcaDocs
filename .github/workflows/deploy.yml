@@ -14,13 +14,23 @@ jobs:
 
       - name: Install ossutil
         run: |
-          # 下载ossutil
+          # 关键命令1：打开“错误时立即退出”模式。任何命令失败（返回非0状态码），整个脚本就停止，不会继续执行错误的后续步骤。
+          set -e
+
           echo "正在下载ossutil..."
-          wget -q https://gosspublic.alicdn.com/ossutil/1.7.19/ossutil64
+          # 关键命令2：下载文件。如果wget失败，则执行 `||` 后面的命令：打印错误信息并退出（状态码1表示失败）。
+          wget -q https://gosspublic.alicdn.com/ossutil/1.7.19/ossutil64 || { echo "下载ossutil失败"; exit 1; }
+
+          # 赋予执行权限
           chmod +x ossutil64
+          # 将文件移动到系统目录并重命名
           sudo mv ossutil64 /usr/local/bin/ossutil
+
           echo "ossutil安装完成，版本信息："
-          ossutil --version
+          # 关键命令3：检查文件是否存在。如果上一步移动失败，这里会报错退出。
+          ls -l /usr/local/bin/ossutil || { echo "ossutil未找到"; exit 1; }
+          # 关键命令4：尝试运行命令。如果文件损坏或无执行权限，这里会报错退出。
+          ossutil --version || { echo "ossutil执行失败"; exit 1; }
           
       - name: Configure ossutil
         run: |
