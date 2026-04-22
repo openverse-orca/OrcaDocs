@@ -1,0 +1,54 @@
+name: Deploy to Aliyun OSS
+
+on:
+  push:
+    branches:
+      - dev # 或者你的主分支名
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install ossutil
+        run: |
+          # 下载ossutil
+          echo "正在下载ossutil..."
+          wget -q https://gosspublic.alicdn.com/ossutil/1.7.19/ossutil64
+          chmod +x ossutil64
+          sudo mv ossutil64 /usr/local/bin/ossutil
+          echo "ossutil安装完成，版本信息："
+          ossutil --version
+          
+      - name: Configure ossutil
+        run: |
+          # 配置ossutil，如果OSS_ENDPOINT没有设置，使用默认值
+          if [ -z "${{ secrets.OSS_ENDPOINT }}" ]; then
+            ossutil config -e oss-cn-shanghai.aliyuncs.com -i ${{ secrets.OSS_ACCESS_KEY_ID }} -k ${{ secrets.OSS_ACCESS_KEY_SECRET }}
+          else
+            ossutil config -e ${{ secrets.OSS_ENDPOINT }} -i ${{ secrets.OSS_ACCESS_KEY_ID }} -k ${{ secrets.OSS_ACCESS_KEY_SECRET }}
+          fi
+          
+      - name: Deploy to Aliyun OSS
+        run: |
+          # 同步文件到OSS，排除.git目录
+          echo "开始同步文件到OSS..."
+          echo "源目录：$(pwd)"
+          echo "目标OSS：oss://orcalab-docs/"
+          
+          # 列出要上传的文件
+          echo "将要上传的文件："
+          find . -type f -name "*" | grep -v ".git" | head -20
+          echo "..."
+          
+          # 执行同步
+          ossutil cp -rf --exclude ".git/**" ./ oss://orcalab-docs/
+          
+          # 验证上传
+          echo "上传完成，验证文件列表："
+          ossutil ls oss://orcalab-docs/ | head -20
+          echo "..."
+          
+          echo "部署完成！"
