@@ -134,7 +134,7 @@ conda env remove -n orcalab
 
 ### 6.1 安装问题
 
-#### 问题：pip 安装失败，下载速度慢
+#### 6.1.1 问题：pip 安装失败，下载速度慢
 
 **解决方案**：
 
@@ -147,7 +147,7 @@ conda env remove -n orcalab
 curl https://pypi.tuna.tsinghua.edu.cn/simple/
 ```
 
-#### 问题：conda 环境激活失败
+#### 6.1.2 问题：conda 环境激活失败
 
 **解决方案**：
 
@@ -163,7 +163,13 @@ conda activate orcalab
 
 ### 6.2 运行问题
 
-#### 问题：软件启动后无法连接服务器
+#### 6.2.1 问题：虚拟机上运行ORCA Lab显示帧率低
+
+**解决方案**：
+
+
+
+#### 6.2.2 问题：软件启动后无法连接服务器
 
 **解决方案**：
 
