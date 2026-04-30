@@ -44,14 +44,15 @@ orcalab
 
 #### 步骤 5：在 OrcaLab 中启动示例
 
-1. OrcaLab 界面右上角点运行按钮，打开选择仿真程序窗口  
-2. **仿真程序**列表中选择对应的示例程序：
+1. 需要在资产列表中找到hummer黄色小车，并拖到上面布局中。
+2. OrcaLab 界面右上角点运行按钮，打开选择仿真程序窗口。
+3. **仿真程序**列表中选择对应的示例程序：
 
    - `run_ackerman` - 小汽车仿真
 
    ![](../img/playground/run_ackerman.png)
 
-3. 启动运行仿真程序后，W、S、A、D 键可控制前后左右移动方向。
+4. 启动运行仿真程序后，W、S、A、D 键可控制前后左右移动方向。
 
 
 **更多配置信息参:OrcaPlayground/examples/wheeled_chassis/README.md**
