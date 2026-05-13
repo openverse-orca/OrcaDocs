@@ -24,7 +24,16 @@
 
 ## 二、安装步骤
 
-### 2.1 安装 Miniconda
+OrcaLab Windows版提供两种安装方式，您可以根据自己的需求选择：
+
+- **方式一：Conda + pip 安装** 
+- **方式二：EXE 安装包安装** 
+
+---
+
+### 方式一：Conda + pip 安装
+
+#### 2.1 安装 Miniconda
 **步骤1：** 下载Miniconda安装程序并安装。
 ```bash
 # 下载 Miniconda windows版本安装包
@@ -50,7 +59,7 @@ C:\ProgramData\miniconda3\Scripts\
 conda --version
 ```
 
-### 2.2 配置 PyPI 镜像源
+#### 2.2 配置 PyPI 镜像源
 
 为了加快下载速度，建议配置清华 PyPI 镜像源：
 
@@ -60,7 +69,7 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 pip config set install.trusted-host pypi.tuna.tsinghua.edu.cn
 ```
 
-### 2.3 创建orcalab运行的Conda环境
+#### 2.3 创建orcalab运行的Conda环境
 
 ```bash
 # 创建名为 orcalab 的 Python 3.12 环境
@@ -71,9 +80,7 @@ conda activate orcalab
 # 激活成功时，括号中显示创建的conda名称 e.g: (orcalab) C:\Users\Admin>
 ```
 
-
-
-### 2.4 安装 OrcaLab
+#### 2.4 安装 OrcaLab
 
 ```bash
 # 从 PyPI 安装 OrcaLab
@@ -81,7 +88,7 @@ pip install orca-lab
 #亦可通过指定版本号安装：pip install orca-lab==xx.x.x
 ```
 
-### 2.5 启动 OrcaLab
+#### 2.5 启动 OrcaLab
 
 ```bash
 # 命令行执行以下命令，首次启动OrcaLab（会自动安装依赖）
@@ -96,7 +103,39 @@ orcalab
 
 ---
 
+### 方式二：EXE 安装包安装
+
+#### 2.1 下载 OrcaLab EXE 安装包
+
+```bash
+# 下载 OrcaLab Windows 安装包
+# 请从官方渠道获取最新版本的 EXE 安装程序
+下载链接： https://www.orcalab.com/download
+```
+
+#### 2.2 运行安装程序
+
+**步骤1：** 双击下载的 EXE 安装文件
+**步骤2：** 按照安装向导提示完成安装
+- 选择安装路径
+![](../img/install/install_exe.png)
+- 等待安装完成，桌面快捷方式会自动创建
+
+#### 2.3 启动 OrcaLab
+
+安装完成后，可以通过以下方式启动：
+- 从桌面快捷方式启动
+- 从开始菜单中找到 OrcaLab 并启动
+
+**注意**：
+- 首次启动会自动安装必要的依赖包，等待安装完成即可
+- 第二次启动会进入软件界面
+
+---
+
 ## 三、检查安装环境及版本
+
+### 3.1 Conda + pip 安装方式验证
 
 安装完成后，可以通过以下方式验证：
 
@@ -111,17 +150,32 @@ pip show orca-lab
 orcalab
 ```
 
+### 3.2 EXE 安装方式验证
+
+- 检查桌面快捷方式是否正常创建
+- 从开始菜单或桌面快捷方式正常启动软件
+- 打开软件查看软件版本
+![](../img/install/version.png)
+
 --- 
 ## 四、OrcaLab升级方法
+
+### 4.1 Conda + pip 安装方式升级
 有升级包可用时
 ```bash
 # 需要添加 --upgrade 参数
 pip install --upgrade orca-lab
 ```
 
+### 4.2 EXE 安装方式升级
+- 下载最新版本的 EXE 安装包
+- 运行安装程序，默认会替换掉旧版本
+
 ---
 
 ## 五、OrcaLab卸载方法
+
+### 5.1 Conda + pip 安装方式卸载
 
 如果需要卸载 OrcaLab：
 
@@ -133,6 +187,11 @@ conda deactivate
 conda env remove -n orcalab
 ```
 
+### 5.2 EXE 安装方式卸载
+
+- 通过 Windows 控制面板卸载程序
+- 或运行安装目录下的卸载程序
+![](../img/install/exe_uninstall.png)
 
 ---
 
@@ -171,6 +230,15 @@ conda activate orcalab
 - 检查是否开启了代理，如果开启了代理，将代理关闭或设置为直连。
   
 ![](../img/install/proxy_setting.png)
+
+#### 6.1.4问题：按照安装步骤中方式一安装完成后，启动不了软件
+![](../img/install/device_guard_err.png)
+![](../img/install/denied_error.png)
+
+**解决方案**:
+- 在Windows安全设置中找到应用和浏览器控制，将智能应用控制开关关闭
+
+![](../img/install/permission_setting.png)
 
 ### 6.2 运行问题
 
