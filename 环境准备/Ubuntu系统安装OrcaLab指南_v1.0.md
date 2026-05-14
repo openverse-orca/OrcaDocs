@@ -19,7 +19,7 @@
 - 建议内存：大于32G
   
 ### 1.4 ORCALab最新版本号26.4.3
- - 2.4章节安装命令默认下载最新版本，亦可通过指定版本号安装：pip install orca-lab==xx.x.x
+ - 2.3章节安装命令默认下载最新版本，亦可通过指定版本号安装：pip install orca-lab==xx.x.x
 ---
 
 ## 二、安装步骤
@@ -37,24 +37,8 @@ bash Miniconda3-latest-Linux-x86_64.sh
 source ~/.bashrc
 ```
 
-### 2.2 配置 PyPI 镜像源
 
-为了加快下载速度，建议配置清华 PyPI 镜像源：
-
-```bash
-# 创建 pip 配置目录
-mkdir -p ~/.pip
-
-# 配置清华源
-cat > ~/.pip/pip.conf << EOF
-[global]
-index-url = https://pypi.tuna.tsinghua.edu.cn/simple
-[install]
-trusted-host = pypi.tuna.tsinghua.edu.cn
-EOF
-```
-
-### 2.3 创建 Conda 环境
+### 2.2 创建 Conda 环境
 
 ```bash
 # 创建名为 orcalab 的 Python 3.12 环境
@@ -65,15 +49,15 @@ conda activate orcalab
 # 激活成功时，括号中显示创建的conda名称 e.g: (orcalab) 123@E-AX:~/orcalab
 ```
 
-### 2.4 安装 OrcaLab
+### 2.3 安装 OrcaLab
 
 ```bash
-# 从 PyPI 安装 OrcaLab
-pip install orca-lab
+# 安装 OrcaLab,推荐清华源或阿里源安装,PyPI安装需挂梯子，且网速较慢
+pip install orca-lab -i https://pypi.tuna.tsinghua.edu.cn/simple
 #亦可通过指定版本号安装：pip install orca-lab==xx.x.x
 ```
 
-### 2.5 启动 OrcaLab
+### 2.4 启动 OrcaLab
 
 ```bash
 # 首次启动（会自动安装依赖）
