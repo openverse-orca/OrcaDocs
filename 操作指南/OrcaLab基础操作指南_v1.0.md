@@ -191,8 +191,7 @@ orcalab
 <td>--</td>
 </tr>
 <tr class="odd">
-<<<<<<< Updated upstream
-<td><img src="img/客户端基础操作指南/运行仿真后移动物体.png" style="width:0.22917in;height:0.25in" /></td>
+
 =======
 <td><img src="img/客户端基础操作指南/移动仿真物体.png" style="width:0.22917in;height:0.25in" /></td>
 >>>>>>> Stashed changes
