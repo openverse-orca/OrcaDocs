@@ -52,7 +52,7 @@ conda activate orcalab
 ### 2.3 安装 OrcaLab
 
 ```bash
-# 安装 OrcaLab,推荐清华源或阿里源安装,PyPI安装需挂梯子，且网速较慢
+# 安装 OrcaLab,推荐清华源或阿里源安装,默认源安装需挂梯子，且网速较慢
 pip install orca-lab -i https://pypi.tuna.tsinghua.edu.cn/simple
 #亦可通过指定版本号安装：pip install orca-lab==xx.x.x
 ```

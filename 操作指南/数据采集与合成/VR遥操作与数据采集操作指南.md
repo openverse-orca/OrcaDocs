@@ -19,8 +19,8 @@ cd OrcaManipulation
 # 激活 OrcaLab 的 conda 环境（根据你的环境名称调整）
 conda activate orcalab  # 激活你创建的 OrcaLab 环境名称
 
-# 安装项目依赖
-pip install -r requirements.txt
+# 安装项目依赖（推荐使用清华源或阿里源加快下载速度)
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple 
 ```
 
 ### 1.2 VR遥操作设备准备
@@ -67,10 +67,16 @@ sudo apt install android-tools-adb android-tools-fastboot
 
 1. 资产库链接: https://simassets.orca3d.cn/
 
-2. 资产中心 → 订阅 **ShopScene_Scaning**
+2. 资产中心 → 订阅灯光资产（必选） **run_light_night**
+   
+![](../../img/shucai/run_ligh.png)
+
+3. 资产中心 → 订阅场景资产(根据场景需求选择) **ShopScene_Scaning**
+   
 ![](../../img/shucai/shop_scan.png)
 
-1. 资产中心 → 订阅 **openloong**
+4. 资产中心 → 订阅机器人资产（根据场景需求选择） **openloong**
+   
 ![](../../img/shucai/openloong.png)
 
   

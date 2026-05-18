@@ -14,8 +14,8 @@ cd OrcaPlayground
 # 激活 OrcaLab 的 conda 环境（根据你的环境名称调整）
 conda activate orcalab  # 激活你创建的 OrcaLab 环境名称
 
-# 安装项目依赖
-pip install -r requirements.txt
+# 安装项目依赖（推荐使用清华源或阿里源加快下载速度)
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 #### 步骤2：登录资产库订阅OrcaPlaygroundAssets
   

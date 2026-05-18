@@ -40,7 +40,7 @@ orcalab
 
 顶部中间【26.1.2】用于显示orcalab版本号，左侧三个符号依次是隐藏、最大化、关闭。
 
-下层左侧依次是文件、编辑、帮助，中部依次是【移动】、【旋转】、【缩放】功能按钮，右侧依次是【仿真运行】、【停止仿真运行】按钮。
+下层左侧依次是文件、编辑、帮助，中部依次是【移动】、【旋转】、【缩放】等功能按钮，右侧依次是【仿真运行】、【停止仿真运行】按钮。
 
 <table>
 <tbody>
@@ -145,6 +145,61 @@ orcalab
 <td>缩放</td>
 <td>支持对选中物体以物体中心点为中心进行缩放</td>
 <td>3</td>
+</tr>
+<tr class="even">
+<td><img src="img/客户端基础操作指南/视角平移.png" style="width:0.26042in;height:0.23958in" /></td>
+<td>视角移动</td>
+<td>支持对视角进行上下左右方向的移动</td>
+<td>鼠标右键+a/d</td>
+</tr>
+<tr class="odd">
+<td><img src="img/客户端基础操作指南/视角旋转.png" style="width:0.26042in;height:0.21875in" /></td>
+<td>视角旋转</td>
+<td>支持对视角进行旋转</td>
+<<<<<<< Updated upstream
+<td>2</td>
+</tr>
+<tr class="even">
+<td><img src="img/客户端基础操作指南/视角放大缩小.png" style="width:0.21875in;height:0.23958in" /></td>
+=======
+<td>鼠标右键</td>
+</tr>
+<tr class="even">
+<td><img src="img/客户端基础操作指南/视角缩放.png" style="width:0.21875in;height:0.23958in" /></td>
+>>>>>>> Stashed changes
+<td>视角前进/后退</td>
+<td>支持控制视角前进/后退</td>
+<td>鼠标滚轮/右键+w(s)</td>
+</tr>
+</tr>
+<tr class="even">
+<td><img src="img/客户端基础操作指南/测距.png" style="width:0.26042in;height:0.23958in" /></td>
+<td>测距</td>
+<td>支持对仿真环境中物体进行测距，鼠标移至起始点可激活重新修改起始点位置</td>
+<td>--</td>
+</tr>
+<tr class="odd">
+<td><img src="img/客户端基础操作指南/量角.png" style="width:0.26042in;height:0.21875in" /></td>
+<td>量角</td>
+<td>支持对仿真环境中的物体测量角度，鼠标移至起始点与转折点可激活修改其位置</td>
+<td>--</td>
+</tr>
+<tr class="even">
+<td><img src="img/客户端基础操作指南/碰撞.png" style="width:0.21875in;height:0.23958in" /></td>
+<td>显示/隐藏碰撞</td>
+<td>显示/隐藏物理碰撞与关节</td>
+<td>--</td>
+</tr>
+<tr class="odd">
+<<<<<<< Updated upstream
+<td><img src="img/客户端基础操作指南/运行仿真后移动物体.png" style="width:0.22917in;height:0.25in" /></td>
+=======
+<td><img src="img/客户端基础操作指南/移动仿真物体.png" style="width:0.22917in;height:0.25in" /></td>
+>>>>>>> Stashed changes
+<td>运行仿真后移动物体</td>
+<td>支持在仿真运行过程中对仿真环境中的物体进行移动</td>
+<td>F3</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td><img src="img/客户端基础操作指南/仿真运行.png" style="width:0.22917in;height:0.25in" /></td>
