@@ -110,7 +110,7 @@ orcalab
 ```bash
 # 下载 OrcaLab Windows 安装包
 # 请从官方渠道获取最新版本的 EXE 安装程序
-下载链接： https://www.orcalab.com/download
+下载链接： https://www.xxxx.xxx
 ```
 
 #### 2.2 运行安装程序
@@ -130,6 +130,20 @@ orcalab
 **注意**：
 - 首次启动会自动安装必要的依赖包，等待安装完成即可
 - 第二次启动会进入软件界面
+
+#### 2.4 环境变量配置
+
+若需要手动在命令行使用conda相关命令，需要配置系统环境变量
+- 按下 Win + R，输入 sysdm.cpl 并回车，打开「系统属性」窗口； 
+- 切换到「高级」选项卡，点击「环境变量」； 
+- 在「系统变量」列表中找到 Path，双击打开； 
+- 点击「新建」，添加以下Miniconda安装路径（替换成你的实际路径）
+
+```bash
+#  Miniconda 安装路径
+C:\用户\用户名\miniconda3\
+C:\用户\用户名\miniconda3\Scripts\
+```
 
 ---
 
