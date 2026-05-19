@@ -156,17 +156,11 @@ orcalab
 <td><img src="img/客户端基础操作指南/视角旋转.png" style="width:0.26042in;height:0.21875in" /></td>
 <td>视角旋转</td>
 <td>支持对视角进行旋转</td>
-<<<<<<< Updated upstream
-<td>2</td>
-</tr>
-<tr class="even">
-<td><img src="img/客户端基础操作指南/视角放大缩小.png" style="width:0.21875in;height:0.23958in" /></td>
-=======
+
 <td>鼠标右键</td>
 </tr>
 <tr class="even">
 <td><img src="img/客户端基础操作指南/视角缩放.png" style="width:0.21875in;height:0.23958in" /></td>
->>>>>>> Stashed changes
 <td>视角前进/后退</td>
 <td>支持控制视角前进/后退</td>
 <td>鼠标滚轮/右键+w(s)</td>
@@ -191,10 +185,7 @@ orcalab
 <td>--</td>
 </tr>
 <tr class="odd">
-
-=======
 <td><img src="img/客户端基础操作指南/移动仿真物体.png" style="width:0.22917in;height:0.25in" /></td>
->>>>>>> Stashed changes
 <td>运行仿真后移动物体</td>
 <td>支持在仿真运行过程中对仿真环境中的物体进行移动</td>
 <td>F3</td>
@@ -210,7 +201,7 @@ orcalab
 <tr class="even">
 <td><img src="img/客户端基础操作指南/仿真结束.png" style="width:0.21875in;height:0.21875in" /></td>
 <td>结束仿真运行</td>
-<td></td>e
+<td></td>
 <td>--</td>
 <td></td>
 </tr>
