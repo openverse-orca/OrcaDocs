@@ -230,7 +230,7 @@ python data_collection_tele.py  --level shop_scaning --agent_name openloong  --t
 
 
 
-## 📖 更多功能：如数据增广/回放信息等，探索 `README.md`
+## 📖 更多功能：如数据增广、回放信息、实时显示相机画面等功能，请探索代码仓中 `README.md`
 
 - OrcaManipulation 主仓库：https://github.com/openverse-orca/OrcaManipulation
 - OrcaManipulation详细说明：查看 `README.md`
