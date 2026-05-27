@@ -100,7 +100,7 @@ orcalab
 ```bash
 # 下载 OrcaLab Windows 安装包
 # 请从官方渠道获取最新版本的 EXE 安装程序
-下载链接： https://www.xxxx.xxx
+下载链接： https://www.orca3d.cn/download.html
 ```
 
 #### 2.2 运行安装程序
