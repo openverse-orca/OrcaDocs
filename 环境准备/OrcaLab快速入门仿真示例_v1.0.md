@@ -1,12 +1,20 @@
 # 快速入门仿真示例
 通过四轮底盘小汽车的仿真示例，还原真实四轮底盘的物理运动特性，可直观模拟重力、摩擦力、动力对车辆行驶状态的影响。通过交互式操作与参数调节，你能深入理解三大物理要素在仿真系统中车辆起步、加速、转向、制动等精准呈现。
 
+## ORCALab 版本和 Playground 版本配套关系
+
+| ORCALab 版本    | Playground 版本   |
+|----------------|-------------------|
+| ORCALab26.4.3  | release/26.4.3    |
+| ORCALab26.5.1  | release/26.5.1    |
+
 ## 🎯一、 快速开始一个仿真示例
 
 #### 步骤 1：从github获取OrcaPlayground代码仓库，已集成 OrcaLab 支持。
 
 ```bash
-git clone https://github.com/openverse-orca/OrcaPlayground.git
+# 克隆OrcaPlayground仓库并直接切换到目标分支
+git clone --branch release/xx.x.x https://github.com/openverse-orca/OrcaPlayground.git
 
 # 进入项目目录
 cd OrcaPlayground
@@ -32,6 +40,7 @@ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 # 激活 OrcaLab 的 conda 环境（根据你的环境名称调整）
 conda activate orcalab  # 激活你创建的 OrcaLab 环境名称
 ```
+⚠️ **注意** ：windows下通过exe安装的Orcalab，必须进入CMD命令行，切换至OrcaPlayground目录，启动Orcalab
 
 #### 步骤 4：在当前目录启动 OrcaLab
 
