@@ -40,7 +40,7 @@ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 # 激活 OrcaLab 的 conda 环境（根据你的环境名称调整）
 conda activate orcalab  # 激活你创建的 OrcaLab 环境名称
 ```
-⚠️ **注意** ：windows下通过exe安装的Orcalab，必须进入CMD命令行，切换至OrcaPlayground目录，启动Orcalab
+⚠️ **注意** ：windows下通过exe安装的Orcalab，必须打开CMD命令行，进入OrcaPlayground目录，使用命令行启动Orcalab
 
 #### 步骤 4：在当前目录启动 OrcaLab
 
