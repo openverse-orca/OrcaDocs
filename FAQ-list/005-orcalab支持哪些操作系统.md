@@ -5,7 +5,7 @@ OrcaLab可以在哪些操作系统上运行？对系统版本有什么具体要�
 
 ## 回答
 
-目前，OrcaLab **仅支持Linux操作系统**，特别是Ubuntu的特定版本。
+目前，OrcaLab 仅支持Linux操作系统和Windows操作系统，特别是Ubuntu的特定版本。
 
 ## 支持的操作系统
 
@@ -22,12 +22,18 @@ Ubuntu 24.04 LTS (Noble Numbat)
 - **Ubuntu 22.04 LTS**：稳定性更高，兼容性最佳
 - **Ubuntu 24.04 LTS**：较新版本，性能可能更优
 
-
+### 🪟 Windows系统要求
+```bash
+# 首选系统版本
+Windows 10/11
+```
+#### 系统选择建议
+- 建议选择Windows 11操作系统，因为它提供了更好的性能和稳定性。
 
 ### 🚫 不支持的操作系统
 
 #### Windows系统
-- ❌ Windows 10/11 不支持
+- ❌ Windows 10以下的系统 未官方测试
 - ❌ Windows Server 不支持  
 - ❌ WSL (Windows Subsystem for Linux) 支持度有限
 
@@ -154,7 +160,7 @@ lspci | grep -i nvidia
 
 ### 📦 环境准备检查清单
 
-- [ ] Ubuntu 22.04/24.04 LTS
+- [ ] Ubuntu 22.04/24.04 LTS/Windows 11
 - [ ] x86_64架构
 - [ ] NVIDIA RTX显卡
 - [ ] 合适的驱动版本
@@ -180,7 +186,6 @@ lspci | grep -i nvidia
 
 ### 🔮 可能支持的系统
 根据用户需求，未来可能考虑支持：
-- Windows版本（通过WSL2或原生支持）
 - macOS版本（Apple Silicon适配）
 - 更多Linux发行版
 
@@ -192,7 +197,7 @@ lspci | grep -i nvidia
 ## 系统选择建议
 
 ### 🎯 新手用户
-推荐**Ubuntu 22.04 LTS**：
+推荐**Ubuntu 22.04 LTS** 或者**Windows 11**：
 - 长期支持版本
 - 社区支持丰富
 - 稳定性最佳
