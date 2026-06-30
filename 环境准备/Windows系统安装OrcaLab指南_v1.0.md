@@ -18,7 +18,7 @@
 - 建议配备 NVIDIA 显卡（RTX 40/50 系列）
 - 建议内存：大于32G
 
-### 1.4 ORCALab最新版本号:26.6.1
+### 1.4 ORCALab最新版本号:26.6.3
  - 2.3章节安装命令默认下载最新版本，亦可通过指定版本号安装：pip install orca-lab==xx.x.x
 
 ---
@@ -168,7 +168,7 @@ orcalab
 ### 4.1 Conda + pip 安装方式升级
 有升级包可用时
 ```bash
-# 需要添加 --upgrade 参数
+# 需要添加 --upgrade 参数，也可以指定版本号升级orca-lab==xx.x.x
 pip install --upgrade orca-lab
 ```
 
