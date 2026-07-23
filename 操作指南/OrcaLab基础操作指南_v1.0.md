@@ -1,16 +1,8 @@
 # OrcaLab基础操作指南
 
-## 启动
-```bash
-##任意位置打开终端，切换至conda环境：*
+## 启动OrcaLab
 
-conda activate orcalab
-
-##启动orcalab客户端*
-
-orcalab
-```
-<img src="img/客户端基础操作指南/orcalab终端启动页面.png" width="77%">
+`注：根据操作系统选择相应的启动方式，具体参考环境准备章节`
 
 启动后，会出现【正在同步资产包...】提示，会自动同步新订阅的资产包以及更新已订阅资产包。
 
