@@ -45,7 +45,6 @@ Open the Asset Library page at https://simassets.orca3d.cn/. Registered users ca
 After successful registration, you will be automatically logged in and the Asset Library interface will appear.
 
  ![](../img/register/assets.png)
----
 
 ## 2. Common Registration Issues
 #### 2.1 Email Verification Code Issues
