@@ -100,4 +100,4 @@ Installing and using OrcaLab on multiple computers is feasible. The key lies in 
 ## Related Links
 - [OrcaLab Installation Guide](environment-setup/ubuntu-installation-guide-v1.0.md)
 - [How to check if OrcaLab is installed successfully?](FAQ-list/025-how-to-check-if-orcalab-is-installed-successfully.md)
-- [What is the Asset Library and how to use it?](FAQ-list/046-what-is-the-asset-library-and-how-to-use-it.md)
+- [What is the Asset Library and how to use it?](FAQ-list/044-what-is-the-asset-library-and-how-to-use-it.md)

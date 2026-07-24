@@ -98,4 +98,4 @@ OrcaLab has high requirements for network connection stability and speed, especi
 ## Related Links
 - [What hardware configuration is required to install OrcaLab?](FAQ-list/016-hardware-requirements-for-installing-orcalab.md)
 - [What to do if pip install OrcaLab download is slow?](FAQ-list/022-what-to-do-if-pip-install-download-is-slow.md)
-- [What to do if Asset Library access is slow?](FAQ-list/059-what-to-do-if-asset-library-access-is-slow.md)
+- [What to do if Asset Library access is slow?](FAQ-list/057-what-to-do-if-asset-library-access-is-slow.md)

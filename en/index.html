@@ -118,23 +118,17 @@
           },
             // 分页设置 - 通过插件动态切换
             pagination: {
-            previousText: '上一章节',
-            nextText: '下一章节',
+            previousText: 'Previous Chapter',
+            nextText: 'Next Chapter',
            },
             /*搜索相关设置*/
             search: {
                 paths: 'auto',
-                placeholder: {
-                    '/': '搜索',
-                    '/en/': 'Search'
-                },
-                noData: {
-                    '/': '找不到结果',
-                    '/en/': 'No results found'
-                },
+                placeholder: 'Search',
+                noData: 'No results found',
                 depth: 4,
                 hideOtherSidebarContent: false,
-                namespace: 'Docsify-Guide',
+                namespace: 'Docsify-Guide-EN',
             },
 
             count:{
@@ -178,15 +172,14 @@
           window.$docsify.plugins = (window.$docsify.plugins || []).concat(function(hook, vm) {
             hook.doneEach(function() {
               updateLanguageSwitcher();
-              // 更新分页文案
-              var isEN = vm.route.path.indexOf('/en/') === 0;
+              // 更新分页文案（en 目录始终为英文）
               var prevEl = document.querySelector('.pagination-item--previous .pagination-item-label');
               var nextEl = document.querySelector('.pagination-item--next .pagination-item-label');
               if (prevEl) {
-                prevEl.textContent = isEN ? 'PREVIOUS' : '上一章节';
+                prevEl.textContent = 'PREVIOUS';
               }
               if (nextEl) {
-                nextEl.textContent = isEN ? 'NEXT' : '下一章节';
+                nextEl.textContent = 'NEXT';
               }
             });
           });
