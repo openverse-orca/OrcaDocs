@@ -261,7 +261,7 @@ conda activate orcalab
 
 **解决方案**：
 - 首选图形处理器设置问题，打开NVIDIA控制面板。
-- 在3D设置中奖NVIDIA处理器设置为首选图形处理器
+- 在3D设置中将NVIDIA处理器设置为首选图形处理器
   
 ![](../img/install/set_GPU.png)
 
