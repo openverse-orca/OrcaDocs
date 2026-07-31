@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ORCA Lab-Guide</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 设置浏览器图标 -->
+    <link rel="icon" href="/assets/ORCALab.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/assets/ORCALab.png" type="image/x-icon" />
+    <!-- 默认主题 -->
+    <link rel="stylesheet" href="/assets/vue.css">
+    <!-- 自定义CSS：替换Google Fonts，使用系统默认字体 -->
+    <style>
+      /* 全局字体设置，避免使用Google Fonts */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !important;
+      }
+      
+      /* 标题字体设置 */
+      h1, h2, h3, h4, h5, h6 {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !important;
+      }
+      
+      /* 代码字体设置 */
+      code, pre {
+        font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace !important;
+      }
+
+      /* 语言切换按钮样式 */
+      .language-switcher {
+        position: fixed;
+        top: 12px;
+        right: 60px;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .language-switcher .lang-btn {
+        cursor: pointer;
+        padding: 4px 10px;
+        font-size: 13px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background: #fff;
+        color: #666;
+        transition: all 0.2s;
+        text-decoration: none;
+        user-select: none;
+      }
+      .language-switcher .lang-btn:hover {
+        border-color: #0070F3;
+        color: #0070F3;
+      }
+      .language-switcher .lang-btn.active {
+        background: #0070F3;
+        color: #fff;
+        border-color: #0070F3;
+      }
+      .language-switcher .lang-divider {
+        color: #ddd;
+        font-size: 13px;
+      }
+      /* 侧边栏语言切换按钮在移动端隐藏 */
+      @media (max-width: 768px) {
+        .language-switcher {
+          top: 10px;
+          right: 50px;
+        }
+        .language-switcher .lang-btn {
+          padding: 2px 6px;
+          font-size: 11px;
+        }
+      }
+    </style>
+</head>
+
+<body>
+    <!-- 语言切换按钮 -->
+    <div class="language-switcher" id="languageSwitcher">
+      <a class="lang-btn" href="/" data-lang="zh">中文</a>
+      <span class="lang-divider">|</span>
+      <a class="lang-btn" href="/en/" data-lang="en">EN</a>
+    </div>
+
+    <!-- 定义加载时候的动作 -->
+    <div id="app">加载中...</div>
+    <script>
+        window.$docsify = {
+            // 项目名称
+            name: '',
+            root: './', // 文档根目录（默认当前）
+            // 侧边栏支持，默认加载的是项目根目录下的_sidebar.md文件
+            loadSidebar: '_sidebar.md',
+            sidebarCollapse: true, // 可选：启用侧边栏折叠功能
+            themeColor: '#0070F3',
+            sidebarDisplayLevel: 6,
+            // 导航栏支持，默认加载的是项目根目录下的_navbar.md文件
+            //loadNavbar: true,
+            // 封面支持，默认加载的是项目根目录下的_coverpage.md文件
+            coverpage: true,
+            // 最大支持渲染的标题层级
+            maxLevel: 5,
+            // 自定义侧边栏后默认不会再生成目录，设置生成目录的最大层级（建议配置为2-4）
+            subMaxLevel: 3,
+            // 小屏设备下合并导航栏到侧边栏
+            mergeNavbar: true,
+            auto2top: true,
+            //Latex设置
+            latex: {
+            inlineMath   : [['$', '$'], ['\\(', '\\)']],
+            displayMath  : [['$$', '$$']],
+            customOptions: {}
+          },
+            // 分页设置 - 通过插件动态切换
+            pagination: {
+            previousText: 'Previous Chapter',
+            nextText: 'Next Chapter',
+           },
+            /*搜索相关设置*/
+            search: {
+                paths: 'auto',
+                placeholder: 'Search',
+                noData: 'No results found',
+                depth: 4,
+                hideOtherSidebarContent: false,
+                namespace: 'Docsify-Guide-EN',
+            },
+
+            count:{
+            countable: true,
+            position: 'top',
+            margin: '10px',
+            float: 'right',
+            fontsize:'0.9em',
+            color:'rgb(90,90,90)',
+            language:'chinese',
+            isExpected: true
+        }
+        }
+    </script>
+
+    <!-- 自定义插件：语言切换高亮 + 动态更新分页文案 -->
+    <script>
+      (function() {
+        function updateLanguageSwitcher() {
+          var path = window.location.pathname;
+          var isEN = path.indexOf('/en/') === 0 || path === '/en';
+          var zhBtn = document.querySelector('.lang-btn[data-lang="zh"]');
+          var enBtn = document.querySelector('.lang-btn[data-lang="en"]');
+          if (zhBtn && enBtn) {
+            zhBtn.classList.toggle('active', !isEN);
+            enBtn.classList.toggle('active', isEN);
+          }
+          // 更新加载提示
+          var app = document.getElementById('app');
+          if (app) {
+            app.textContent = isEN ? 'Loading...' : '加载中...';
+          }
+        }
+
+        // 页面加载和路由变化时更新
+        document.addEventListener('DOMContentLoaded', updateLanguageSwitcher);
+        window.addEventListener('popstate', updateLanguageSwitcher);
+
+        // Docsify 路由钩子
+        if (window.$docsify) {
+          window.$docsify.plugins = (window.$docsify.plugins || []).concat(function(hook, vm) {
+            hook.doneEach(function() {
+              updateLanguageSwitcher();
+              // 更新分页文案（en 目录始终为英文）
+              var prevEl = document.querySelector('.pagination-item--previous .pagination-item-label');
+              var nextEl = document.querySelector('.pagination-item--next .pagination-item-label');
+              if (prevEl) {
+                prevEl.textContent = 'PREVIOUS';
+              }
+              if (nextEl) {
+                nextEl.textContent = 'NEXT';
+              }
+            });
+          });
+        }
+      })();
+    </script>
+
+ <!-- MathJax -->
+<script src="/assets/tex-mml-chtml.js"></script>
+<script src="/assets/docsify-latex@0.js"></script>
+<!-- docsify的js依赖 -->
+<script src="/assets/docsify.min.js"></script>
+<!-- emoji表情支持 -->
+<!-- <script src="assets/emoji.min.js"></script>  -->
+
+<!-- 图片放大缩小支持 -->
+<script src="/assets/zoom-image.min.js"></script>
+<!-- 搜索功能支持 -->
+<script src="/assets/search.min.js"></script>
+
+<!-- code render-->
+<script src="/assets/prism-bash.js"></script>
+<script src="/assets/prism-python.js"></script>
+<script src="/assets/docsify-pagination.min.js"></script>
+<script src="/assets/docsify-copy-code.js"></script>
+<!--  <script src="https://fastly.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script> -->
+
+  
+
+</body>
+</html>
