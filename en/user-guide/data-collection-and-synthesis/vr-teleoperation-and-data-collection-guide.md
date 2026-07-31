@@ -31,19 +31,19 @@ VR teleoperation requires completing hardware connection and software initializa
  - Use a USB cable to connect the Pico to the computer and power it on.
  - Copy `PicoController.apk` to the PICO device directory
 
-![](img/shucai/pico_install.png)
+![](../../img/shucai/pico_install.png)
  - Wear the VR device. In the VR view, find the file manager, browse to the APK directory, and press the **A button** on the right-hand controller to confirm installation of the APK.
 
 **Step 2**: Enable VR device developer mode
  - In the VR view, navigate to: **Settings → About → Software Version**, point at the software version number using the confirm button **A button**, and click continuously **6–7 times** to enable developer mode.
  - Turn on the debugging switch.
-![](img/shucai/pico_usb.jpg)
+![](../../img/shucai/pico_usb.jpg)
 **Step 3**: Launch the VR-side OrcaGymCtrl application
  - Turn on the VR device and select "Library" at the bottom (on Pico Ultra 4 devices, search for "OrcaGymCtrl" directly in the Library).
- ![Pico Device Library Interface](img/shucai/pico_gym_controller.png)
+ ![Pico Device Library Interface](../../img/shucai/pico_gym_controller.png)
  - After VR starts, you will be prompted to set a safety boundary. You can choose "Reset Boundary" or "Keep Existing Boundary" (default configuration).
  - After launching OrcaGymCtrl, you will enter a 3D program interface: the left side displays a 3D red-blue-green coordinate axis, with red text in the center. **The VR teleoperation requires this interface to remain active at all times**.
- ![Pico Device Library Interface](img/shucai/pico_OrcaGymCtrl.png)
+ ![Pico Device Library Interface](../../img/shucai/pico_OrcaGymCtrl.png)
 
 **Step 4**: Install ADB tools (Windows requires downloading ADB tools and configuring environment variables)
 Run the following command in the Ubuntu terminal to install Android Debug Bridge (adb):
@@ -69,15 +69,15 @@ sudo apt install android-tools-adb android-tools-fastboot
 
 2. Asset Center → Subscribe to lighting asset (required) **run_light_night**
 
-![](img/shucai/run_ligh.png)
+![](../../img/shucai/run_ligh.png)
 
 3. Asset Center → Subscribe to scene asset (select based on scene requirements) **ShopScene_Scaning**
 
-![](img/shucai/shop_scan.png)
+![](../../img/shucai/shop_scan.png)
 
 4. Asset Center → Subscribe to robot asset (select based on scene requirements) **openloong**
 
-![](img/shucai/openloong.png)
+![](../../img/shucai/openloong.png)
 
 
 ## 2. Teleoperation Data Collection
@@ -103,30 +103,30 @@ conda activate orcalab
 orcalab
 ```
 3. During launch, subscribed assets will be downloaded automatically. Please wait for download and sync to complete.
-![](img/shucai/shop_download.png)
+![](../../img/shucai/shop_download.png)
 
 4. After asset download is complete, in the Select Scene dialog, choose the **shop scene** and select the default layout.
-![](img/shucai/shop_select.png)
+![](../../img/shucai/shop_select.png)
 
 5. In the OrcaLab client menu bar, select **Open Layout** and load the `shop_openloong.json` file.
 ```bash
 # Layout JSON file path (Note: the layout file defines the robot's initial position and pose)
   ~/OrcaManipulation/src/examples/超市场景青龙机器人数采案例/shop_openloong.json
 ```
-![](img/shucai/shop_layout.png)
+![](../../img/shucai/shop_layout.png)
 
 6. The YAML file for the shopScene example scene has been pre-configured as example.yaml. For detailed information on configuration parameter meanings, please refer to Chapter 3: Data Collection Task Configuration File Description.
 ```bash
 # example.yaml file path
 ~/OrcaManipulation/src/examples/dataCollection
 ```
-![](img/shucai/shop_example1.png)
+![](../../img/shucai/shop_example1.png)
 
 ### 2.2 Start Simulation
 
 1. Click the **green Start button** in the upper-right corner of the interface
 2. Select **No Simulation Program (Manual Start)**
-![](img/shucai/shop_sim1.png)
+![](../../img/shucai/shop_sim1.png)
 
 ### 2.3 Run the Data Collection Script
 
@@ -143,14 +143,14 @@ cd ~/OrcaManipulation/src/examples/dataCollection
 python data_collection_tele.py  --level shop_scaning --agent_name openloong  --task_config example.yaml
 ```
 
-![](img/shucai/run_shop_scan.png)
+![](../../img/shucai/run_shop_scan.png)
 
 ### 2.4 VR Teleoperation Data Collection
 
 1. **Robot Arm Reset** — enter grasping mode
    - Press the **Left Joystick** and then the **Right Joystick** in sequence
    - The robot arm in the simulation environment becomes movable, and the robot enters grasping operation mode
-![](img/shucai/vr_hand.png)
+![](../../img/shucai/vr_hand.png)
 
 2. **Controller Button Mapping**
 
@@ -168,7 +168,7 @@ python data_collection_tele.py  --level shop_scaning --agent_name openloong  --t
    - According to the task prompts, grasp the target object and place it in the basket.
    - After completing the grasp, press the left controller trigger once more to save the collected data. The save directory will be displayed. If data collection fails, proceed to the next task.
 
-![](img/shucai/PICO_l_save.png)
+![](../../img/shucai/PICO_l_save.png)
 
 
 
@@ -243,7 +243,7 @@ If you encounter issues, please:
 2. Check terminal error messages
 3. Scan the QR code to contact the technical support team (please include your school/company/personal information when joining the group)
 
-![](img/shucai/chat_scode.png)
+![](../../img/shucai/chat_scode.png)
 
 ---
 
