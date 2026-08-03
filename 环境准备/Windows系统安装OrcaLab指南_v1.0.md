@@ -18,7 +18,7 @@
 - 建议配备 NVIDIA 显卡（RTX 40/50 系列）
 - 建议内存：大于32G
 
-### 1.4 ORCALab最新版本号:26.6.3
+### 1.4 ORCALab最新版本号:26.7.1
  - 2.3章节安装命令默认下载最新版本，亦可通过指定版本号安装：pip install orca-lab==xx.x.x
 
 ---
@@ -261,7 +261,7 @@ conda activate orcalab
 
 **解决方案**：
 - 首选图形处理器设置问题，打开NVIDIA控制面板。
-- 在3D设置中奖NVIDIA处理器设置为首选图形处理器
+- 在3D设置中将NVIDIA处理器设置为首选图形处理器
   
 ![](../img/install/set_GPU.png)
 
