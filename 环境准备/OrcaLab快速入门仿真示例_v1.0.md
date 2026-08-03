@@ -122,6 +122,7 @@ OrcaPlayground/
 - **OrcaLocomotion** - (examples/orca_locomotion/README.md)：PyPI 包回放 Go2 / G1 运动控制策略
 - **场景复制** - (examples/replicator/README.md)：Actor 与 Light 批量生成
 - **流体仿真** - (examples/fluid/README.md)：SPH 流体与 MuJoCo 刚体耦合
+- **Franka 多机械臂 RL** - (examples/franka_rl/README.md)：SB3 + HER，多臂并行训练 + 局部坐标隔离
 
 
 > **⚠️ 重要提示：资产准备**
