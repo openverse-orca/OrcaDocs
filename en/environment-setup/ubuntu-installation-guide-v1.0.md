@@ -2,9 +2,9 @@
 
 ## 1. System Requirements
 
-### 1.1 Operating System
+### 1.1 Operating System and Hardware Requirements
 
-- **Recommended Systems**: Ubuntu 22.04 LTS, Ubuntu 24.04 LTS, UOS V20
+- **Reference**: [System and GPU Support](environment-setup/system-and-gpu-support.md)
 
 ### 1.2 Prerequisites
 
@@ -12,13 +12,8 @@
 - **Network Requirements**: A stable network connection is required
 - **System Permissions**: sudo privileges are required to install system dependencies
 - **User Registration**: See the User Registration & Management section to complete user registration
-### 1.3 Hardware Requirements
 
-- An NVIDIA graphics card is recommended (RTX 40/50 series)
-- Recommended driver version: ≥535.00 (RTX 40 series) or ≥550.00 (RTX 50 series)
-- Recommended memory: >32GB
-
-### 1.4 ORCALab Latest Version: 26.6.3
+### 1.3 ORCALab Latest Version: 26.7.1
  - The installation command in Section 2.3 downloads the latest version by default. You may also install a specific version: pip install orca-lab==xx.x.x
 
 ---

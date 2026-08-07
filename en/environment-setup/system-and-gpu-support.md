@@ -194,6 +194,6 @@ Docker support is limited:
 
 ## 7. Related Links
 
-- [Linux Installation Guide](ubuntu-installation-guide-v1.0.md)
-- [Windows Installation Guide](windows-installation-guide-v1.0.md)
-- [FAQ: What operating systems does OrcaLab support](../FAQ-list/005-what-operating-systems-does-orcalab-support.md)
+- [Linux Installation Guide](environment-setup/ubuntu-installation-guide-v1.0.md)
+- [Windows Installation Guide](environment-setup/windows-installation-guide-v1.0.md)
+- [FAQ: What operating systems does OrcaLab support](FAQ-list/005-what-operating-systems-does-orcalab-support.md)
