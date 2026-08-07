@@ -10,6 +10,7 @@
 - **ORCA Lab**
   - [**Welcome to ORCA Lab**](README.md)
 - **Environment Setup**
+  - [**System & GPU Support**](environment-setup/system-and-gpu-support.md)
   - [**User Registration & Management**](environment-setup/user-registration-and-management.md)
   - [**Linux Installation Guide**](environment-setup/ubuntu-installation-guide-v1.0.md)
   - [**Windows Installation Guide**](environment-setup/windows-installation-guide-v1.0.md)
