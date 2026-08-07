@@ -104,7 +104,7 @@ Using OrcaLab requires:
 ### ✅ Support Provided
 - **Documentation Support**: Complete user documentation
 - **Community Forum**: User discussion and problem-solving
-- **Open-Source Examples**: GitHub code repositories
+- **Open-Source Examples**: GitHub code repositories (e.g., OrcaPlayground/OrcaManipulation)
 - **Basic Q&A**: Frequently asked questions
 
 ### ❌ Support NOT Provided
