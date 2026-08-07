@@ -4,7 +4,7 @@
 
 ### 1.1 Operating System and Hardware Requirements
 
-- **Reference**: [System and GPU Support](environment-setup/system-and-gpu-support.md)
+- **Reference**: [System and GPU Support](/environment-setup/system-and-gpu-support.md)
 
 ### 1.2 Prerequisites
 
