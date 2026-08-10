@@ -99,3 +99,4 @@
 ### [099-虚拟机上运行ORCALab帧率低](FAQ-list/099-虚拟机上运行ORCALab帧率低.md)
 ### [100-Ubuntu显示器设置缩放导致仿真画面卡顿怎么办](FAQ-list/100-Ubuntu显示器设置缩放导致仿真画面卡顿怎么办.md)
 ### [101-OrcaLab在混合GPU环境下可能默认使用集成显卡而非独立显卡](FAQ-list/101-OrcaLab在混合GPU环境下可能默认使用集成显卡而非独立显卡.md)
+### [102-RTX50系列显存和内存均未占满情况下在Linux上运行OrcaLab卡死](FAQ-list/102-RTX50系列显存和内存均未占满情况下在Linux上运行OrcaLab卡死.md)
