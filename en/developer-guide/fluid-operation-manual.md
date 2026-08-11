@@ -20,13 +20,31 @@ conda create -n orcalab python=3.12
 ### 1.3 Download Teleoperation Code
 
 Clone the `dev` branch of the following three repositories in the same directory:
-- OrcaGym dev
-- OrcaManipulation dev
-- OrcaPlayground dev
+
+| Repository URL | Branch |
+|---------|------|
+| `https://github.com/openverse-orca/OrcaGym.git` | dev |
+| `https://github.com/openverse-orca/OrcaManipulation.git` | dev |
+| `https://github.com/openverse-orca/OrcaPlayground.git` | dev |
+
+**Clone command example:**
+```bash
+git clone -b dev https://github.com/openverse-orca/OrcaGym.git
+git clone -b dev https://github.com/openverse-orca/OrcaManipulation.git
+git clone -b dev https://github.com/openverse-orca/OrcaPlayground.git
+```
 
 ![OrcaGym dev asset](../img/fluid/orcagym_dev.png)
 ![OrcaManipulation dev asset](../img/fluid/OrcaManipulation_dev.png)
 ![OrcaPlayground dev asset](../img/fluid/orcaplayground_dev.png)
+
+### 1.4 Install Dependencies
+
+Run the following in `<repo-root>/OrcaManipulation`:
+
+```bash
+pip install -r requirements.txt
+```
 ---
 
 ## 2. Pico Setup

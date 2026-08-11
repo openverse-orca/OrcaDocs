@@ -15,8 +15,9 @@
 
 ```bash
 conda create -n orcalab python=3.12
-pip install -i https://test.pypi.org/simple/ orca-link==26.7.1.2
-pip install -i https://test.pypi.org/simple/ orca-xpbd==26.7.1.16
+pip install orca-sph==26.8.1
+pip install orca-link==26.8.1
+pip install orca-xpbd==26.8.1
 ```
 
 ![Environment configuration](../img/routi/environment.png)
@@ -24,13 +25,31 @@ pip install -i https://test.pypi.org/simple/ orca-xpbd==26.7.1.16
 ### 1.3 Download Teleoperation Code
 
 Clone the specified branches of the following three repositories in the same directory:
-- OrcaGym cloth_dev
-- OrcaManipulation dev
-- OrcaPlayground cloth_dev
+
+| Repository URL | Branch |
+|---------|------|
+| `https://github.com/openverse-orca/OrcaGym.git` | cloth_dev |
+| `https://github.com/openverse-orca/OrcaManipulation.git` | dev |
+| `https://github.com/openverse-orca/OrcaPlayground.git` | cloth_dev |
+
+**Clone command example:**
+```bash
+git clone -b cloth_dev https://github.com/openverse-orca/OrcaGym.git
+git clone -b dev https://github.com/openverse-orca/OrcaManipulation.git
+git clone -b cloth_dev https://github.com/openverse-orca/OrcaPlayground.git
+```
 
 ![OrcaGym cloth_dev asset](../img/routi/orcagym_cloth_dev.png)
 ![OrcaManipulation dev asset](../img/routi/OrcaManipulation_dev.png)
 ![OrcaPlayground cloth_dev asset](../img/routi/orcaplayground_cloth_dev.png)
+
+### 1.4 Install Dependencies
+
+Run the following in `<repo-root>/OrcaManipulation`:
+
+```bash
+pip install -r requirements.txt
+```
 ---
 
 ## 2. Pico Setup
