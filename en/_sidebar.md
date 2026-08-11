@@ -22,6 +22,8 @@
 - **Developer Guide**
   - [**OrcaGym API Documentation**](developer-guide/development-guide.md)
   - [**MCP & CLI Operation Guide**](developer-guide/mcp-cli-basic-operation-guide.md)
+  - [**Fluid Operation Manual**](developer-guide/fluid-operation-manual.md)
+  - [**Softbody Operation Manual**](developer-guide/softbody-operation-manual.md)
 - **FAQ & Troubleshooting**
   - [**FAQ**](FAQ.md)
 
