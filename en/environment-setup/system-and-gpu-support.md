@@ -25,15 +25,6 @@ This page describes the operating systems, graphics cards, and other hardware re
 x86_64 (64-bit) architecture
 ```
 
-### 1.4 Unsupported Operating Systems
-
-- ❌ macOS (both Intel and Apple Silicon are unsupported)
-- ❌ Windows versions below 10 (not officially tested)
-- ❌ Windows Server (unsupported)
-- ❌ WSL (Windows Subsystem for Linux) — limited support
-- ❌ CentOS / RHEL / Fedora (not officially tested)
-- ❌ Debian (may be compatible but not officially supported)
-
 ---
 
 ## 2. GPU Support
