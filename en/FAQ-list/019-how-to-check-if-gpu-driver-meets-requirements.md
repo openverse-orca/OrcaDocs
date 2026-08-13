@@ -48,8 +48,8 @@ In the sample output above, you can see `Driver Version: 550.67`. This is the NV
 
 ### Step 4: Compare with OrcaLab Requirements
 According to OrcaLab's installation guide, the driver version requirements are as follows:
-- **RTX 40 Series**: Recommended driver version **≥ 535.00**
-- **RTX 50 Series**: Recommended driver version **≥ 550.00**
+- **RTX 40 Series**: Recommended driver version **≥ 535.00, ≤ 580.00**
+- **RTX 50 Series**: Recommended driver version **≥ 550.00, ≤ 580.00**
 
 Compare the driver version from your `nvidia-smi` output with the above requirements:
 - **If your driver version meets the requirements**: No additional action is needed; you can proceed directly with OrcaLab installation.

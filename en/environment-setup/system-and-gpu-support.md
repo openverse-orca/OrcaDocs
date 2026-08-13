@@ -35,8 +35,8 @@ OrcaLab recommends NVIDIA RTX series GPUs, **RTX 3060 or above required**.
 
 | GPU Series | Supported Models | Recommended Driver | Notes |
 | --- | --- | --- | --- |
-| RTX 50 Series | RTX 5090, 5080, 5070, etc. | ≥ 550.00 | 5080/5070 verified on Windows 11; 5090 and same-architecture models theoretically compatible but untested |
-| RTX 40 Series | RTX 4090, 4080, 4070, 4060, etc. | ≥ 535.00 | 4080 (Win11), 4070 (Win11/Ubuntu 22.04/24.04), 4060 (Ubuntu 24.04) verified; 4090 etc. untested |
+| RTX 50 Series | RTX 5090, 5080, 5070, etc. | ≥ 550.00, ≤ 580.00 | 5080/5070 verified on Windows 11; 5090 and same-architecture models theoretically compatible but untested |
+| RTX 40 Series | RTX 4090, 4080, 4070, 4060, etc. | ≥ 535.00, ≤ 580.00 | 4080 (Win11), 4070 (Win11/Ubuntu 22.04/24.04), 4060 (Ubuntu 24.04) verified; 4090 etc. untested |
 | RTX 30 Series | RTX 3090, 3080, 3070, 3060 | ≥ 470.00 | ⚠️ Only 3090 (Windows 10) verified; 3080/3070/3060 theoretically compatible but untested; 30 series may be limited in high-performance scenarios |
 
 > ⚠️ **Note**: Same-series models not listed above are theoretically compatible but have not been officially tested. If you encounter issues, please contact technical support.
