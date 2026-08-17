@@ -1,15 +1,7 @@
-<div style="text-align: center;">
-  <img src="../assets/ORCALabLOGO.png" alt="ORCA Lab Official Logo" title="ORCA Lab Logo" width="80" />
-</div>
-<p style="text-align: center; font-size: 16px;">
-  ORCA Lab Documentation
-</p> 
-
-
-
 - **ORCA Lab**
   - [**Welcome to ORCA Lab**](README.md)
 - **Environment Setup**
+  - [**System & GPU Support**](environment-setup/system-and-gpu-support.md)
   - [**User Registration & Management**](environment-setup/user-registration-and-management.md)
   - [**Linux Installation Guide**](environment-setup/ubuntu-installation-guide-v1.0.md)
   - [**Windows Installation Guide**](environment-setup/windows-installation-guide-v1.0.md)
@@ -21,6 +13,8 @@
 - **Developer Guide**
   - [**OrcaGym API Documentation**](developer-guide/development-guide.md)
   - [**MCP & CLI Operation Guide**](developer-guide/mcp-cli-basic-operation-guide.md)
+  - [**Fluid Operation Manual**](developer-guide/fluid-operation-manual.md)
+  - [**Softbody Operation Manual**](developer-guide/softbody-operation-manual.md)
 - **FAQ & Troubleshooting**
   - [**FAQ**](FAQ.md)
 

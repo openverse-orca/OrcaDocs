@@ -35,7 +35,6 @@ Comprehensively covers the key stages of robot virtual simulation training:
 ### Technical Advantages
 - **High-fidelity physics simulation**: Precisely simulates gravity, friction, and dynamic characteristics
 - **GPU acceleration support**: Optimized for NVIDIA RTX series graphics cards
-- **Open-source ecosystem integration**: Supports GitHub repositories, compatible with mainstream development tools
 
 ### Use Cases
 - 🏫 **Education & Teaching**: Robotics course experiments, academic research

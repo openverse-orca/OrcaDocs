@@ -99,3 +99,4 @@
 ### [099 - Low framerate when running OrcaLab on a virtual machine](FAQ-list/099-low-framerate-when-running-orcalab-on-virtual-machine.md)
 ### [100 - Ubuntu display scaling causes simulation stutter — what to do?](FAQ-list/100-ubuntu-display-scaling-causes-simulation-stutter.md)
 ### [101 - OrcaLab may use integrated GPU instead of discrete GPU in mixed GPU environments](FAQ-list/101-orcalab-may-use-integrated-gpu-instead-of-discrete-gpu.md)
+### [102 - RTX 50 series freezes when running OrcaLab on Linux while VRAM and RAM are not fully occupied](FAQ-list/102-rtx-50-series-freezes-on-linux-while-VRAM-and-RAM-not-fully-occupied.md)

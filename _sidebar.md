@@ -1,16 +1,7 @@
-<div style="text-align: center;">
-  <img src="assets/ORCALabLOGO.png" alt="ORCA Lab 官方Logo" title="ORCA Lab Logo" width="80" />
-</div>
-<p style="text-align: center; font-size: 16px;">
-  ORCA Lab Documentation
-</p> 
-
-
-
-
 - **ORCA Lab**
   - [**欢迎使用ORCA Lab**](/README.md)
 - **环境准备**
+  - [**系统及显卡**](环境准备/系统及显卡支持.md)
   - [**用户注册与管理**](环境准备/用户注册与管理.md)
   - [**Linux上安装ORCA Lab指南**](环境准备/Ubuntu系统安装OrcaLab指南_v1.0.md)
   - [**Windows上安装ORCA Lab指南**](环境准备/Windows系统安装OrcaLab指南_v1.0.md)
@@ -22,6 +13,8 @@
 - **开发者指南**
   - [**OrcaGym API开发文档**](开发者指南/开发指南.md)
   - [**MCP&CLI基础操作指南**](开发者指南/MCP&CLI基础操作指南.md)
+  - [**流体操作指南**](开发者指南/流体操作手册.md)
+  - [**柔体操作指南**](开发者指南/柔体操作手册.md)
 - **常见问题与解决方法**
   - [**FAQ**](/FAQ.md)
 

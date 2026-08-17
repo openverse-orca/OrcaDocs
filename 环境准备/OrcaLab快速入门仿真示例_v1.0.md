@@ -113,7 +113,7 @@ OrcaPlayground/
 - **足式机器人 RL 训练** -(examples/legged_gym/README.md)：SB3 PPO + RLlib APPO，支持 Lite3 / Go2 / G1 等
 - **轮式底盘** - (examples/wheeled_chassis/README.md)：差速驱动 + 阿克曼转向
 - **XBot 机器人** - (examples/xbot/README.md)：基于 humanoid-gym 预训练模型的双足行走
-- **D12 双臂机器人** - (examples/d12/README.md)：脚本轨迹回放（[demo](examples/d12/demo/README.md)）+ ACT 策略推理（[act](examples/d12/act/README.md)）
+- **D12 双臂机器人** - (examples/d12/README.md)：脚本轨迹回放(examples/d12/demo/README.md)+ ACT 策略推理(examples/d12/act/README.md)
 - **Franka 多机械臂 RL** - (examples/franka_rl/README.md)：SB3 + HER，多臂并行训练 + 局部坐标隔离
 - **Ant RL** - (examples/ant_rl/README.md)：Ray RLlib APPO 多环境并行训练（单机 / 集群）
 - **无人机推力驱动仿真** - (examples/drone_driver/README.md)：CTBR 控制器 + 多机型 profile，键盘 / 手柄操控
