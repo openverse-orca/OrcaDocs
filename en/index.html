@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>ORCA Lab-Guide</title>
+    <title>ORCA Lab Documentation</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="description" content="Description">
+    <meta name="description" content="ORCA Lab Documentation - Physics Simulation Platform">
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <!-- 设置浏览器图标 -->
@@ -13,6 +13,8 @@
     <link rel="shortcut icon" href="/assets/ORCALab.png" type="image/x-icon" />
     <!-- 默认主题 -->
     <link rel="stylesheet" href="/assets/vue.css">
+    <!-- OrcaGym 风格自定义样式 -->
+    <link rel="stylesheet" href="/assets/orca-style.css">
     <!-- 自定义CSS：替换Google Fonts，使用系统默认字体 -->
     <style>
       /* 全局字体设置，避免使用Google Fonts */
@@ -30,85 +32,91 @@
         font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace !important;
       }
 
-      /* 语言切换按钮样式 */
-      .language-switcher {
-        position: fixed;
-        top: 12px;
-        right: 60px;
-        z-index: 9999;
-        display: flex;
-        align-items: center;
-        gap: 4px;
-      }
-      .language-switcher .lang-btn {
-        cursor: pointer;
-        padding: 4px 10px;
-        font-size: 13px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        background: #fff;
-        color: #666;
-        transition: all 0.2s;
-        text-decoration: none;
-        user-select: none;
-      }
-      .language-switcher .lang-btn:hover {
-        border-color: #0070F3;
-        color: #0070F3;
-      }
-      .language-switcher .lang-btn.active {
-        background: #0070F3;
-        color: #fff;
-        border-color: #0070F3;
-      }
-      .language-switcher .lang-divider {
-        color: #ddd;
-        font-size: 13px;
-      }
-      /* 侧边栏语言切换按钮在移动端隐藏 */
-      @media (max-width: 768px) {
-        .language-switcher {
-          top: 10px;
-          right: 50px;
-        }
-        .language-switcher .lang-btn {
-          padding: 2px 6px;
-          font-size: 11px;
-        }
+      /* 移动端汉堡菜单按钮位置 */
+      .orca-menu-toggle {
+        margin-right: 0;
       }
     </style>
 </head>
 
 <body>
-    <!-- 语言切换按钮 -->
-    <div class="language-switcher" id="languageSwitcher">
-      <a class="lang-btn" href="/" data-lang="zh">中文</a>
-      <span class="lang-divider">|</span>
-      <a class="lang-btn" href="/en/" data-lang="en">EN</a>
-    </div>
+    <!-- 顶部导航栏 -->
+    <nav class="orca-top-nav">
+      <div class="orca-top-nav-row orca-top-nav-row--main">
+        <button class="orca-menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+        <div class="orca-nav-brand">
+          <img src="/assets/ORCALabLOGO.png" alt="ORCA Lab Logo">
+          <span id="brandText">ORCA Lab Docs</span>
+        </div>
+        <div class="orca-nav-right">
+          <button class="orca-theme-toggle" id="themeToggle" title="Toggle dark/light mode" aria-label="Toggle theme">
+            <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+          <div class="orca-search-wrapper">
+            <!-- 搜索框会被 docsify search 插件填充，这里预留位置 -->
+          </div>
+          <div class="language-switcher" id="languageSwitcher">
+            <a class="lang-btn" href="/" data-lang="zh">中文</a>
+            <span class="lang-divider">|</span>
+            <a class="lang-btn" href="/en/" data-lang="en">EN</a>
+          </div>
+        </div>
+      </div>
+      <div class="orca-top-nav-row orca-top-nav-row--sub">
+        <div class="orca-nav-links" id="navLinks">
+          <!-- 导航链接通过 JS 动态生成 -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- 移动端遮罩层 -->
+    <div class="orca-overlay" id="overlay"></div>
+
+    <!-- 回到顶部按钮 -->
+    <button class="orca-back-to-top" id="backToTop" aria-label="Back to top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <!-- 右侧页内目录 TOC -->
+    <aside class="orca-toc" id="orcaToc">
+      <div class="orca-toc-title" id="tocTitle">目录</div>
+      <ul id="tocList"></ul>
+    </aside>
 
     <!-- 定义加载时候的动作 -->
     <div id="app">加载中...</div>
+
+    <!-- 页脚 -->
+    <footer class="orca-footer">
+      <div class="orca-footer-inner">
+        <div class="orca-footer-copyright">Copyright © Songying Technology Co., Ltd.</div>
+        <div class="orca-footer-logo">
+          <img src="/assets/ORCALabLOGO.png" alt="ORCA Lab Logo">
+        </div>
+      </div>
+    </footer>
     <script>
         window.$docsify = {
-            // 项目名称
+            // 项目名称（顶部导航已显示，这里留空）
             name: '',
+            logo: '',
             root: './', // 文档根目录（默认当前）
             // 侧边栏支持，默认加载的是项目根目录下的_sidebar.md文件
             loadSidebar: '_sidebar.md',
             sidebarCollapse: true, // 可选：启用侧边栏折叠功能
-            themeColor: '#0070F3',
+            themeColor: '#6d28d9',
             sidebarDisplayLevel: 6,
-            // 导航栏支持，默认加载的是项目根目录下的_navbar.md文件
+            // 导航栏支持
             //loadNavbar: true,
             // 封面支持，默认加载的是项目根目录下的_coverpage.md文件
             coverpage: true,
             // 最大支持渲染的标题层级
-            maxLevel: 5,
-            // 自定义侧边栏后默认不会再生成目录，设置生成目录的最大层级（建议配置为2-4）
-            subMaxLevel: 3,
-            // 小屏设备下合并导航栏到侧边栏
-            mergeNavbar: true,
+            maxLevel: 4,
+            // 自定义侧边栏后默认不会再生成目录，设置生成目录的最大层级（右侧 TOC 由我们自己生成）
+            subMaxLevel: 0,
+            // 小屏设备下合并导航栏到侧边栏（我们自己处理移动端菜单）
+            mergeNavbar: false,
             auto2top: true,
             //Latex设置
             latex: {
@@ -118,8 +126,8 @@
           },
             // 分页设置 - 通过插件动态切换
             pagination: {
-            previousText: 'Previous Chapter',
-            nextText: 'Next Chapter',
+            previousText: '上一章节',
+            nextText: '下一章节',
            },
             /*搜索相关设置*/
             search: {
@@ -144,12 +152,345 @@
         }
     </script>
 
-    <!-- 自定义插件：语言切换高亮 + 动态更新分页文案 -->
+    <!-- 自定义插件：语言切换 + 导航栏 + TOC + 搜索框移动 -->
     <script>
       (function() {
-        function updateLanguageSwitcher() {
+        // 导航配置 - 中英文（key 是用于匹配路径前缀的标识）
+        const navConfig = {
+          zh: [
+            { text: '简介', href: '#/README.md', prefix: '#/README', id: 'intro', keywords: ['ORCA Lab', '简介'] },
+            { text: '环境准备', href: '#/环境准备/系统及显卡支持.md', prefix: '#/环境准备/', id: 'setup', keywords: ['环境准备', '环境'] },
+            { text: '操作指南', href: '#/操作指南/OrcaLab基础操作指南_v1.0.md', prefix: '#/操作指南/', id: 'guide', keywords: ['操作指南', '操作'] },
+            { text: '开发者指南', href: '#/开发者指南/开发指南.md', prefix: '#/开发者指南/', id: 'dev', keywords: ['开发者指南', '开发者'] },
+            { text: '常见问题', href: '#/FAQ.md', prefix: '#/FAQ', id: 'faq', keywords: ['常见问题', 'FAQ'] }
+          ],
+          en: [
+            { text: 'Home', href: '#/README.md', prefix: '#/README', id: 'intro', keywords: ['ORCA Lab', 'Welcome'] },
+            { text: 'Setup', href: '#/environment-setup/system-and-gpu-support.md', prefix: '#/environment-setup/', id: 'setup', keywords: ['Environment Setup', 'Setup', 'Environment'] },
+            { text: 'User Guide', href: '#/user-guide/orca-lab-basic-operation-guide-v1.0.md', prefix: '#/user-guide/', id: 'guide', keywords: ['User Guide'] },
+            { text: 'Developer', href: '#/developer-guide/development-guide.md', prefix: '#/developer-guide/', id: 'dev', keywords: ['Developer Guide', 'Developer'] },
+            { text: 'FAQ', href: '#/FAQ.md', prefix: '#/FAQ', id: 'faq', keywords: ['FAQ', 'Troubleshooting'] }
+          ]
+        };
+
+        // 获取当前页面属于哪个导航分类
+        function getCurrentNavCategory() {
+          var lang = isEnglish() ? 'en' : 'zh';
+          var links = navConfig[lang];
+          // 浏览器会对中文 hash 做百分号编码，需要解码后再比较
+          var currentHash = decodeURIComponent(window.location.hash || '#/README.md');
+          
+          for (var i = 0; i < links.length; i++) {
+            var link = links[i];
+            // 检查当前路径是否以该分类前缀开头
+            if (currentHash.indexOf(link.prefix) === 0) {
+              return link;
+            }
+          }
+          // 默认返回第一个（简介）
+          return links[0];
+        }
+
+        // 过滤侧边栏，只显示当前分类下的子页面
+        function filterSidebar() {
+          var sidebar = document.querySelector('.sidebar');
+          if (!sidebar) return;
+
+          var currentCategory = getCurrentNavCategory();
+          var sidebarNav = sidebar.querySelector('.sidebar-nav');
+          if (!sidebarNav) return;
+
+          // docsify 侧边栏结构：ul > li (分类标题，可能包含 strong 和子 ul)
+          // 我们需要：找到当前分类，显示它下面的子链接，隐藏其他分类
+          var topLevelLis = sidebarNav.querySelectorAll(':scope > ul > li');
+          var found = false;
+          
+          topLevelLis.forEach(function(li) {
+            var strong = li.querySelector(':scope > p > strong, :scope > strong, :scope > a > strong');
+            var link = li.querySelector(':scope > a');
+            var subUl = li.querySelector(':scope > ul');
+
+            // 判断这个顶级 li 是否属于当前分类
+            var isMatch = false;
+
+            // 方式1: 通过直接链接 href 匹配
+            if (link) {
+              var href = link.getAttribute('href') || '';
+              if (href.indexOf(currentCategory.prefix) === 0) {
+                isMatch = true;
+              }
+            }
+
+            // 方式2: 通过子菜单中任意链接的 href 匹配前缀
+            if (!isMatch && subUl) {
+              var subLinks = subUl.querySelectorAll('a');
+              for (var j = 0; j < subLinks.length; j++) {
+                var subHref = subLinks[j].getAttribute('href') || '';
+                if (subHref.indexOf(currentCategory.prefix) === 0) {
+                  isMatch = true;
+                  break;
+                }
+              }
+            }
+
+            // 方式3: 通过 strong 文本匹配 keywords
+            if (!isMatch && strong && currentCategory.keywords) {
+              var sText = strong.textContent.trim();
+              for (var k = 0; k < currentCategory.keywords.length; k++) {
+                if (sText.indexOf(currentCategory.keywords[k]) >= 0) {
+                  isMatch = true;
+                  break;
+                }
+              }
+            }
+
+            if (isMatch) {
+              found = true;
+              li.style.display = '';
+              // 展开子菜单
+              if (subUl) {
+                subUl.style.display = '';
+                li.classList.add('open');
+              }
+              // 把分类标题文字加粗显示（作为侧边栏的标题）
+              if (strong) {
+                strong.style.display = 'block';
+                strong.style.fontWeight = '800';
+                strong.style.color = 'var(--primary-dark)';
+                strong.style.fontSize = '1rem';
+                strong.style.padding = '8px 12px';
+                strong.style.margin = '0';
+                strong.style.borderBottom = '1px solid var(--border)';
+                strong.style.marginBottom = '8px';
+              }
+            } else {
+              // 判断这是否是顶级分类项（有 strong 或有子 ul），如果是则隐藏
+              var isTopLevelCategory = strong || (subUl && !link);
+              if (isTopLevelCategory) {
+                li.style.display = 'none';
+              } else {
+                li.style.display = '';
+              }
+            }
+          });
+
+          // 如果没找到匹配项，显示所有（容错）
+          if (!found) {
+            topLevelLis.forEach(function(li) {
+              li.style.display = '';
+              var subUl = li.querySelector(':scope > ul');
+              if (subUl) subUl.style.display = '';
+            });
+          }
+        }
+
+        function isEnglish() {
           var path = window.location.pathname;
-          var isEN = path.indexOf('/en/') === 0 || path === '/en';
+          return path.indexOf('/en/') === 0 || path === '/en' || path === '/en/';
+        }
+
+        function updateNavigation() {
+          var lang = isEnglish() ? 'en' : 'zh';
+          var navLinks = document.getElementById('navLinks');
+          var brandText = document.getElementById('brandText');
+          var tocTitle = document.getElementById('tocTitle');
+          var searchInput = document.querySelector('.orca-search-wrapper input');
+          
+          if (!navLinks) return;
+
+          // 更新品牌文字
+          if (brandText) {
+            brandText.textContent = lang === 'en' ? 'ORCA Lab Docs' : 'ORCA Lab 文档';
+          }
+
+          // 更新 TOC 标题
+          if (tocTitle) {
+            tocTitle.textContent = lang === 'en' ? 'On this page' : '目录';
+          }
+
+          // 更新导航链接
+          var links = navConfig[lang];
+          navLinks.innerHTML = '';
+          var currentCategory = getCurrentNavCategory();
+          links.forEach(function(link) {
+            var a = document.createElement('a');
+            a.href = link.href;
+            a.textContent = link.text;
+            a.dataset.navId = link.id;
+            // 高亮当前分类
+            if (link.id === currentCategory.id) {
+              a.classList.add('active');
+            }
+            navLinks.appendChild(a);
+          });
+
+          // 更新搜索框 placeholder
+          if (searchInput) {
+            searchInput.placeholder = lang === 'en' ? 'Search' : '搜索';
+          }
+
+          // 更新文档 title
+          document.title = lang === 'en' ? 'ORCA Lab Documentation' : 'ORCA Lab 文档';
+        }
+
+        // 将 docsify 的搜索框移动到顶部导航
+        function moveSearchBox() {
+          var searchWrapper = document.querySelector('.orca-search-wrapper');
+          if (!searchWrapper) return;
+
+          // 查找所有不在 wrapper 内的 .search 元素
+          var allSearchEls = document.querySelectorAll('.search');
+          var targetEl = null;
+          allSearchEls.forEach(function(el) {
+            if (!searchWrapper.contains(el) && el.querySelector('input')) {
+              if (!targetEl) targetEl = el;
+              else el.style.display = 'none';
+            }
+          });
+
+          if (targetEl && !searchWrapper.querySelector('.search')) {
+            searchWrapper.appendChild(targetEl);
+            targetEl.style.display = '';
+            // 搜索结果面板样式由 CSS 控制（.orca-search-wrapper .results-panel）
+            // 搜索结果项链接颜色
+            var resultLinks = targetEl.querySelectorAll('.matching-post a');
+            resultLinks.forEach(function(link) {
+              link.style.color = '';
+            });
+
+            // 绑定搜索框展开/收起逻辑
+            var input = targetEl.querySelector('input[type="search"]');
+            if (input && !targetEl._expandedBound) {
+              targetEl._expandedBound = true;
+              input.addEventListener('focus', function() {
+                searchWrapper.classList.add('is-active');
+              });
+              input.addEventListener('input', function() {
+                if (input.value) {
+                  searchWrapper.classList.add('is-active');
+                }
+              });
+              // ESC 键收起
+              input.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                  input.blur();
+                  searchWrapper.classList.remove('is-active');
+                }
+              });
+              // 点击搜索结果后收起（mousedown 阶段就收起，但不阻止默认跳转）
+              targetEl.addEventListener('mousedown', function(e) {
+                if (e.target.closest('a')) {
+                  searchWrapper.classList.remove('is-active');
+                }
+              });
+              // 点击搜索框外部任意位置收起
+              document.addEventListener('mousedown', function(e) {
+                if (!searchWrapper.contains(e.target)) {
+                  searchWrapper.classList.remove('is-active');
+                }
+              });
+            }
+          }
+        }
+
+        // 生成右侧 TOC
+        function generateTOC() {
+          var tocList = document.getElementById('tocList');
+          var content = document.querySelector('.markdown-section');
+          if (!tocList || !content) return;
+
+          var headings = content.querySelectorAll('h2, h3, h4');
+          if (headings.length === 0) {
+            document.getElementById('orcaToc').style.display = 'none';
+            return;
+          }
+
+          document.getElementById('orcaToc').style.display = 'block';
+          tocList.innerHTML = '';
+
+          headings.forEach(function(heading, index) {
+            // 为标题添加 id（如果没有）
+            if (!heading.id) {
+              heading.id = 'heading-' + index;
+            }
+
+            var li = document.createElement('li');
+            li.className = 'toc-' + heading.tagName.toLowerCase();
+            
+            var a = document.createElement('a');
+            a.href = '#' + heading.id;
+            a.textContent = heading.textContent;
+            a.dataset.target = heading.id;
+            
+            a.addEventListener('click', function(e) {
+              e.preventDefault();
+              var target = document.getElementById(heading.id);
+              if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            });
+
+            li.appendChild(a);
+            tocList.appendChild(li);
+          });
+
+          // 滚动时高亮当前 TOC 项
+          updateTOCActive();
+        }
+
+        function updateTOCActive() {
+          var tocLinks = document.querySelectorAll('#tocList a');
+          var headings = document.querySelectorAll('.markdown-section h2, .markdown-section h3, .markdown-section h4');
+          if (headings.length === 0) return;
+
+          var scrollPos = window.scrollY + 100;
+          var activeIndex = 0;
+
+          headings.forEach(function(heading, index) {
+            if (heading.offsetTop <= scrollPos) {
+              activeIndex = index;
+            }
+          });
+
+          tocLinks.forEach(function(link, index) {
+            if (index === activeIndex) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+
+        // 移动端菜单切换
+        function setupMobileMenu() {
+          var toggle = document.getElementById('menuToggle');
+          var sidebar = document.querySelector('.sidebar');
+          var overlay = document.getElementById('overlay');
+
+          if (toggle && sidebar && overlay) {
+            toggle.addEventListener('click', function() {
+              sidebar.classList.toggle('open');
+              overlay.classList.toggle('show');
+            });
+
+            overlay.addEventListener('click', function() {
+              sidebar.classList.remove('open');
+              overlay.classList.remove('show');
+            });
+
+            // 点击导航链接后关闭菜单
+            sidebar.addEventListener('click', function(e) {
+              if (e.target.tagName === 'A') {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('show');
+              }
+            });
+          }
+        }
+
+        // 语言切换按钮高亮
+        function updateLanguageSwitcher() {
+          var isEN = isEnglish();
           var zhBtn = document.querySelector('.lang-btn[data-lang="zh"]');
           var enBtn = document.querySelector('.lang-btn[data-lang="en"]');
           if (zhBtn && enBtn) {
@@ -163,26 +504,212 @@
           }
         }
 
+        // 检测是否在封面页
+        function checkCoverPage() {
+          var hash = decodeURIComponent(window.location.hash || '');
+          // 封面页只在根路径时显示
+          var isCover = hash === '' || hash === '#' || hash === '#/' ||
+                        hash === '#/en/' || hash === '#/en';
+
+          if (isCover) {
+            document.body.classList.add('on-cover');
+            window.scrollTo(0, 0);
+          } else {
+            document.body.classList.remove('on-cover');
+          }
+        }
+
+        // 初始化
+        function init() {
+          updateLanguageSwitcher();
+          updateNavigation();
+          setupMobileMenu();
+          checkCoverPage();
+          setupSubnavScroll();
+          setupBackToTop();
+
+          // 顶部导航链接点击即时反馈（不用等 hashchange）
+          var navLinks = document.getElementById('navLinks');
+          if (navLinks) {
+            navLinks.addEventListener('click', function(e) {
+              var target = e.target.closest('a');
+              if (target) {
+                // 立即更新激活状态
+                navLinks.querySelectorAll('a').forEach(function(a) {
+                  a.classList.remove('active');
+                });
+                target.classList.add('active');
+              }
+            });
+          }
+
+          // 暗色/亮色模式切换
+          initThemeToggle();
+
+          // 定期检查并移动搜索框（docsify 可能会重新渲染）
+          setInterval(function() {
+            moveSearchBox();
+            checkCoverPage();
+            filterSidebar();
+          }, 500);
+        }
+
+        // 滚动时动态隐藏/显示第二行导航
+        var lastScrollY = 0;
+        var scrollTick = false;
+        function setupSubnavScroll() {
+          window.addEventListener('scroll', function() {
+            if (scrollTick) return;
+            scrollTick = true;
+            window.requestAnimationFrame(function() {
+              var currentY = window.scrollY;
+              var isCover = document.body.classList.contains('on-cover');
+              if (isCover || currentY <= 10) {
+                document.body.classList.remove('orca-subnav-hidden');
+              } else if (currentY > lastScrollY + 5) {
+                document.body.classList.add('orca-subnav-hidden');
+              } else if (currentY < lastScrollY - 5) {
+                document.body.classList.remove('orca-subnav-hidden');
+              }
+              // 回到顶部按钮显隐
+              var backBtn = document.getElementById('backToTop');
+              if (backBtn) {
+                if (currentY > 300 && !isCover) {
+                  backBtn.classList.add('show');
+                } else {
+                  backBtn.classList.remove('show');
+                }
+              }
+              lastScrollY = currentY;
+              scrollTick = false;
+            });
+          }, { passive: true });
+        }
+
+        // 回到顶部按钮
+        function setupBackToTop() {
+          var btn = document.getElementById('backToTop');
+          if (!btn) return;
+          btn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          });
+        }
+
+        // 主题切换
+        function initThemeToggle() {
+          var toggle = document.getElementById('themeToggle');
+          if (!toggle) return;
+
+          var iconLight = toggle.querySelector('.theme-icon-light');
+          var iconDark = toggle.querySelector('.theme-icon-dark');
+
+          function updateIcons(isDark) {
+            if (isDark) {
+              iconLight.style.display = 'none';
+              iconDark.style.display = 'block';
+            } else {
+              iconLight.style.display = 'block';
+              iconDark.style.display = 'none';
+            }
+          }
+
+          // 从 localStorage 读取保存的主题
+          var savedTheme = localStorage.getItem('orca-theme') || 'light';
+          var isDark = savedTheme === 'dark';
+          document.documentElement.setAttribute('data-theme', savedTheme);
+          updateIcons(isDark);
+
+          toggle.addEventListener('click', function() {
+            var current = document.documentElement.getAttribute('data-theme') || 'light';
+            var next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('orca-theme', next);
+            updateIcons(next === 'dark');
+          });
+        }
+
         // 页面加载和路由变化时更新
-        document.addEventListener('DOMContentLoaded', updateLanguageSwitcher);
-        window.addEventListener('popstate', updateLanguageSwitcher);
+        document.addEventListener('DOMContentLoaded', init);
+        window.addEventListener('popstate', function() {
+          setTimeout(function() {
+            updateLanguageSwitcher();
+            updateNavigation();
+            checkCoverPage();
+            filterSidebar();
+          }, 100);
+        });
+        window.addEventListener('hashchange', function() {
+          setTimeout(function() {
+            updateNavigation();
+            generateTOC();
+            checkCoverPage();
+            filterSidebar();
+          }, 100);
+        });
+        window.addEventListener('scroll', updateTOCActive);
 
         // Docsify 路由钩子
         if (window.$docsify) {
           window.$docsify.plugins = (window.$docsify.plugins || []).concat(function(hook, vm) {
             hook.doneEach(function() {
+              document.body.classList.remove('orca-subnav-hidden');
+              lastScrollY = window.scrollY;
               updateLanguageSwitcher();
-              // 更新分页文案（en 目录始终为英文）
+              updateNavigation();
+              moveSearchBox();
+              checkCoverPage();
+              filterSidebar();
+              setTimeout(function() {
+                generateTOC();
+                checkCoverPage();
+                filterSidebar();
+              }, 100);
+              
+              // 更新分页文案
+              var isEN = isEnglish();
               var prevEl = document.querySelector('.pagination-item--previous .pagination-item-label');
               var nextEl = document.querySelector('.pagination-item--next .pagination-item-label');
               if (prevEl) {
-                prevEl.textContent = 'PREVIOUS';
+                prevEl.textContent = isEN ? 'PREVIOUS' : '上一章节';
               }
               if (nextEl) {
-                nextEl.textContent = 'NEXT';
+                nextEl.textContent = isEN ? 'NEXT' : '下一章节';
               }
             });
+
+            hook.mounted(function() {
+              moveSearchBox();
+              checkCoverPage();
+              setTimeout(filterSidebar, 100);
+            });
+
+            hook.ready(function() {
+              checkCoverPage();
+              filterSidebar();
+              moveSearchBox();
+            });
           });
+        }
+
+        // 使用 MutationObserver 监听搜索框被动态插入（防抖）
+        var searchObserverTimer = null;
+        var searchObserver = new MutationObserver(function() {
+          if (searchObserverTimer) clearTimeout(searchObserverTimer);
+          searchObserverTimer = setTimeout(moveSearchBox, 100);
+        });
+        searchObserver.observe(document.body, { childList: true, subtree: true });
+
+        // 页面加载后多次尝试移动搜索框，确保捕获
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(moveSearchBox, 100);
+            setTimeout(moveSearchBox, 500);
+            setTimeout(moveSearchBox, 1000);
+          });
+        } else {
+          setTimeout(moveSearchBox, 100);
+          setTimeout(moveSearchBox, 500);
+          setTimeout(moveSearchBox, 1000);
         }
       })();
     </script>
@@ -208,6 +735,5 @@
 <!--  <script src="https://fastly.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script> -->
 
   
-
 </body>
 </html>

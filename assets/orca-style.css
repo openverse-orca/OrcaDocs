@@ -1,0 +1,1394 @@
+/* ============================================
+   OrcaDocs - OrcaGym 风格定制（紫色主题）
+   参考: /home/user/桌面/orca/OrcaGym/docs/extra.css
+   ============================================ */
+
+/* ---------- 封面页模式 - 全屏显示，不显示三栏布局 ---------- */
+body.on-cover {
+  overflow: hidden;
+}
+
+body.on-cover .orca-top-nav {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.on-cover .orca-top-nav-row--main {
+  justify-content: flex-end;
+}
+
+body.on-cover .orca-nav-brand,
+body.on-cover .orca-theme-toggle,
+body.on-cover .orca-search-wrapper,
+body.on-cover .orca-menu-toggle {
+  display: none !important;
+}
+
+body.on-cover .orca-top-nav-row--sub {
+  display: none !important;
+}
+
+body.on-cover main {
+  padding-top: 0 !important;
+}
+
+body.on-cover .sidebar {
+  display: none !important;
+}
+
+body.on-cover .orca-toc {
+  display: none !important;
+}
+
+body.on-cover .orca-footer {
+  display: none !important;
+}
+
+body.on-cover .content {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 0 !important;
+  visibility: hidden;
+}
+
+body.on-cover section.cover {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body.on-cover section.cover .cover-main {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+/* 非封面页时隐藏 cover */
+body:not(.on-cover) section.cover {
+  display: none !important;
+}
+
+:root {
+  /* 主色 - 霓虹紫 */
+  --primary: #7e56c2;
+  --primary-light: #8b5cf6;
+  --primary-dark: #5b21b6;
+  --primary-fg: #ffffff;
+
+  /* 强调色 - 电光青 */
+  --accent: #06b6d4;
+  --accent-light: #22d3ee;
+
+  /* 背景色 */
+  --bg: #ffffff;
+  --bg-light: #fefefe;
+  --bg-lighter: #f1f5f9;
+
+  /* 前景文字 */
+  --fg: #1e293b;
+  --fg-light: #475569;
+  --fg-lighter: #64748b;
+
+  /* 链接 */
+  --link: #2563eb;
+  --link-hover: #1d4ed8;
+
+  /* 边框 */
+  --border: #e2e8f0;
+  --border-light: #f1f5f9;
+
+  /* 代码块 */
+  --code-bg: #f5f5f5;
+  --code-fg: #1e293b;
+}
+
+/* 暗色模式变量 */
+[data-theme="dark"] {
+  --primary: #6d28d9;
+  --bg: #070b19;
+  --bg-light: #0d1128;
+  --bg-lighter: #141838;
+  --fg: #d0d4f0;
+  --fg-light: #989cc8;
+  --fg-lighter: #6468a0;
+  --border: rgba(139, 92, 246, 0.2);
+  --border-light: rgba(139, 92, 246, 0.1);
+  --code-bg: #0c1021;
+  --code-fg: #c0ffc0;
+  --link: #60a5fa;
+  --link-hover: #93c5fd;
+}
+
+/* ---------- 全局重置与基础样式 ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px; /* 防止锚点被导航栏遮挡 */
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: var(--bg) !important;
+  color: var(--fg) !important;
+}
+
+/* 覆盖 docsify 默认 #app 加载样式，防止顶部空白 */
+#app {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: inherit !important;
+  text-align: inherit !important;
+}
+
+/* 覆盖 docsify section 默认 padding/max-width */
+section.markdown-section {
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: none !important;
+}
+
+/* ---------- 布局变量：居中容器 + 两边留白 ---------- */
+:root {
+  --layout-max-width: 1600px;
+  --layout-gutter: max(24px, calc((100vw - var(--layout-max-width)) / 2));
+  --sidebar-width: 240px;
+  --toc-width: 220px;
+}
+
+/* ---------- 顶部导航栏 ---------- */
+.orca-top-nav {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: var(--primary-fg);
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(139, 92, 246, 0.15);
+  margin: 0 !important;
+}
+
+.orca-top-nav-row {
+  display: flex;
+  align-items: center;
+  max-width: var(--layout-max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.orca-top-nav-row--main {
+  height: 61px;
+  position: relative;
+}
+
+.orca-top-nav-row--sub {
+  height: 48px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-bottom: 2px;
+  overflow: hidden;
+  transition: height 0.28s ease, opacity 0.28s ease, padding 0.28s ease, border-top-width 0.28s ease;
+}
+
+body.orca-subnav-hidden .orca-top-nav-row--sub {
+  height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-top-width: 0;
+}
+
+body.orca-subnav-hidden main {
+  padding-top: 56px !important;
+  transition: padding-top 0.28s ease;
+}
+
+body.orca-subnav-hidden .sidebar {
+  top: 56px !important;
+  height: calc(100vh - 56px) !important;
+  transition: top 0.28s ease, height 0.28s ease;
+}
+
+body.orca-subnav-hidden .orca-toc {
+  top: 56px !important;
+  height: calc(100vh - 56px) !important;
+  transition: top 0.28s ease, height 0.28s ease;
+}
+
+main {
+  transition: padding-top 0.28s ease;
+}
+
+.sidebar, .orca-toc {
+  transition: top 0.28s ease, height 0.28s ease;
+}
+
+.orca-nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-right: 32px;
+}
+
+.orca-nav-brand img {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+}
+
+.orca-nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+  width: 100%;
+}
+
+.orca-nav-links a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  padding: 6px 18px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.orca-nav-links a:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.orca-nav-links a.active {
+  color: white;
+  background: rgba(255, 255, 255, 0.18);
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.orca-nav-links a:active {
+  transform: scale(0.96);
+}
+
+.orca-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+/* ---------- 搜索框移到顶部 ---------- */
+.orca-search-wrapper {
+  position: relative;
+  width: 220px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: width 0.3s ease, background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.orca-search-wrapper:focus-within,
+.orca-search-wrapper.is-active {
+  width: 420px;
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.orca-search-wrapper:focus-within::before,
+.orca-search-wrapper.is-active::before {
+  opacity: 1;
+  color: var(--primary);
+}
+
+.orca-search-wrapper:focus-within input[type="search"],
+.orca-search-wrapper.is-active input[type="search"] {
+  color: var(--fg) !important;
+}
+
+.orca-search-wrapper .search {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: transparent !important;
+  border: none !important;
+  position: relative;
+}
+
+.orca-search-wrapper input[type="search"] {
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  border-radius: 6px;
+  background: transparent !important;
+  color: white !important;
+  font-size: 0.9rem;
+  outline: none !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.orca-search-wrapper::before {
+  content: "🔍";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  opacity: 0.7;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* 隐藏 docsify 搜索框自带的图标 */
+.orca-search-wrapper .search input[type="search"] {
+  padding-left: 36px !important;
+  background: transparent !important;
+  border: none !important;
+  color: black !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+}
+
+/* 隐藏 docsify 原始搜索框的清除按钮等 */
+.orca-search-wrapper .search .clear-button {
+  display: none !important;
+}
+
+/* 搜索结果下拉面板 */
+.orca-search-wrapper:not(.is-active):not(:focus-within) .results-panel {
+  display: none !important;
+}
+
+.orca-search-wrapper .results-panel {
+  position: absolute !important;
+  top: calc(100% + 6px) !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  max-height: 400px !important;
+  overflow-y: auto !important;
+  background: var(--bg) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18) !important;
+  z-index: 2000 !important;
+  padding: 6px 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  color: var(--fg) !important;
+}
+
+.orca-search-wrapper .matching-post {
+  padding: 8px 14px !important;
+  border-bottom: 1px solid var(--border-light) !important;
+  margin: 0 !important;
+  background: transparent !important;
+}
+
+.orca-search-wrapper .matching-post:last-child {
+  border-bottom: none !important;
+}
+
+.orca-search-wrapper .matching-post a {
+  color: var(--fg) !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  display: block !important;
+  line-height: 1.4 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.orca-search-wrapper .matching-post a:hover {
+  color: var(--primary) !important;
+}
+
+.orca-search-wrapper .matching-post p {
+  margin: 4px 0 0 !important;
+  font-size: 0.82rem !important;
+  color: var(--fg-light) !important;
+  line-height: 1.4 !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+.orca-search-wrapper .matching-post .search-result {
+  color: var(--primary) !important;
+  font-weight: 600;
+}
+
+/* 暗色模式搜索结果适配 */
+[data-theme="dark"] .orca-search-wrapper .results-panel {
+  background: var(--bg-light) !important;
+  border-color: var(--border) !important;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5) !important;
+}
+
+.orca-search-wrapper .results-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.orca-search-wrapper .results-panel::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+.orca-search-wrapper .results-panel::-webkit-scrollbar-thumb:hover {
+  background: var(--fg-lighter);
+}
+
+/* 隐藏所有 docsify 原始搜索框，只显示顶部导航栏内的 */
+.search {
+  display: none !important;
+}
+
+.orca-search-wrapper .search {
+  display: block !important;
+}
+
+/* ---------- 语言切换按钮 ---------- */
+.language-switcher {
+  display: flex !important;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.language-switcher .lang-btn {
+  cursor: pointer;
+  padding: 4px 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9) !important;
+  transition: all 0.2s;
+  text-decoration: none;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+.language-switcher .lang-btn:focus {
+  outline: none;
+}
+
+.language-switcher .lang-btn:hover {
+  border-color: white;
+  color: white !important;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.language-switcher .lang-btn.active {
+  background: #fff;
+  color: #1e293b  !important;
+  border-color: #1e293b;
+}
+
+.language-switcher .lang-divider {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+/* 封面页时，语言切换按钮固定在右上角 */
+body.on-cover .language-switcher {
+  position: fixed !important;
+  top: 16px;
+  right: 60px;
+  z-index: 200;
+}
+
+body.on-cover .language-switcher .lang-btn {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.5);
+  color: #999 !important;
+}
+
+body.on-cover .language-switcher .lang-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary) !important;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+body.on-cover .language-switcher .lang-btn.active {
+  background: white;
+  color: var(--primary) !important;
+  border-color: white;
+  font-weight: 600;
+}
+
+body.on-cover .language-switcher .lang-divider {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  body.on-cover .language-switcher {
+    top: 10px;
+    right: 16px;
+  }
+  .language-switcher .lang-btn {
+    padding: 2px 6px;
+    font-size: 11px;
+  }
+}
+
+/* GitHub 链接 */
+.orca-github-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.orca-github-link:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.orca-github-link svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* ---------- 布局调整 - 四模块布局（居中容器 + 两边留白）-----------
+   模块1: 顶部固定导航栏 (整宽背景，内部内容居中)
+   模块2: 左侧固定侧边栏 (对齐居中容器左边缘)
+   模块3: 中间内容区
+   模块4: 右侧固定目录 (对齐居中容器右边缘)
+*/
+
+/* main 容器 */
+main {
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 100vh !important;
+  z-index: 0 !important;
+  overflow-x: hidden !important;
+  padding-top: 100px !important;
+}
+
+/* content 区域 - 两边留白 + 左右栏空间 */
+.content {
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  margin-left: calc(var(--layout-gutter) + var(--sidebar-width)) !important;
+  margin-right: calc(var(--layout-gutter) + var(--toc-width)) !important;
+  max-width: none !important;
+  padding: 28px 24px 60px 24px !important;
+  transition: none !important;
+  transform: none !important;
+  box-sizing: border-box !important;
+}
+
+/* markdown-section */
+.markdown-section {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: static !important;
+}
+
+.markdown-section h1:first-child {
+  margin-top: 0 !important;
+}
+
+/* 侧边栏 - 对齐居中容器左边缘 */
+.sidebar {
+  position: fixed !important;
+  top: 100px !important;
+  bottom: 0 !important;
+  left: var(--layout-gutter) !important;
+  width: var(--sidebar-width) !important;
+  height: calc(100vh - 100px) !important;
+  border-right: 1px solid var(--border) !important;
+  background: var(--bg-light) !important;
+  padding: 0 !important;
+  overflow-y: auto !important;
+  z-index: 20 !important;
+  transition: transform .25s ease-out !important;
+}
+
+/* 平板及以下：隐藏右侧 TOC */
+@media (max-width: 1200px) {
+  :root {
+    --toc-width: 0px;
+  }
+  .orca-toc {
+    display: none !important;
+  }
+}
+
+/* 隐藏 docsify 默认的侧边栏切换按钮 */
+.sidebar-toggle {
+  display: none !important;
+}
+
+/* 移动端侧边栏隐藏 */
+@media (max-width: 768px) {
+  :root {
+    --sidebar-width: 280px;
+  }
+  main {
+    padding-top: 56px !important;
+  }
+  .sidebar {
+    top: 56px !important;
+    left: 0 !important;
+    height: calc(100vh - 56px) !important;
+    transform: translateX(-100%) !important;
+    z-index: 999 !important;
+  }
+  .sidebar.open {
+    transform: translateX(0) !important;
+  }
+  .orca-toc {
+    top: 56px !important;
+    height: calc(100vh - 56px) !important;
+  }
+  .content {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 20px 16px !important;
+  }
+  .orca-top-nav-row--main {
+    padding: 0 100px 0 12px !important;
+  }
+  .orca-nav-brand span {
+    display: none;
+  }
+  .orca-search-wrapper {
+    width: 140px;
+  }
+}
+
+.sidebar ul {
+  margin: 0 !important;
+}
+
+/* 侧边栏导航内边距 */
+.sidebar .sidebar-nav {
+  padding: 16px 8px 20px 8px !important;
+}
+
+.sidebar ul li a {
+  color: var(--fg-light) !important;
+  border-left: 2px solid transparent !important;
+  padding: 6px 12px !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+}
+
+.sidebar ul li a:hover {
+  color: var(--primary) !important;
+  background: rgba(109, 40, 217, 0.05);
+}
+
+.sidebar ul li.active > a {
+  color: var(--primary) !important;
+  border-left-color: var(--primary) !important;
+  font-weight: 600 !important;
+  background: rgba(109, 40, 217, 0.08);
+}
+
+/* 侧边栏大标题（一级菜单）加粗加重 */
+.sidebar > ul > li > a {
+  font-weight: 700 !important;
+  color: var(--primary-dark) !important;
+  font-size: 0.95rem !important;
+  text-transform: none;
+  letter-spacing: 0;
+  padding: 8px 12px !important;
+  margin-top: 8px;
+}
+
+.sidebar > ul > li > a:hover {
+  color: var(--primary) !important;
+}
+
+[data-theme="dark"] .sidebar > ul > li > a {
+  color: #c4b5fd !important;
+  text-shadow: 0 0 4px rgba(139, 92, 246, 0.3);
+}
+
+/* ---------- 右侧页内目录 (TOC) - 对齐居中容器右边缘 ---------- */
+.orca-toc {
+  position: fixed;
+  top: 100px;
+  right: var(--layout-gutter);
+  width: var(--toc-width);
+  height: calc(100vh - 100px);
+  border-left: 1px solid var(--border);
+  background: var(--bg-light);
+  padding: 24px 16px;
+  overflow-y: auto;
+  font-size: 0.85rem;
+  z-index: 20;
+}
+
+.orca-toc-title {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--fg);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.orca-toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.orca-toc ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.orca-toc ul li a {
+  display: block;
+  padding: 4px 8px;
+  color: var(--fg-lighter);
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  transition: all 0.15s;
+  border-radius: 0 4px 4px 0;
+}
+
+.orca-toc ul li a:hover {
+  color: var(--primary);
+  background: rgba(109, 40, 217, 0.05);
+}
+
+.orca-toc ul li a.active {
+  color: var(--primary);
+  border-left-color: var(--primary);
+  background: rgba(109, 40, 217, 0.08);
+  font-weight: 600;
+}
+
+.orca-toc ul li.toc-h3 {
+  padding-left: 12px;
+}
+
+.orca-toc ul li.toc-h4 {
+  padding-left: 24px;
+}
+
+/* ---------- 内容样式定制 ---------- */
+.markdown-section {
+  max-width: none !important;
+}
+
+.markdown-section h1 {
+  font-weight: 800;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 12px;
+  margin-top: 0 !important;
+}
+
+.markdown-section h2 {
+  font-weight: 700;
+  margin-top: 2rem !important;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+.markdown-section h3,
+.markdown-section h4 {
+  font-weight: 600;
+}
+
+.markdown-section a {
+  color: var(--link) !important;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+.markdown-section a:hover {
+  color: var(--link-hover) !important;
+  text-decoration: underline;
+}
+
+/* 标题内 docsify 自动生成的 .anchor 锚点链接颜色覆盖，不影响真正的导航链接 */
+body .markdown-section h1 .anchor,
+body .markdown-section h1 .anchor:visited,
+body .markdown-section h1 .anchor:hover,
+body .markdown-section h1 .anchor:focus,
+body .markdown-section h1 .anchor span {
+  color: var(--fg) !important;
+}
+
+body .markdown-section h2 .anchor,
+body .markdown-section h2 .anchor:visited,
+body .markdown-section h2 .anchor:hover,
+body .markdown-section h2 .anchor:focus,
+body .markdown-section h2 .anchor span {
+  color: var(--fg) !important;
+}
+
+body .markdown-section h3 .anchor,
+body .markdown-section h4 .anchor,
+body .markdown-section h3 .anchor:visited,
+body .markdown-section h4 .anchor:visited,
+body .markdown-section h3 .anchor:hover,
+body .markdown-section h4 .anchor:hover,
+body .markdown-section h3 .anchor:focus,
+body .markdown-section h4 .anchor:focus,
+body .markdown-section h3 .anchor span,
+body .markdown-section h4 .anchor span {
+  color: var(--fg) !important;
+}
+
+/* 代码块样式 */
+.markdown-section pre {
+  background: var(--code-bg) !important;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.05);
+  padding: 16px;
+  overflow-x: auto;
+}
+
+.markdown-section code {
+  background: transparent !important;
+  color: var(--code-fg) !important;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.88rem;
+}
+
+.markdown-section :not(pre) > code {
+  background: var(--bg-lighter) !important;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--primary-dark);
+  font-size: 0.88em;
+}
+
+[data-theme="dark"] .markdown-section :not(pre) > code {
+  color: #c4b5fd;
+  background: rgba(139, 92, 246, 0.15) !important;
+}
+
+[data-theme="dark"] .markdown-section pre {
+  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.08);
+}
+
+/* 表格样式 */
+.markdown-section table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.markdown-section table th {
+  background: #f5f7fa;
+  color: var(--fg);
+  font-weight: 600;
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 2px solid var(--border);
+}
+
+[data-theme="dark"] .markdown-section table th {
+  background: var(--bg-lighter);
+  color: var(--fg);
+}
+
+.markdown-section table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.markdown-section table tbody tr:nth-child(even) {
+  background: rgba(139, 92, 246, 0.04);
+}
+
+[data-theme="dark"] .markdown-section table tbody tr:nth-child(even) {
+  background: rgba(139, 92, 246, 0.06);
+}
+
+/* 引用块 */
+.markdown-section blockquote {
+  border-left: 4px solid var(--primary-light);
+  background: rgba(139, 92, 246, 0.05);
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 0 8px 8px 0;
+  color: var(--fg-light);
+}
+
+/* 提示块（docsify 的 [!NOTE] 等） */
+.markdown-section .tip,
+.markdown-section .warn {
+  border-radius: 8px;
+  border-left-width: 4px;
+}
+
+/* ---------- 自定义滚动条 ---------- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 3px;
+  opacity: 0.8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-light);
+}
+
+/* ---------- 暗色模式适配 ---------- */
+[data-theme="dark"] body {
+  background-color: var(--bg) !important;
+}
+
+[data-theme="dark"] .sidebar,
+[data-theme="dark"] .orca-toc {
+  background: var(--bg-light) !important;
+  border-color: var(--border) !important;
+}
+
+[data-theme="dark"] .markdown-section h1,
+[data-theme="dark"] .markdown-section h2,
+[data-theme="dark"] .markdown-section h3,
+[data-theme="dark"] .markdown-section h4,
+[data-theme="dark"] .markdown-section h1 a,
+[data-theme="dark"] .markdown-section h2 a,
+[data-theme="dark"] .markdown-section h3 a,
+[data-theme="dark"] .markdown-section h4 a,
+[data-theme="dark"] .markdown-section h1 a:visited,
+[data-theme="dark"] .markdown-section h2 a:visited,
+[data-theme="dark"] .markdown-section h3 a:visited,
+[data-theme="dark"] .markdown-section h4 a:visited,
+[data-theme="dark"] .markdown-section h1 a:hover,
+[data-theme="dark"] .markdown-section h2 a:hover,
+[data-theme="dark"] .markdown-section h3 a:hover,
+[data-theme="dark"] .markdown-section h4 a:hover,
+[data-theme="dark"] .markdown-section h1 .anchor,
+[data-theme="dark"] .markdown-section h2 .anchor,
+[data-theme="dark"] .markdown-section h3 .anchor,
+[data-theme="dark"] .markdown-section h4 .anchor,
+[data-theme="dark"] .markdown-section h1 .anchor span,
+[data-theme="dark"] .markdown-section h2 .anchor span,
+[data-theme="dark"] .markdown-section h3 .anchor span,
+[data-theme="dark"] .markdown-section h4 .anchor span {
+  color: var(--fg) !important;
+}
+
+[data-theme="dark"] .markdown-section table th {
+  background: var(--bg-lighter);
+  color: var(--fg);
+}
+
+[data-theme="dark"] .markdown-section table td {
+  color: var(--fg);
+  border-bottom-color: var(--border);
+}
+
+[data-theme="dark"] .markdown-section blockquote {
+  color: var(--fg-light);
+  border-left-color: var(--primary);
+}
+
+[data-theme="dark"] .orca-search-wrapper {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="dark"] .orca-search-wrapper:focus-within {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="dark"] .sidebar ul li a {
+  color: var(--fg-light) !important;
+}
+
+[data-theme="dark"] .orca-toc ul li a {
+  color: #d0d4f0;
+}
+
+[data-theme="dark"] .pagination-item {
+  border-color: var(--border) !important;
+}
+
+[data-theme="dark"] .pagination-item-label {
+  color: var(--fg-light) !important;
+}
+
+[data-theme="dark"] .markdown-section hr {
+  background: var(--border);
+}
+
+[data-theme="dark"] .sidebar-toggle-button span {
+  background-color: var(--fg);
+}
+
+/* ---------- 回到顶部按钮 ---------- */
+.orca-back-to-top {
+  position: fixed;
+  right: calc(var(--layout-gutter) + 12px);
+  bottom: 80px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: none;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(126, 86, 194, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease, background 0.2s ease;
+  z-index: 900;
+}
+
+.orca-back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.orca-back-to-top:hover {
+  background: var(--primary-light);
+  box-shadow: 0 6px 20px rgba(126, 86, 194, 0.45);
+}
+
+.orca-back-to-top:active {
+  transform: scale(0.92);
+}
+
+[data-theme="dark"] .orca-back-to-top {
+  background: var(--primary);
+  box-shadow: 0 4px 15px rgba(109, 40, 217, 0.4);
+}
+
+[data-theme="dark"] .orca-back-to-top:hover {
+  background: var(--primary-light);
+}
+
+/* ---------- 页脚 ---------- */
+.orca-footer {
+  background: #1a1a1a;
+  color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  margin-top: 60px;
+  position: relative;
+  z-index: 50;
+}
+
+.orca-footer-inner {
+  max-width: var(--layout-max-width);
+  margin: 0 auto;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.orca-footer-copyright {
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.orca-footer-logo img {
+  height: 38px;
+  width: auto;
+}
+
+
+[data-theme="dark"] .orca-footer {
+  background: #050810;
+  border-top: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+@media (max-width: 768px) {
+  .orca-footer {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .orca-footer-inner {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    padding: 20px 16px;
+  }
+}
+
+/* ---------- 响应式 - 移动端适配 ---------- */
+@media (max-width: 768px) {
+  .orca-top-nav-row--sub {
+    display: none;
+  }
+
+  .orca-search-wrapper {
+    width: 140px;
+  }
+
+  .orca-search-wrapper.is-active,
+  .orca-search-wrapper:focus-within {
+    width: 240px;
+  }
+
+  .language-switcher .lang-btn {
+    padding: 2px 6px !important;
+    font-size: 11px !important;
+  }
+}
+
+/* 汉堡菜单按钮（移动端） */
+.orca-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 4px 8px;
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .orca-menu-toggle {
+    display: block;
+  }
+}
+
+/* ============================================
+   标题内 docsify .anchor 锚点链接颜色覆盖
+   （不影响标题中的真正导航链接，如FAQ列表）
+   ============================================ */
+.markdown-section h1 > .anchor,
+.markdown-section h1 > .anchor span {
+  color: #1e293b !important;
+}
+
+.markdown-section h2 > .anchor,
+.markdown-section h2 > .anchor span {
+  color: #1e293b !important;
+}
+
+.markdown-section h3 > .anchor,
+.markdown-section h4 > .anchor,
+.markdown-section h3 > .anchor span,
+.markdown-section h4 > .anchor span {
+  color: #1e293b !important;
+}
+
+[data-theme="dark"] .markdown-section h1 > .anchor,
+[data-theme="dark"] .markdown-section h1 > .anchor span {
+  color: #d0d4f0 !important;
+}
+
+[data-theme="dark"] .markdown-section h2 > .anchor,
+[data-theme="dark"] .markdown-section h2 > .anchor span {
+  color: #d0d4f0 !important;
+}
+
+[data-theme="dark"] .markdown-section h3 > .anchor,
+[data-theme="dark"] .markdown-section h4 > .anchor,
+[data-theme="dark"] .markdown-section h3 > .anchor span,
+[data-theme="dark"] .markdown-section h4 > .anchor span {
+  color: #d0d4f0 !important;
+}
+
+/* 遮罩层（移动端侧边栏打开时） */
+.orca-overlay {
+  display: none;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+.orca-overlay.show {
+  display: block;
+}
+
+/* ---------- Docsify 分页插件样式调整 ---------- */
+.pagination-item {
+  border-color: var(--border) !important;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.pagination-item:hover {
+  border-color: var(--primary) !important;
+  background: rgba(109, 40, 217, 0.03);
+}
+
+.pagination-item-title {
+  color: var(--primary) !important;
+  opacity: 1 !important;
+}
+
+.pagination-item-label {
+  color: var(--fg-light) !important;
+  opacity: 1 !important;
+}
+
+/* 统一上一章节/下一章节的所有文字颜色 */
+.pagination-item,
+.pagination-item a,
+.pagination-item:visited,
+.pagination-item--previous,
+.pagination-item--previous a,
+.pagination-item--next,
+.pagination-item--next a {
+  color: var(--primary) !important;
+  opacity: 1 !important;
+}
+
+.pagination-item .pagination-item-label,
+.pagination-item--previous .pagination-item-label,
+.pagination-item--next .pagination-item-label {
+  color: var(--fg-light) !important;
+  opacity: 0.8 !important;
+}
+
+.pagination-item .pagination-item-title,
+.pagination-item--previous .pagination-item-title,
+.pagination-item--next .pagination-item-title {
+  color: var(--primary) !important;
+  opacity: 1 !important;
+}
+
+/* ---------- 封面页样式调整 ---------- */
+section.cover {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  height: 100vh !important;
+}
+
+section.cover .cover-main {
+  padding-top: 0;
+}
+
+section.cover .mask {
+  background: linear-gradient(135deg, rgba(109, 40, 217, 0.85) 0%, rgba(91, 33, 182, 0.9) 50%, rgba(6, 182, 212, 0.8) 100%) !important;
+}
+
+section.cover h1,
+section.cover h2,
+section.cover blockquote,
+section.cover p {
+  color: white !important;
+}
+
+section.cover a {
+  color: #c4b5fd !important;
+}
+
+section.cover .cover-main > p:last-child a {
+  border-color: #007bff !important;
+  background: #007bff !important;
+  color: white !important;
+  border-radius: 2rem;
+  padding: 10px 28px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: all 0.2s;
+}
+
+section.cover .cover-main > p:last-child a:hover {
+  background: #0069d9 !important;
+  border-color: #0062cc !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+section.cover .cover-main > p:last-child a:last-child {
+  background: #007bff !important;
+  color: white !important;
+  box-shadow: none;
+}
+
+section.cover .cover-main > p:last-child a:last-child:hover {
+  background: #0069d9 !important;
+  border-color: #0062cc !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.35);
+}
+
+/* 隐藏 docsify 默认的标题显示（因为顶部导航已有 brand） */
+.sidebar .app-name {
+  display: none !important;
+}
+
+/* 暗色模式切换按钮样式预留 */
+.orca-theme-toggle {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 18px;
+  transition: all 0.2s;
+}
+
+.orca-theme-toggle:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
