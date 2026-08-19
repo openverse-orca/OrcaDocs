@@ -8,7 +8,7 @@ This guide uses a four-wheel chassis car simulation example to faithfully reprod
 | ORCALab26.4.3  | release/26.4.3    |
 | ORCALab26.5.1  | release/26.5.1    |
 | ORCALab26.6.3  | release/26.6.1    |
-| ORCALab26.7.2  | release/26.7.1    |
+| ORCALab26.7.3  | release/26.7.1    |
 
 
 ## 🎯 1. Quick Start: Running a Simulation Example
