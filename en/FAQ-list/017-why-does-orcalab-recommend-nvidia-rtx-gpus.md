@@ -5,7 +5,7 @@ OrcaLab's installation guide explicitly recommends using NVIDIA RTX series graph
 
 ## Answer
 
-The core reason OrcaLab recommends NVIDIA RTX series graphics cards is their **powerful GPU computing capability** and **optimized support for specific NVIDIA technologies**, which is crucial for high-fidelity physics AI simulation.
+The core reason OrcaLab recommends NVIDIA RTX series graphics cards (RTX 3060 or above required) is their **powerful GPU computing capability** and **optimized support for specific NVIDIA technologies**, which is crucial for high-fidelity physics AI simulation. Verified models include RTX 3090, RTX 4060/4070/4080, and RTX 5070/5080; in addition, the AMD Radeon RX 9070 XT is also tested and supported.
 
 ## 🚀 Core Reasons
 
@@ -34,14 +34,14 @@ The core reason OrcaLab recommends NVIDIA RTX series graphics cards is their **p
 - **Unable to Run**: OrcaLab may not launch at all, or even if it does, it will be severely sluggish with extremely low framerates, making effective operation impossible.
 
 ### 2. **AMD Graphics Cards**
-- **Compatibility Issues**: OrcaLab's low-level optimization may primarily target the NVIDIA CUDA platform; AMD's ROCm or OpenCL ecosystem may have compatibility or performance bottlenecks.
-- **Performance Degradation**: Even if it runs, performance may be far below that of equivalent NVIDIA graphics cards.
-- **Driver Stability**: AMD graphics drivers on Linux may not be as mature as NVIDIA's, potentially leading to more issues.
+- **Supported Model**: AMD Radeon RX 9070 XT has passed official testing (requires AMD-SMI version 26.2.1+fc0010cf6a or above).
+- **Other Models Untested**: AMD GPUs other than the RX 9070 XT have not been officially tested; compatibility is not guaranteed. AMD's ROCm or OpenCL ecosystem may have performance bottlenecks.
+- **Driver Requirements**: On Linux, ensure the AMD driver and AMD-SMI version meet the requirements; otherwise stability may be affected.
 
 ### 3. **Older NVIDIA Graphics Cards (GTX Series, RTX 20/30 Series)**
-- **Performance Limitations**: While GTX and older RTX series cards also provide some GPU computing capability, they lack the latest Tensor Cores and RT Cores, or have fewer cores.
-- **Degraded Experience**: When handling complex scenes, large-scale AI training, or pursuing high-fidelity rendering, performance will be noticeably insufficient, causing simulation stutter, extended training times, and degraded user experience.
-- **Driver Version Limitations**: Older cards may not support the latest driver versions, preventing the utilization of the latest optimizations.
+- **RTX 30 Series**: RTX 3090 verified (Windows 10); 3080/3070/3060 theoretically compatible but untested; 30 series may be limited in high-performance scenarios.
+- **GTX and RTX 20 Series**: Lack the latest Tensor Cores and RT Cores, or have fewer cores. Performance is noticeably insufficient when handling complex scenes, large-scale AI training, or high-fidelity rendering, potentially causing simulation stutter and extended training times.
+- **Driver Version Limitations**: Older cards may not support the latest driver versions, preventing the use of the latest optimizations.
 
 ## 📈 Summary
 
@@ -54,6 +54,8 @@ NVIDIA RTX series graphics cards provide OrcaLab with **powerful physics computa
 Therefore, to obtain the best OrcaLab experience, it is strongly recommended to equip your system with an NVIDIA RTX series graphics card meeting the recommended specifications.
 
 ## Related Links
-- [OrcaLab Installation Guide](environment-setup/ubuntu-installation-guide-v1.0.md)
+- [System and GPU Support](environment-setup/system-and-gpu-support.md)
+- [Linux Installation Guide](environment-setup/ubuntu-installation-guide-v1.0.md)
+- [Windows Installation Guide](environment-setup/windows-installation-guide-v1.0.md)
 - [What hardware configuration is required to install OrcaLab?](FAQ-list/016-hardware-requirements-for-installing-orcalab.md)
 - [What is the technical architecture of OrcaLab?](FAQ-list/013-what-is-the-technical-architecture-of-orcalab.md)

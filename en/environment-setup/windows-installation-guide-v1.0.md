@@ -13,7 +13,7 @@
 - **Network Requirements**: A stable network connection is required
 - **User Registration**: See the User Registration & Management section to complete user registration
 
-### 1.3 ORCALab Latest Version: 26.7.1
+### 1.3 ORCALab Latest Version: 26.7.2
  - The installation command in Section 2.3 downloads the latest version by default. You may also install a specific version: pip install orca-lab==xx.x.x
 
 ---
