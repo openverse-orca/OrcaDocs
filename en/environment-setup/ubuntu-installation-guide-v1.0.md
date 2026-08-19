@@ -13,7 +13,7 @@
 - **System Permissions**: sudo privileges are required to install system dependencies
 - **User Registration**: See the User Registration & Management section to complete user registration
 
-### 1.3 ORCALab Latest Version: 26.7.2
+### 1.3 ORCALab Latest Version: 26.7.3
  - The installation command in Section 2.3 downloads the latest version by default. You may also install a specific version: pip install orca-lab==xx.x.x
 
 ---

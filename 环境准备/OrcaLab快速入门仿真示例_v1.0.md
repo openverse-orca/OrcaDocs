@@ -8,7 +8,7 @@
 | ORCALab26.4.3  | release/26.4.3    |
 | ORCALab26.5.1  | release/26.5.1    |
 | ORCALab26.6.3  | release/26.6.1    |
-| ORCALab26.7.2  | release/26.7.1    |
+| ORCALab26.7.3  | release/26.7.1    |
 
 
 ## 🎯一、 快速开始一个仿真示例
