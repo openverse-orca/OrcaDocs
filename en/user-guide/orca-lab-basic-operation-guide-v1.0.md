@@ -157,7 +157,6 @@ The lower-left section contains File, Edit, and Help. The center section contain
 <td>Move the view forward and backward</td>
 <td>Mouse wheel / Right-click + w(s)</td>
 </tr>
-</tr>
 <tr class="even">
 <td><img src="img/client-basic-guide/distance-measurement.png" style="width:0.26042in;height:0.23958in" /></td>
 <td>Distance Measurement</td>
@@ -171,6 +170,18 @@ The lower-left section contains File, Edit, and Help. The center section contain
 <td>--</td>
 </tr>
 <tr class="even">
+<td></td>
+<td>Cancel Measurement</td>
+<td>Switch to another mouse mode via the top menu bar to temporarily hide distance and angle markers; they reappear when the measurement button is clicked again. Press the X key to permanently delete all distance and angle markers</td>
+<td>X key / Switch menu mode</td>
+</tr>
+<tr class="odd">
+<td><img src="img/client-basic-guide/hub_button.png" style="width:0.26042in;height:0.23958in" /></td>
+<td>Pivot</td>
+<td>After selecting multiple objects, switch the Pivot mode. The system calculates the Gizmo display position and transform reference center based on the current mode, and controls the final transform result of the multi-selected objects; defaults to Median Point, with four modes supported: Individual Origins, Bounding Box Center, Median Point, and Active Actor. Move/Rotate/Scale is performed around the corresponding center</td>
+<td>--</td>
+</tr>
+<tr class="even">
 <td><img src="img/client-basic-guide/collision.png" style="width:0.21875in;height:0.23958in" /></td>
 <td>Show/Hide Collision</td>
 <td>Show or hide physics collisions and joints</td>
@@ -181,21 +192,24 @@ The lower-left section contains File, Edit, and Help. The center section contain
 <td>Move Objects During Simulation</td>
 <td>Move objects in the simulation environment while the simulation is running</td>
 <td>F3</td>
-<td></td>
+</tr>
+<tr class="even">
+<td><img src="img/client-basic-guide/diguianniu.png" style="width:0.26042in;height:0.23958in" /></td>
+<td>Recursive Display</td>
+<td>Recursively display all information of the current asset and its children, such as joints, rigid bodies, cameras, etc.; after selecting an asset in the left Outline panel and clicking this button, the right Edit panel lists all information in a tree view with filtering support</td>
+<td>--</td>
 </tr>
 <tr class="odd">
 <td><img src="img/client-basic-guide/simulation-running.png" style="width:0.22917in;height:0.25in" /></td>
 <td>Run Simulation</td>
 <td></td>
 <td>--</td>
-<td></td>
 </tr>
 <tr class="even">
 <td><img src="img/client-basic-guide/simulation-end.png" style="width:0.21875in;height:0.21875in" /></td>
 <td>Stop Simulation</td>
 <td></td>
 <td>--</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -205,9 +219,9 @@ The lower-left section contains File, Edit, and Help. The center section contain
 
 This module is primarily used for managing objects and viewpoints in the viewport layout. The leftmost button toggles between [Outline] and [Camera]. [Outline] is used to manage objects and cameras in the viewport layout, while [Camera] is used to switch between different camera viewpoints.
 
-![](img/client-basic-guide/outline.png)
+<img src="img/client-basic-guide/outline.png" width="77%" >
 
-![](img/client-basic-guide/camera.png)
+<img src="img/client-basic-guide/camera.png" width="77%" >
 
 Drag assets from the Asset Library into the viewport module to add objects and cameras. Added objects and cameras will simultaneously appear in the [Outline] list. The supported operations are as follows:
 
@@ -252,14 +266,18 @@ To closely inspect an object in the 3D viewport, click the node in the Outline t
 
 ### Edit
 
-This module has the [Edit] function, which is primarily responsible for editing asset Transform properties (Position, Rotation, Uniform Scale).
+This module has the [Edit] function, which is primarily responsible for editing asset Transform properties (Position, Rotation, Uniform Scale). Colliders, rigid bodies, cameras, and other components can also be edited.
 
 <img src="img/client-basic-guide/edit.png" width="77%" >
 
 
-[Edit] function: Select an asset in the Outline list or viewport, and the right-side [Edit Panel] will display the object's Transform information, including Position, Rotation, and Uniform Scale. You can click to directly enter numeric values for precise modification, or adjust parameters by sliding the arrows that appear when hovering over data bars.
+1. [Edit] function: Select an asset in the Outline list or viewport, and the right-side [Edit Panel] will display the object's Transform information, including Position, Rotation, and Uniform Scale. You can click to directly enter numeric values for precise modification, or adjust parameters by sliding the arrows that appear when hovering over data bars.
 
 <img src="img/client-basic-guide/outline-view-edit.png" width="77%" >
+
+2. Combined with the [Recursive Display] function, all information of the asset is displayed and can be filtered for editing. The figure below uses a robot camera as an example; click in the order marked in the figure to filter and edit.
+
+<img src="img/client-basic-guide/edit_digui.png" width="77%" >
 
 
 ### Assets & Terminal
