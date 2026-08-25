@@ -15,8 +15,8 @@ After downloading and installing the OrcaLab client, click the [Open Asset Libra
   orcalab
   ```
 
-![](img/asset-library-basic-guide/open-asset-library.png)
-![](img/asset-library-basic-guide/assets.png)
+<img src="img/asset-library-basic-guide/open-asset-library.png" width="77%" >
+<img src="img/asset-library-basic-guide/assets.png" width="77%" >
 
 ### Asset Management
 - Search: Supports searching all assets in the Asset Center by image reference or text description.
@@ -35,12 +35,12 @@ After downloading and installing the OrcaLab client, click the [Open Asset Libra
 ### Search
 Provides two search methods: reference image and text description.
 
-![](img/asset-library-basic-guide/assets.png)
+<img src="img/asset-library-basic-guide/assets.png" width="77%" >
 
 ### Asset Center
 There are 6 categories in total: Industrial Assets, Lifestyle Assets, Service Assets, Sensor Assets, Robot Assets, and Other Assets. You can browse and subscribe to desired assets in the corresponding categories. Supports searching for asset packages or assets by keyword input, and sorting asset packages in the Asset Center by name or by size.
 
-![](img/asset-library-basic-guide/asset-center.png)
+<img src="img/asset-library-basic-guide/asset-center.png" width="77%" >
 
 #### Asset Package Details & Viewing
 An asset package is a collection of one or more assets and is the basic unit of subscription in the Asset Library. An asset package contains basic information such as author, project, number of included assets, and total size.
@@ -87,7 +87,7 @@ An asset package is a collection of one or more assets and is the basic unit of 
 **Generate Assets**
 Supports generating USDZ-format 3D assets via [Image Reference] or [Text Description]. Currently, each user has 5 usage attempts per day, shared across both methods.
 
-![](img/asset-library-basic-guide/ai-generate-assets.png)
+<img src="img/asset-library-basic-guide/ai-generate-assets.png" width="77%" >
 Parameter introduction [generally keep defaults]:
 - Separate Mesh: Split a model's mesh into multiple independent model files or assets
 - Auto-generate LOD: Automatically generate multi-level detail meshes for the model
